@@ -58,16 +58,31 @@
   const LINK_NOT_PUBLISHED = editorial('link.not-published', 'Link not published');
   const ATTACHMENT_NOT_INCLUDED = editorial('link.attachment-missing', 'Attachment not included');
   const DETAIL_TERM_DEFINITIONS = Object.freeze({
-    h0: editorial('detail.terms.h0', 'h0 is an auxiliary expression used to shorten the proposed wild relation h0 u1^-1 x1^sigma c0 = 1. It supplies the first factor of that relation.'),
-    gammaA2: editorial('detail.terms.gamma-a2', 'Γ_A2 denotes the profinite group defined by the rejected A2 presentation in these early records. The final Lean theorem concerns the later presentation.'),
-    gammaA: editorial('detail.terms.gamma-a', 'Γ_A denotes the candidate profinite group defined by the presentation being discussed. In the final Lean files, GammaA refers to the final presentation; earlier records can use similar notation for proposals later rejected.'),
+    candidateA1: editorial('detail.terms.candidate-a1', 'Candidate A1 was the first late-June proposal. It passed several local finite checks but failed the required rank calculation.'),
+    candidateA2: editorial('detail.terms.candidate-a2', 'Candidate A2 passed the available local finite checks, but a manuscript review exposed a false proposition and marked-abelianization obstruction.'),
+    finalCandidate: editorial('detail.terms.final-candidate', 'The final candidate replaced A2 with the corrected relation $h_0u_1^{-1}x_1^{\\sigma}c_0=1$ and is the presentation proved in the paper and Lean developments.'),
+    h0: editorial('detail.terms.h0', '$h_0$ is an auxiliary expression used to shorten the proposed wild relation $h_0u_1^{-1}x_1^{\\sigma}c_0=1$. It supplies the first factor of that relation.'),
+    gammaA2: editorial('detail.terms.gamma-a2', '$\\Gamma_{A2}$ denotes the profinite group defined by the rejected A2 presentation in these early records. The final Lean theorem concerns the later presentation.'),
+    gammaA: editorial('detail.terms.gamma-a', '$\\Gamma_A$ denotes the candidate profinite group defined by the presentation being discussed. In the final Lean files, `GammaA` refers to the final presentation; earlier records can use similar notation for proposals later rejected.'),
   });
   const BRIEF_TERM_DEFINITIONS = Object.freeze({
-    h0: editorial('record.terms.h0', 'h0 is an auxiliary expression in the proposed wild relation.'),
-    gammaA2: editorial('record.terms.gamma-a2', 'Γ_A2 is the group defined by the rejected A2 proposal.'),
-    gammaA: editorial('record.terms.gamma-a', 'Γ_A denotes the candidate profinite group defined by the presentation being discussed.'),
+    candidateA1: editorial('record.terms.candidate-a1', 'A1: rejected after the rank calculation.'),
+    candidateA2: editorial('record.terms.candidate-a2', 'A2: locally promising, then structurally refuted.'),
+    finalCandidate: editorial('record.terms.final-candidate', 'Final candidate: the presentation proved in the paper.'),
+    h0: editorial('record.terms.h0', '$h_0$ is an auxiliary expression in the corrected wild relation.'),
+    gammaA2: editorial('record.terms.gamma-a2', '$\\Gamma_{A2}$ is the group defined by the rejected A2 proposal.'),
+    gammaA: editorial('record.terms.gamma-a', '$\\Gamma_A$ denotes the candidate profinite group defined by the presentation being discussed.'),
+  });
+  const TERM_LINKS = Object.freeze({
+    candidateA1: '../presentations/#candidate-a1',
+    candidateA2: '../presentations/#candidate-a2',
+    finalCandidate: '../presentations/#proven-presentation',
+    h0: '../presentations/#proven-presentation',
   });
   const TERM_PATTERNS = Object.freeze({
+    candidateA1: /(?:\bCandidate\s+A1\b|\bA1\s+(?:candidate|proposal|presentation)\b|\bcandidate\s+called\s+A1\b)/i,
+    candidateA2: /(?:\bCandidate\s+A2\b|\bA2\s+(?:candidate|proposal|presentation)\b|\bcandidate\s+called\s+A2\b)/i,
+    finalCandidate: /(?:\bfinal candidate\b|\bcorrected (?:candidate|presentation|relation)\b)/i,
     h0: /(?:\bh0\b|h_0|h_\{0\}|h₀)/,
     gammaA2: /(?:GammaA2|Gamma_A2|Γ_A2|ΓA2|\\Gamma_\{A_?2\}|\\Gamma_A2)(?![A-Za-z0-9₂])/,
     gammaA: /(?:GammaA|Gamma_A|Γ_A|ΓA|\\Gamma_\{A\}|\\Gamma_A)(?![A-Za-z0-9₂])/,
@@ -125,8 +140,56 @@
     const terms = termKeysFor(...values);
     const box = $('d-terms');
     const definitions = $('d-term-definitions');
-    definitions.replaceChildren(...terms.map((term) => make('p', '', DETAIL_TERM_DEFINITIONS[term])));
+    definitions.replaceChildren(...terms.map((term) => {
+      const paragraph = make('p', '', DETAIL_TERM_DEFINITIONS[term]);
+      if (TERM_LINKS[term]) {
+        paragraph.append(' ', Object.assign(make('a', 'candidate-detail-link', editorial('detail.terms.view-presentation', 'View presentation details')), {href: TERM_LINKS[term]}));
+      }
+      return paragraph;
+    }));
     box.hidden = terms.length === 0;
+    renderEditorialMath(definitions);
+  }
+
+  function attributionRuleFor(node) {
+    return (D.model_attribution?.rules || []).find((rule) => {
+      const selector = rule.selector || {};
+      if (selector.lanes && !selector.lanes.includes(node.lane)) return false;
+      if (selector.turn_min != null && Number(node.turn) < Number(selector.turn_min)) return false;
+      if (selector.turn_max != null && Number(node.turn) > Number(selector.turn_max)) return false;
+      return true;
+    });
+  }
+
+  function modelAttributionFor(node) {
+    if (node.model_public_text) return node.model_public_text;
+    const rule = attributionRuleFor(node);
+    if (rule?.public_text) return rule.public_text;
+    return editorial('model.unattributed', 'Model not established from the retained artifact.');
+  }
+
+  function modelLabelFor(node) {
+    if (node.model_public_text) return node.model_public_text;
+    const rule = attributionRuleFor(node);
+    return rule?.observed_label || editorial('model.unattributed-short', 'Model not established');
+  }
+
+  function renderEditorialMath(root) {
+    if (!root || typeof window.renderMathInElement !== 'function') return;
+    window.renderMathInElement(root, {
+      delimiters: [
+        {left: '$$', right: '$$', display: true},
+        {left: '\\[', right: '\\]', display: true},
+        {left: '$', right: '$', display: false},
+        {left: '\\(', right: '\\)', display: false},
+      ],
+      ignoredTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+      throwOnError: false,
+      trust: false,
+      output: 'mathml',
+      maxExpand: 1000,
+    });
+    normalizeMathMLScriptChildren(root);
   }
 
   const laneOrder = [...(D.lane_order || [])];
@@ -311,7 +374,7 @@
     if (state.focus === 'decisive' && !DECISIVE.has(node.class) && node.class !== 'manual') return false;
     if (!state.query) return true;
     const query = state.query.toLocaleLowerCase();
-    return [node.key, node.summary, node.why, node.tag, node.class, laneTitle(node.lane), stages.get(stageIdFor(node))?.title,
+    return [node.key, node.summary, node.why, node.tag, node.class, modelAttributionFor(node), laneTitle(node.lane), stages.get(stageIdFor(node))?.title,
       node.turn == null ? '' : `turn ${node.turn}`, node.turn == null ? '' : `t${node.turn}`]
       .some((value) => String(value || '').toLocaleLowerCase().includes(query));
   }
@@ -514,6 +577,7 @@
     button.append(make('span', 'record-turn', node.turn == null ? editorial('record.separate.short', 'Conversation') : `${editorial('record.turn.short', 'Turn')} ${node.turn}`));
     button.append(make('span', 'record-summary', node.summary || node.key));
     button.append(make('span', 'record-meta', formatTimestamp(node)));
+    button.append(make('span', 'record-model', modelLabelFor(node)));
     const termNote = termBrief(node.summary, node.why);
     if (termNote) button.append(make('span', 'record-term-note', termNote));
     if (reason) button.append(make('span', 'record-reason', reason));
@@ -898,6 +962,7 @@
     const termNote = termBrief(node.summary, node.why);
     tip.replaceChildren(content);
     if (termNote) tip.append(make('span', 'tooltip-term-note', termNote));
+    renderEditorialMath(tip);
     tip.hidden = false;
     tip.setAttribute('aria-hidden', 'false');
     const anchorRect = anchor.getBoundingClientRect();
@@ -929,6 +994,7 @@
     buildMobileTimeline();
     buildMap();
     syncControls();
+    renderEditorialMath($('stage'));
   }
 
   function openRecord(node, options = {}) {
@@ -940,11 +1006,12 @@
     openDetailShell();
     const classLabel = CLASS_INFO[node.class]?.label || node.class;
     $('d-title').textContent = `${classLabel}: ${node.summary || node.key}`;
-    const pieces = [laneTitle(node.lane), node.turn == null ? editorial('detail.meta.conversation', 'Separate conversation') : `${editorial('detail.meta.turn', 'Turn')} ${node.turn}`, formatTimestamp(node)];
+    const pieces = [laneTitle(node.lane), node.turn == null ? editorial('detail.meta.conversation', 'Separate conversation') : `${editorial('detail.meta.turn', 'Turn')} ${node.turn}`, formatTimestamp(node), modelAttributionFor(node)];
     if (node.tag) pieces.push(node.tag);
     $('d-meta').textContent = pieces.join(' · ');
     $('d-why').textContent = node.why || '';
     updateDetailTerms(node.summary, node.why);
+    renderEditorialMath($('detail'));
     const sequence = (laneNodes.get(node.lane) || []).filter(matches);
     const fallback = laneNodes.get(node.lane) || [];
     const active = sequence.some((item) => item.key === node.key) ? sequence : fallback;
@@ -1033,6 +1100,7 @@
         const block = make('section', `msg ${message.role}`);
         let roleLabel = MESSAGE_ROLE_LABELS[message.role];
         if (message.role === 'assistant' && ['demangled', 'reconstructed'].includes(sourceKind)) roleLabel = editorial('detail.role.reconstructed', 'Reconstructed model response');
+        if (message.role === 'assistant' && message.model) roleLabel = `${roleLabel} · ${message.model}`;
         block.append(make('h3', 'rolelbl', roleLabel), renderMessageArtifact(message));
         fragment.append(block);
       }
@@ -1054,6 +1122,7 @@
   }
 
   function sourceLabel(kind) {
+    if (kind === 'assistant_only_redacted') return editorial('source.assistant-only', 'Assistant-only public record; human prompts, tool payloads, and hidden reasoning omitted');
     if (['archived', 'archived_saved_response', 'saved', 'saved-response'].includes(kind)) return editorial('source.archived', 'Archived saved response');
     if (['demangled', 'reconstructed'].includes(kind)) return editorial('source.reconstructed', 'Reconstructed from a saved rendering of the response');
     if (['fetched', 'backend-fetched', 'backend_fetched'].includes(kind)) return editorial('source.fetched', 'Backend-fetched conversation text');

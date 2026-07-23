@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Methods, model attribution, public formalization corpora, and a reproducible token-accounting audit for the Q2 presentation project.">
+<title>Methods and compute · Q₂ development record</title>
+<link rel="stylesheet" href="../../site.css">
+<link rel="stylesheet" href="methods.css">
+</head>
+<body>
+<header class="page-header">
+  <a class="back" href="../">&#8592; Development record</a>
+  <p class="eyebrow">Methods and compute</p>
+  <h1>What was counted, and what could only be estimated</h1>
+  <p class="method-lede">The successful natural-language campaign and the later
+  Lean autoformalization were different processes. They are counted separately
+  here, with measured usage separated from inferred hidden reasoning.</p>
+</header>
+
+<main class="methods-main">
+  <section class="method-callout" aria-labelledby="scope-title">
+    <h2 id="scope-title">Scope boundary</h2>
+    <p>The solution estimate begins with the successful second-half-of-June
+    campaign and ends with the repaired natural-language proof on June 26. It
+    excludes the earlier GPT-5.2 and GPT-5.4 attempts, as requested. It also
+    excludes the June 27–28 attempt to compare Roe’s and Turturean’s
+    presentations, because that comparison remained unfinished and was not a
+    dependency of either Lean proof.</p>
+    <p>The formalization estimate begins June 29. It includes Turturean’s
+    Codex–ChatGPT Pro workflow and later Fable-led continuation, plus Roe’s
+    independent Fable-led workflow.</p>
+  </section>
+
+  <section aria-labelledby="solution-title">
+    <p class="section-kicker">Phase one · June 18–26, 2026</p>
+    <h2 id="solution-title">Successful candidate and natural-language proof</h2>
+    <div class="metric-grid" aria-label="Solution token estimate">
+      <article class="metric-card">
+        <span class="metric-label">Central estimate</span>
+        <strong>327 million</strong>
+        <span>processed tokens</span>
+      </article>
+      <article class="metric-card">
+        <span class="metric-label">Scenario range</span>
+        <strong>305–365 million</strong>
+        <span>processed tokens</span>
+      </article>
+      <article class="metric-card">
+        <span class="metric-label">Observed Pro thinking</span>
+        <strong>41.9 hours</strong>
+        <span>across 174 retained records</span>
+      </article>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <caption>Components of the solution-phase estimate</caption>
+        <thead>
+          <tr><th scope="col">Surface</th><th scope="col">Measured or estimated usage</th><th scope="col">Treatment</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Claude Code controller · Opus 4.8</th>
+            <td>279,920,555 processed tokens</td>
+            <td>Measured. Includes 261,399,302 cache-read tokens.</td>
+          </tr>
+          <tr>
+            <th scope="row">Codex audit and integration · GPT-5.5</th>
+            <td>3,945,940 processed tokens</td>
+            <td>Measured from the root session and its six children.</td>
+          </tr>
+          <tr>
+            <th scope="row">Preserved ChatGPT corpus</th>
+            <td>5,651,761 visible tokens</td>
+            <td>Locally tokenized with <code>o200k_base</code>; includes prompts, attached context, outputs, and selected reviews.</td>
+          </tr>
+          <tr>
+            <th scope="row">ChatGPT Pro hidden reasoning</th>
+            <td>15,092,300–75,461,500 tokens; central 37,730,750</td>
+            <td>Scenario estimate only, based on 100/250/500 hidden tokens per observed thinking second.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section aria-labelledby="formalization-title">
+    <p class="section-kicker">Phase two · June 29–July 10, 2026</p>
+    <h2 id="formalization-title">Lean autoformalization</h2>
+    <div class="metric-grid" aria-label="Formalization token estimate">
+      <article class="metric-card">
+        <span class="metric-label">Central estimate</span>
+        <strong>19.91 billion</strong>
+        <span>processed tokens</span>
+      </article>
+      <article class="metric-card">
+        <span class="metric-label">Scenario range</span>
+        <strong>19.87–19.97 billion</strong>
+        <span>processed tokens</span>
+      </article>
+      <article class="metric-card">
+        <span class="metric-label">Without cache reads</span>
+        <strong>618–715 million</strong>
+        <span>measured subtotal plus estimated Pro reasoning</span>
+      </article>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <caption>Measured formalization usage and the unmeasured browser component</caption>
+        <thead>
+          <tr><th scope="col">Corpus</th><th scope="col">Processed usage</th><th scope="col">Models recorded in the logs</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Turturean formalization</th>
+            <td>10,613,709,354 measured tokens</td>
+            <td>GPT-5.5 and GPT-5.6 Sol in Codex; Fable 5 and Opus 4.8 in Claude Code.</td>
+          </tr>
+          <tr>
+            <th scope="row">Roe formalization</th>
+            <td>9,234,303,694 measured tokens</td>
+            <td>Fable 5 and Opus 4.8. The archive is Fable-led, not Fable-only.</td>
+          </tr>
+          <tr>
+            <th scope="row">ChatGPT Pro browser work</th>
+            <td>24,350,900–121,754,500 estimated hidden-reasoning tokens</td>
+            <td>278 unique preserved response bodies, plus the four-turn formalization plan; historical hidden-reasoning usage is unavailable.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>Cache reads dominate the processed total. They measure repeated model
+    exposure to accumulated context, not 19.9 billion unique words or unique
+    mathematical ideas. For that reason the non-cache subtotal is shown beside
+    the processed total rather than being hidden.</p>
+  </section>
+
+  <section aria-labelledby="corpora-title">
+    <h2 id="corpora-title">The two public formalization corpora</h2>
+    <div class="method-corpora">
+      <article>
+        <h3>Turturean’s corpus</h3>
+        <p>Daily records preserve 7,388 model-authored messages from the
+        continuous Codex/GPT workflow and later Fable-led continuation.</p>
+        <p><a href="../#view=list&amp;stage=turturean-formalization-corpus">Open the Turturean formalization records</a></p>
+      </article>
+      <article>
+        <h3>Roe’s corpus</h3>
+        <p>Twenty records preserve 442 model-authored messages from Roe’s
+        official redacted archive, maintaining the archive’s session
+        boundaries.</p>
+        <p><a href="../#view=list&amp;stage=roe-formalization-corpus">Open the Roe formalization records</a><br>
+        <a href="https://math.mit.edu/~roed/gq2-lean-session-logs.tar.gz">Download Roe’s official raw redacted archive</a></p>
+      </article>
+    </div>
+    <p class="method-note">Publication policy: human prompts, tool payloads,
+    private links, local home paths, email addresses, credentials, and hidden
+    reasoning are not published. Model-authored text is retained with its
+    timestamp and logged model label.</p>
+  </section>
+
+  <section aria-labelledby="definitions-title">
+    <h2 id="definitions-title">Definitions and reproducibility</h2>
+    <dl class="definition-list">
+      <div>
+        <dt>Processed tokens</dt>
+        <dd>Fresh input, cache creation or cache write, cache read, and output.
+        Codex’s <code>total_tokens</code> already includes input and output;
+        cached input is a subset of input and is never added twice.</dd>
+      </div>
+      <div>
+        <dt>Non-cache subtotal</dt>
+        <dd>Fresh input plus cache creation/write plus output. This removes
+        cache reads, but it is still not a count of unique semantic content.</dd>
+      </div>
+      <div>
+        <dt>Hidden-reasoning estimate</dt>
+        <dd>A sensitivity range, not provider telemetry. OpenAI documents that
+        reasoning tokens exist and count against output limits, but its public
+        material does not expose historical hidden-reasoning counts for
+        ChatGPT Pro conversations.</dd>
+      </div>
+    </dl>
+
+    <ul class="download-list">
+      <li><a href="token-accounting.json">Download the complete machine-readable token audit (JSON)</a></li>
+      <li><a href="token-accounting.csv">Download the token table (CSV)</a></li>
+      <li><a href="../corpora/manifest.json">Download the corpus source-hash and redaction manifest</a></li>
+      <li><a href="../../artifacts/turturean-q2-manuscript-2026-06-25.pdf">Download the preserved 60-page manuscript used for formalization</a></li>
+    </ul>
+
+    <p class="source-note">Method references:
+    <a href="https://developers.openai.com/api/docs/guides/reasoning">OpenAI reasoning guide</a> and
+    <a href="https://help.openai.com/en/articles/20001354">OpenAI’s GPT-5.6 ChatGPT documentation</a>.
+    These sources support the accounting caveat; they do not reveal the
+    historical hidden-reasoning counts estimated here.</p>
+  </section>
+
+  <section class="funding-note" aria-labelledby="compute-title">
+    <h2 id="compute-title">Compute support</h2>
+    <p><a href="https://fulcrum.inc/">Fulcrum</a> provided the great majority of
+    the compute used for Turturean’s successful solution campaign and
+    independent Lean formalization.</p>
+  </section>
+</main>
+
+<footer>
+  <a href="../">Return to the development record</a>.
+</footer>
+</body>
+</html>
