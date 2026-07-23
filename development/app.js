@@ -79,6 +79,12 @@
     finalCandidate: '../presentations/#proven-presentation',
     h0: '../presentations/#proven-presentation',
   });
+  const TERM_LINK_LABELS = Object.freeze({
+    candidateA1: editorial('candidate.link.a1', 'Candidate A1'),
+    candidateA2: editorial('candidate.link.a2', 'Candidate A2'),
+    finalCandidate: editorial('candidate.link.final', 'Proven presentation'),
+    h0: editorial('candidate.link.final', 'Proven presentation'),
+  });
   const TERM_PATTERNS = Object.freeze({
     candidateA1: /(?:\bCandidate\s+A1\b|\bA1\s+(?:candidate|proposal|presentation)\b|\bcandidate\s+called\s+A1\b)/i,
     candidateA2: /(?:\bCandidate\s+A2\b|\bA2\s+(?:candidate|proposal|presentation)\b|\bcandidate\s+called\s+A2\b)/i,
@@ -149,6 +155,21 @@
     }));
     box.hidden = terms.length === 0;
     renderEditorialMath(definitions);
+  }
+
+  function appendCandidateLinks(container, ...values) {
+    const links = new Map();
+    termKeysFor(...values).forEach((term) => {
+      if (TERM_LINKS[term]) links.set(TERM_LINKS[term], TERM_LINK_LABELS[term]);
+    });
+    if (!links.size) return;
+    const paragraph = make('p', 'stage-candidate-links');
+    paragraph.append(`${editorial('candidate.link.label', 'Presentation details')}: `);
+    [...links].forEach(([href, label], index) => {
+      if (index) paragraph.append(' · ');
+      paragraph.append(Object.assign(make('a', '', label), {href}));
+    });
+    container.append(paragraph);
   }
 
   function attributionRuleFor(node) {
@@ -526,6 +547,7 @@
       box.append(button);
     });
     renderStageSummary();
+    renderEditorialMath($('stage'));
   }
 
   function selectStage(id) {
@@ -552,6 +574,7 @@
       const stage = stages.get(ids[0]);
       box.append(make('p', 'stage-summary-label', stage.date_label || editorial('stage.summary.selected', 'Selected stage')), make('h2', '', stage.title));
       if (stage.summary) box.append(make('p', '', stage.summary));
+      appendCandidateLinks(box, stage.title, stage.summary);
       return;
     }
     box.append(make('p', 'stage-summary-label', editorial('stage.summary.multiple', 'Selected stages')));
@@ -562,6 +585,7 @@
       item.append(make('h2', '', stage.title));
       if (stage.date_label) item.append(make('p', 'stage-summary-date', stage.date_label));
       if (stage.summary) item.append(make('p', '', stage.summary));
+      appendCandidateLinks(item, stage.title, stage.summary);
       list.append(item);
     });
     box.append(list);
