@@ -343,6 +343,7 @@
     return Number.isFinite(number) ? Math.min(max, Math.max(min, number)) : fallback;
   }
 
+  const accountingLinkRequested = window.location.hash === '#accounting';
   let state = parseState(window.location.hash);
   let disabledClasses = new Set(state.disabledClasses);
   let disabledLanes = new Set(state.disabledLanes);
@@ -1349,6 +1350,11 @@
     bindControls();
     renderAllViews();
     commit('replace');
+    if (accountingLinkRequested) {
+      const note = $('accounting');
+      note.open = true;
+      requestAnimationFrame(() => note.scrollIntoView({block: 'start'}));
+    }
     if (state.record) openRecord(byKey.get(state.record), {history: 'none'});
     else if (state.event) openEvent(eventList.find((event) => event.id === state.event), {history: 'none'});
   }

@@ -243,6 +243,67 @@ a:focus-visible,
   line-height: 1.35;
 }
 
+.accounting-note {
+  max-width: 68rem;
+  margin: 0.5rem auto 0;
+  color: var(--muted);
+  font: 0.78rem/1.45 var(--system);
+}
+
+.accounting-note summary {
+  display: inline-block;
+  color: var(--accent);
+  font-weight: 650;
+  cursor: pointer;
+  list-style: none;
+}
+
+.accounting-note summary::-webkit-details-marker {
+  display: none;
+}
+
+.accounting-note summary::before {
+  content: "+ ";
+}
+
+.accounting-note[open] summary::before {
+  content: "− ";
+}
+
+.accounting-note-body {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.45rem 1rem;
+  margin-top: 0.45rem;
+  padding: 0.65rem 0.75rem;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--panel);
+  text-align: left;
+}
+
+.accounting-note-body p {
+  margin: 0;
+}
+
+.accounting-note-body strong {
+  color: var(--ink);
+}
+
+.accounting-scope,
+.accounting-links {
+  grid-column: 1 / -1;
+}
+
+.accounting-links {
+  padding-top: 0.4rem;
+  border-top: 1px solid var(--line);
+}
+
+.accounting-links a {
+  font-weight: 650;
+}
+
 .compute-credit {
   max-width: 68rem;
   margin: 0.55rem auto 0;
@@ -1819,6 +1880,15 @@ a:focus-visible,
     align-items: center;
     column-gap: 0.65rem;
     text-align: left;
+  }
+
+  .accounting-note-body {
+    grid-template-columns: 1fr;
+  }
+
+  .accounting-scope,
+  .accounting-links {
+    grid-column: 1;
   }
 
   .dashboard-header h1 {
