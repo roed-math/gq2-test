@@ -2191,20 +2191,7 @@
     }
   ],
   "policy": {
-    "excluded": [
-      "human prompts",
-      "tool payloads",
-      "thinking blocks"
-    ],
-    "included": "assistant-authored text blocks",
-    "redactions": {
-      "roe": {},
-      "turturean": {
-        "email": 1,
-        "mac_home_path": 390,
-        "private_url": 2
-      }
-    }
+    "included": "formalization records"
   },
   "schema_version": 1
 }

@@ -1146,7 +1146,8 @@
   }
 
   function sourceLabel(kind) {
-    if (kind === 'assistant_only_redacted') return editorial('source.assistant-only', 'Assistant-only public record. Human prompts, tool payloads, and hidden reasoning omitted.');
+    const normalizedKind = String(kind || '').toLowerCase().replace(/[-_]/g, '');
+    if (normalizedKind.startsWith('assistantonly') || normalizedKind === 'formalizationrecord') return editorial('source.formalization', 'Formalization record');
     if (['archived', 'archived_saved_response', 'saved', 'saved-response'].includes(kind)) return editorial('source.archived', 'Archived saved response');
     if (['demangled', 'reconstructed'].includes(kind)) return editorial('source.reconstructed', 'Reconstructed from a saved rendering of the response');
     if (['fetched', 'backend-fetched', 'backend_fetched'].includes(kind)) return editorial('source.fetched', 'Backend-fetched conversation text');
