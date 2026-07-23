@@ -1,0 +1,65 @@
+<html lang="en"><head><meta charset="UTF-8"></meta><meta name="viewport" content="width=device-width, initial-scale=1"></meta><link rel="stylesheet" href=".././style.css"></link><link rel="icon" href=".././favicon.svg"></link><link rel="mask-icon" href=".././favicon.svg" color="#000000"></link><link rel="prefetch" href=".././/declarations/declaration-data.bmp" as="image"></link><title>GQ2.FoxHeisenberg</title><script defer="true" src=".././mathjax-config.js"></script><script defer="true" src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script><script defer="true" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script><script>const SITE_ROOT=".././";</script><script>const MODULE_NAME="GQ2.FoxHeisenberg";</script><script type="module" src=".././jump-src.js"></script><script type="module" src=".././search.js"></script><script type="module" src=".././expand-nav.js"></script><script type="module" src=".././how-about.js"></script><script type="module" src=".././instances.js"></script><script type="module" src=".././importedBy.js"></script></head><body><input id="nav_toggle" type="checkbox"></input><header><h1><label for="nav_toggle"></label><span>Documentation</span></h1><h2 class="header_filename break_within"><span class="name">GQ2</span>.<span class="name">FoxHeisenberg</span></h2><form id="search_form"><input type="text" name="q" autocomplete="off"></input>&#32;<button id="search_button" onclick="javascript: form.action='.././search.html';">Search</button></form></header><nav class="internal_nav"><p><a href="#top">return to top</a></p><p class="gh_nav_link"><a href="https://github.com/roed-math/gq2-lean/blob/91e1918fea29c23579c6bf9df42d30160d769283/GQ2/FoxHeisenberg.lean">source</a></p><div class="imports"><details><summary>Imports</summary><ul><li><a href=".././Init.html">Init</a></li><li><a href=".././GQ2/FoxHeisenberg/Basic.html">GQ2.FoxHeisenberg.Basic</a></li><li><a href=".././GQ2/FoxHeisenberg/Heisenberg.html">GQ2.FoxHeisenberg.Heisenberg</a></li><li><a href=".././GQ2/FoxHeisenberg/HessianRow.html">GQ2.FoxHeisenberg.HessianRow</a></li><li><a href=".././GQ2/FoxHeisenberg/Traced.html">GQ2.FoxHeisenberg.Traced</a></li><li><a href=".././GQ2/FoxHeisenberg/WildRow.html">GQ2.FoxHeisenberg.WildRow</a></li></ul></details><details><summary>Imported by</summary><ul id="imported-by-GQ2.FoxHeisenberg" class="imported-by-list"></ul></details></div></nav><main>
+<div class="mod_doc"><h1 id="5-statements-the-two-source-specific-lifting-theories" class="markdown-heading">§5 statements: the two source-specific lifting theories <a class="hover-link" href="#5-statements-the-two-source-specific-lifting-theories">#</a></h1><p>The paper's §5 sets up, for a finite <em>lower target</em> <code>C</code> and an elementary <code>𝔽₂[C]</code>-module <code>A</code>,
+the two cochain theories that the §9 induction compares: the <strong>finite word complex</strong> (30) on the
+candidate side, and continuous Galois cohomology on the local side.  This file is a thin
+umbrella: the content now lives in the <code>GQ2/FoxHeisenberg/</code> sub-modules imported above
+(<code>Basic</code>, <code>Heisenberg</code>, <code>Traced</code>, <code>WildRow</code>, <code>HessianRow</code>), which provide the definition layer
+(the complex, the Heisenberg groups, the mixed central coordinate) and the <strong>proved</strong>
+Lemmas/Propositions 5.6, 5.7, 5.8, 5.11, 5.12, 5.13, 5.15, 5.16 together with the
+5.17-numerics wiring corollary.  The overview below documents the §5 encodings shared by all
+the sub-modules.</p><h2 id="The-5-objects-and-their-encodings" class="markdown-heading">The §5 objects and their encodings <a class="hover-link" href="#The-5-objects-and-their-encodings">#</a></h2><ul><li><strong>Coefficients.</strong>  <code>A</code> is an &quot;elementary <code>𝔽₂[C]</code>-module&quot;: <code>[AddCommGroup A]</code> +
+<code>[DistribMulAction C A]</code> + the hypothesis <code>hA₂ : ∀ a : A, a + a = 0</code> (+ <code>[Finite A]</code> where the
+paper says finite).  No <code>Module 𝔽₂</code> instances (the continuous-cohomology and Demushkin conventions); &quot;dim&quot;-statements are stated
+in <code>Nat.card</code> form (e.g. <code>2^{2 dim A + dim (A^∨)^C}</code> becomes <code>#A² · #(A^∨)^C</code>).</li><li><strong>The lower map.</strong>  The complex depends on <code>ρ : Γ ↠ C</code> only through the four marked values
+<code>ρ(σ), ρ(τ), ρ(x₀), ρ(x₁)</code>, i.e. through the pushed marking <code>univMarking.map ρ</code> — so the
+whole candidate-side theory is parametrized by a <code>t : Marking C</code> (<code><a href=".././GQ2/Words.html">GQ2/Words.lean</a></code>), keeping
+§5 purely finite.  The relations enter as hypotheses <code>t.TameRel</code>, <code>t.WildRel</code> where the paper
+assumes <code>ρ</code> kills the relators.</li><li><strong>Relator values.</strong>  <code>Marking.tameValue = τ^σ (τ²)⁻¹</code> and <code>Marking.wildValue = h₀u₁⁻¹x₁^σc₀</code>
+(relations (5)/(6) as <em>elements</em>; <code>= 1 ↔ TameRel/WildRel</code> proved).  The <code>ω₂</code>-powers are
+<code>powOmega2</code> — by the profinite-exponentiation API's headline these compute the profinite <code>ω₂</code> in every finite group, and
+by <code>powOmega2_pow_eq</code> any integer representative modulo the relevant exponent agrees: that is
+exactly <strong>Lemma 5.1</strong> (finite-exponent independence), which is therefore <em>absorbed by the
+encoding</em> and not re-stated.</li><li><strong><code>A ⋊ C</code></strong> (<code>WordLift A C</code>): own structure with the paper's lift convention
+<code>(u, g)(v, h) = (u + g•v, gh)</code> (Lemma 5.5's proof display) — definitional, no
+<code>Multiplicative</code>-wrapped <code>SemidirectProduct</code> (avoids the Demushkin wrapper traps).</li><li><strong>The word complex (30)/(31).</strong>  <code>d0 t : A →+ (Fin 4 → A)</code> is (31) (indices <code>0,1,2,3</code> =
+<code>σ,τ,x₀,x₁</code>, matching <code>univMarking</code>); <code>d1Fun t x</code> is the pair of <code>A</code>-coordinates of the two
+relator values at the lifted marking <code>liftMarking t x</code> — the paper's &quot;coefficient of <code>A</code> in
+the evaluated tame and wild relators&quot;, verbatim.  <strong>Additivity of <code>d1Fun</code> is the paper's
+&quot;finite Fox rules&quot;</strong>, proved as <code>d1Fun_add</code> (via the ledger of Lemma 5.4); the bundled
+<code>d1 t</code> is built on it, and <code>Z1w/H0w/H1w/H2w</code> follow the <code>ContCoh</code> shape
+(<code>H1 = Z1 ⧸ B1.addSubgroupOf Z1</code> — total definitions, no chain condition needed; the
+chain identity <code>d¹∘d⁰ = 0</code> under the relations is the separate proved <code>d1Fun_comp_d0</code>).
+The <strong>proved</strong> stress test <code>d1Fun_tame</code> computes the tame row in closed form — the general
+form of display (34), validating the convention stack (lift order, <code>conjP</code>, the <code>(u,g)(v,h)</code>
+rule) end-to-end.</li><li><strong><code>𝔽₂</code>-duals</strong> (<code>ElemDual A := A →+ ZMod 2</code>): the Tate-duality interface's <code>MuDual</code> def-synonym recipe (own
+<code>FunLike</code>, contragredient action <code>(g•λ)(a) = λ(g⁻¹•a)</code>; a plain <code>abbrev</code> would collide with
+Mathlib's codomain-action instance).</li><li><strong><code>H(A) ⋊ C</code></strong> (<code>HeisLift A C</code>, §5.2): own structure on <code>A × A^∨ × 𝔽₂ × C</code> with the paper's
+multiplication <code>(a,λ,z)(a',λ',z') = (a+a', λ+λ', z+z'+λ(a'))</code> twisted by the diagonal
+<code>C</code>-action — again definitional.  <code>mixedB t x y</code> is the traced mixed central coordinate
+<code>B_{ρ,A} = β_t + β_w</code> of Prop 5.8 (the <strong>sum</strong> of the two words' <code>z</code>-coordinates, not the
+<code>z</code>-coordinate of their product).</li><li><strong>Stokes</strong> (Lemma 5.7): stated in the paper's general form — ordinary free group
+<code>FreeGroup (Fin n)</code> (Mathlib's, not profinite), evaluation <code>stokesEval</code> via <code>FreeGroup.lift</code>,
+mod-2 exponents <code>expMod2</code> via the lift to <code>Multiplicative (ZMod 2)</code>.  The tame relator's
+exponent vector <code>(0,1,0,0)</code> (Prop 5.8's proof) is <strong>proved</strong> here for the free-group tame
+word (<code>expMod2_fgTame</code>); the wild word's vector was the §5 proof layer content (it needs the integer-<code>ω₂</code>
+representative words) and is proved in the sub-modules.</li><li><strong>Duality statements.</strong>  5.15/5.16 are stated in <code>Nat.card</code> + pairing form; &quot;perfect&quot; is
+encoded as two-sided nondegeneracy (equivalent to perfectness for finite elementary groups,
+given the card clauses).  On the candidate side the descended <code>H¹×H¹</code>-pairing is carried
+<em>inside</em> the statement (<code>∃ P, descends mixedB ∧ nondegenerate</code>) — no descent-backed
+definitions.  On the local side the pairing is the <em>already-descended</em> cup product with the
+evaluation pairing <code>dualEval</code>, in the form used by <code>TateDuality</code>;
+<code>TateDuality</code> phrasing; the target-line certification is the clause <code>#H²(𝔽₂-trivial) = 2</code>.
+<code>IsSelfDual</code> packages the 5.15 conclusion; <strong>Lemma 5.11</strong> (dévissage) is stated as
+two-out-of-three for <code>IsSelfDual</code> along a short exact sequence of coefficient modules — the
+mapping cone <code>K(A)</code> of (49) is its <em>proof</em> device (the §5 proof layer), not statement content (flagged
+deviation).</li><li><strong>Prop 5.10</strong> (the Fox–Heisenberg chain map) is <em>not</em> packaged as a <code>HomologicalComplex</code>
+map: its degree-(0,2) components are the trivial <code>traceD0</code>/<code>traceD2</code> below, and its two
+chain identities (47)/(48) are — after unfolding the canonical identifications — exactly
+Prop 5.8's (41)/(42) with <code>L = d1Fun</code> on <code>A</code> resp. <code>A^∨</code>.  Statement content = 5.8 + 5.6;
+deviation flagged.</li></ul><h2 id="Encoding-deviations" class="markdown-heading">Encoding deviations <a class="hover-link" href="#Encoding-deviations">#</a></h2><ul><li><strong>Corollary 5.17's adjoint-boundary identity (58)</strong> uses connecting maps
+<code>∂ : H¹(V) → H²(T)</code> in <em>both</em> theories (snake maps for the word complex, coefficient-SES
+connecting maps for <code>ContCoh</code>).  The numerical half is <code>cor_5_17_card</code>; the connecting-map
+formulation is kept in the downstream assembly where both complexes are available.</li><li>Lemmas 5.2/5.3/5.4/5.14 are represented by the class-two identity, <code>h₀</code>-shadow, ledger, and
+Hessian calculations in the proof modules.  Lemma 5.1 is absorbed into the definitions above.</li></ul><p>Conventions: <code>x ^ g = g⁻¹xg</code> (<code>conjP</code>), <code>[x,y] = x⁻¹y⁻¹xy</code> (<code>commP</code>), marking order
+<code>(σ, τ, x₀, x₁)</code> = indices <code>0,1,2,3</code>.</p></div></main>
+<nav class="nav"><iframe src=".././navbar.html" class="navframe" frameBorder="0"></iframe></nav></body></html>
