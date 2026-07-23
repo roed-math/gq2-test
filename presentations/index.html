@@ -167,15 +167,14 @@
   </div>
 
   <section class="dead-ends-section" aria-labelledby="dead-ends-title">
-    <h2 id="dead-ends-title">Dead ends</h2>
-    <p class="section-intro" style="max-width: 132ch;">These proposals are part
-    of the discovery record, not alternatives to the verifier-passed
-    presentations above. The section is collapsed by default so the passing
-    candidates remain primary. “Local test” never means Roe’s complete
-    verifier.</p>
+    <h2 id="dead-ends-title">Rejected candidates</h2>
+    <p class="section-intro" style="max-width: 132ch;">The six proposals below
+    document failed paths in the search. The verifier-passed presentations
+    remain above, and this section stays collapsed by default. Every “local
+    test” cited here was separate from Roe’s complete verifier.</p>
 
     <details class="dead-ends-disclosure">
-      <summary>Show six rejected candidates and their failure evidence</summary>
+      <summary>Six rejected candidates and their failure evidence</summary>
       <div class="resource-grid dead-end-grid">
         <div class="resource-card" id="candidate-w3">
           <div class="card-heading">
@@ -188,13 +187,13 @@
             <div><dt>Model</dt><dd>Exact generator not established</dd></div>
           </dl>
           <div class="pres-math">
-            <p>Proposed wild relation:</p>
+            <p>Proposed wild relation</p>
             $$x_1^2[\sigma,x_0][\tau,x_0][\tau,x_1]=1.$$
           </div>
           <p>Roe initially reported 931 failures among 2,952 processed groups;
           the retained full output contains 1,578 mismatches. Contemporary
-          proof development used ChatGPT-5.2-Pro and computation used Claude
-          Code with Opus 4.6, but neither artifact establishes a sole
+          proof development used ChatGPT-5.2-Pro; the computation used Claude
+          Code with Opus 4.6. The retained artifacts do not identify a sole
           generator.</p>
         </div>
 
@@ -209,13 +208,13 @@
             <div><dt>Model</dt><dd>Exact generator not established</dd></div>
           </dl>
           <div class="pres-math">
-            <p>Proposed wild relation, accompanied by two shadow relations:</p>
+            <p>Proposed wild relation with two shadow relations</p>
             $$x_1^2[\sigma,x_1][\tau,x_1]
               (x_0^\sigma)^{-1}(x_0\tau)^{40491355905}=1.$$
           </div>
           <p>It passed all 1,403 reported local cases, then Roe’s verifier found
           127 mismatches. The candidate came from a human-directed systematic
-          search; the exact generating model is not preserved.</p>
+          search. The retained records do not identify the generating model.</p>
         </div>
 
         <div class="resource-card" id="candidate-sigma2">
@@ -233,8 +232,8 @@
             $$x_1^2[\sigma_2,x_1](x_0^\sigma)^{-1}
               (x_0\tau)^{40491355905}=1.$$
           </div>
-          <p>The correction reduced Roe’s result to seven failures, with 21
-          additional cases reported as timeouts. It was still false.</p>
+          <p>After the correction, Roe reported seven failures and 21
+          timeouts. Those results refuted the candidate.</p>
         </div>
 
         <div class="resource-card" id="candidate-r0">
@@ -273,9 +272,9 @@
             $$x_0^2x_1^4u_1^{-1}x_1^\sigma d_0d_1^{-1}=1.$$
           </div>
           <p>A cup-product rank calculation gave 17 instead of the required
-          23. This was an internal candidate and is not evidenced as a
-          submission to Roe’s verifier.</p>
-          <p><a href="../development/#view=timeline&amp;record=frontiermath_q2_galois__turn_003">Open the rejection record</a>.</p>
+          23. The retained evidence identifies A1 as an internal candidate.
+          It was not submitted to Roe’s verifier.</p>
+          <p><a href="../development/#view=timeline&amp;record=frontiermath_q2_galois__turn_003">A1 rejection record</a>.</p>
         </div>
 
         <div class="resource-card" id="candidate-a2">
@@ -297,9 +296,9 @@
           </div>
           <p>A2 passed all 1,639 runnable rows in the local cluster sweep; 64
           custom groups were unavailable. A marked-abelianization
-          contradiction later refuted the word itself. This was not a
-          complete official Roe-verifier run.</p>
-          <p><a href="../development/#view=timeline&amp;record=frontiermath_q2_galois__turn_133">Open the record that retires A2 and derives the corrected relation</a>.</p>
+          contradiction later refuted the word itself. Roe’s complete
+          verifier was not run on A2.</p>
+          <p><a href="../development/#view=timeline&amp;record=frontiermath_q2_galois__turn_133">A2 rejection and corrected relation</a>.</p>
         </div>
       </div>
     </details>

@@ -1,9 +1,9 @@
 {
   "definitions": {
-    "non_cache_subtotal": "Fresh input plus cache creation/write plus output. It excludes cache reads but is not a count of unique semantic content.",
+    "non_cache_subtotal": "Fresh input plus cache creation/write plus output. It excludes cache reads and does not measure unique semantic content.",
     "processed_tokens": "All logged fresh input, cache creation/write, cache read, and output. For Codex, total_tokens already includes input and output; cached input is a subset of input and is never added a second time.",
-    "reasoning_estimate": "Scenario estimate only. OpenAI does not expose historical ChatGPT Pro hidden-reasoning usage. Low/central/high apply 100/250/500 hidden tokens per recorded thinking second; formalization browser calls use the successful campaign's observed mean thinking time per dashboard record.",
-    "visible_tokens": "Local o200k_base tokenization of preserved text, not provider billing."
+    "reasoning_estimate": "The scenario estimate applies 100, 250, or 500 hidden tokens per recorded thinking second. OpenAI does not expose historical ChatGPT Pro hidden-reasoning usage. Formalization browser calls use the successful campaign's observed mean thinking time per dashboard record.",
+    "visible_tokens": "Local o200k_base tokenization of preserved text. Provider billing may use a different count."
   },
   "exclusions": [
     "All GPT-5.2 and GPT-5.4 attempts before the successful second-half-of-June campaign.",
@@ -39,7 +39,7 @@
     "preserved_chatgpt_pro_outputs": {
       "bytes": 960725,
       "candidate_files": 346,
-      "chronology": "The preserved response bodies are deduplicated by content hash; their original browser-turn chronology was not reconstructed.",
+      "chronology": "The preserved response bodies are deduplicated by content hash. Their original browser-turn chronology cannot be reconstructed from the retained files.",
       "content_set_sha256": "88d0680e72768413bad275f25293dfeb445fd198d4b761988f4ea6fce05e2980",
       "unique_content_hashes": 278,
       "visible_tokens_o200k": 223505
@@ -171,7 +171,7 @@
         "user": 66
       },
       "records": 23,
-      "thinking_hours": 0.0,
+      "thinking_hours": 0,
       "thinking_seconds": 0,
       "visible_tokens_o200k": {
         "assistant": 109317,

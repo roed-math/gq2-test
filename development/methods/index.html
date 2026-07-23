@@ -12,21 +12,22 @@
 <header class="page-header">
   <a class="back" href="../">&#8592; Development record</a>
   <p class="eyebrow">Methods and compute</p>
-  <h1>What was counted, and what could only be estimated</h1>
-  <p class="method-lede">The successful natural-language campaign and the later
-  Lean autoformalization were different processes. They are counted separately
-  here, with measured usage separated from inferred hidden reasoning.</p>
+  <h1>Token accounting for the solution and formalization</h1>
+  <p class="method-lede">The tables report the successful natural-language
+  campaign separately from the later Lean autoformalization. Logged usage
+  supplies the measured totals. Missing ChatGPT Pro reasoning is represented
+  by scenario estimates.</p>
 </header>
 
 <main class="methods-main">
   <section class="method-callout" aria-labelledby="scope-title">
-    <h2 id="scope-title">Scope boundary</h2>
+    <h2 id="scope-title">Dates and exclusions</h2>
     <p>The solution estimate begins with the successful second-half-of-June
-    campaign and ends with the repaired natural-language proof on June 26. It
-    excludes the earlier GPT-5.2 and GPT-5.4 attempts, as requested. It also
-    excludes the June 27–28 attempt to compare Roe’s and Turturean’s
-    presentations, because that comparison remained unfinished and was not a
-    dependency of either Lean proof.</p>
+    campaign and ends with the repaired natural-language proof on June 26.
+    Earlier GPT-5.2 and GPT-5.4 attempts fall outside this date range. The
+    June 27–28 comparison of Roe’s and Turturean’s presentations is also
+    excluded because it remained unfinished and neither Lean proof depended
+    on it.</p>
     <p>The formalization estimate begins June 29. It includes Turturean’s
     Codex–ChatGPT Pro workflow and later Fable-led continuation, plus Roe’s
     independent Fable-led workflow.</p>
@@ -57,7 +58,7 @@
       <table>
         <caption>Components of the solution-phase estimate</caption>
         <thead>
-          <tr><th scope="col">Surface</th><th scope="col">Measured or estimated usage</th><th scope="col">Treatment</th></tr>
+          <tr><th scope="col">System or corpus</th><th scope="col">Measured or estimated usage</th><th scope="col">Accounting method</th></tr>
         </thead>
         <tbody>
           <tr>
@@ -121,7 +122,7 @@
           <tr>
             <th scope="row">Roe formalization</th>
             <td>9,234,303,694 measured tokens</td>
-            <td>Fable 5 and Opus 4.8. The archive is Fable-led, not Fable-only.</td>
+            <td>Fable 5 is the primary model in the archive; Opus 4.8 also appears.</td>
           </tr>
           <tr>
             <th scope="row">ChatGPT Pro browser work</th>
@@ -132,34 +133,34 @@
       </table>
     </div>
 
-    <p>Cache reads dominate the processed total. They measure repeated model
-    exposure to accumulated context, not 19.9 billion unique words or unique
-    mathematical ideas. For that reason the non-cache subtotal is shown beside
-    the processed total rather than being hidden.</p>
+    <p>Cache reads account for most of the processed total and record repeated
+    exposure to accumulated context. The non-cache subtotal is reported
+    alongside the processed total. These totals do not measure unique words
+    or mathematical ideas.</p>
   </section>
 
   <section aria-labelledby="corpora-title">
-    <h2 id="corpora-title">The two public formalization corpora</h2>
+    <h2 id="corpora-title">Public formalization corpora</h2>
     <div class="method-corpora">
       <article>
         <h3>Turturean’s corpus</h3>
         <p>Daily records preserve 7,388 model-authored messages from the
         continuous Codex/GPT workflow and later Fable-led continuation.</p>
-        <p><a href="../#view=list&amp;stage=turturean-formalization-corpus">Open the Turturean formalization records</a></p>
+        <p><a href="../#view=list&amp;stage=turturean-formalization-corpus">Turturean formalization records</a></p>
       </article>
       <article>
         <h3>Roe’s corpus</h3>
         <p>Twenty records preserve 442 model-authored messages from Roe’s
         official redacted archive, maintaining the archive’s session
         boundaries.</p>
-        <p><a href="../#view=list&amp;stage=roe-formalization-corpus">Open the Roe formalization records</a><br>
-        <a href="https://math.mit.edu/~roed/gq2-lean-session-logs.tar.gz">Download Roe’s official raw redacted archive</a></p>
+        <p><a href="../#view=list&amp;stage=roe-formalization-corpus">Roe formalization records</a><br>
+        <a href="https://math.mit.edu/~roed/gq2-lean-session-logs.tar.gz">Roe’s official raw redacted archive</a></p>
       </article>
     </div>
-    <p class="method-note">Publication policy: human prompts, tool payloads,
+    <p class="method-note">The public corpora omit human prompts, tool payloads,
     private links, local home paths, email addresses, credentials, and hidden
-    reasoning are not published. Model-authored text is retained with its
-    timestamp and logged model label.</p>
+    reasoning. Each retained model-authored message includes its timestamp and
+    logged model label.</p>
   </section>
 
   <section aria-labelledby="definitions-title">
@@ -173,30 +174,30 @@
       </div>
       <div>
         <dt>Non-cache subtotal</dt>
-        <dd>Fresh input plus cache creation/write plus output. This removes
-        cache reads, but it is still not a count of unique semantic content.</dd>
+        <dd>Fresh input plus cache creation/write plus output. It excludes
+        cache reads and does not measure unique semantic content.</dd>
       </div>
       <div>
         <dt>Hidden-reasoning estimate</dt>
-        <dd>A sensitivity range, not provider telemetry. OpenAI documents that
-        reasoning tokens exist and count against output limits, but its public
-        material does not expose historical hidden-reasoning counts for
+        <dd>A sensitivity range derived from retained thinking time. OpenAI
+        documents reasoning tokens and their effect on output limits. Its
+        public material does not expose historical hidden-reasoning counts for
         ChatGPT Pro conversations.</dd>
       </div>
     </dl>
 
     <ul class="download-list">
-      <li><a href="token-accounting.json">Download the complete machine-readable token audit (JSON)</a></li>
-      <li><a href="token-accounting.csv">Download the token table (CSV)</a></li>
-      <li><a href="../corpora/manifest.json">Download the corpus source-hash and redaction manifest</a></li>
-      <li><a href="../../artifacts/turturean-q2-manuscript-2026-06-25.pdf">Download the preserved 60-page manuscript used for formalization</a></li>
+      <li><a href="token-accounting.json">Machine-readable token audit (JSON)</a></li>
+      <li><a href="token-accounting.csv">Token table (CSV)</a></li>
+      <li><a href="../corpora/manifest.json">Corpus source-hash and redaction manifest</a></li>
+      <li><a href="../../artifacts/turturean-q2-manuscript-2026-06-25.pdf">Preserved 60-page formalization manuscript</a></li>
     </ul>
 
-    <p class="source-note">Method references:
+    <p class="source-note">The accounting references are the
     <a href="https://developers.openai.com/api/docs/guides/reasoning">OpenAI reasoning guide</a> and
     <a href="https://help.openai.com/en/articles/20001354">OpenAI’s GPT-5.6 ChatGPT documentation</a>.
-    These sources support the accounting caveat; they do not reveal the
-    historical hidden-reasoning counts estimated here.</p>
+    They support the accounting caveat. Historical hidden-reasoning counts
+    remain unavailable.</p>
   </section>
 
   <section class="funding-note" aria-labelledby="compute-title">

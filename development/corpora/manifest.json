@@ -1933,7 +1933,7 @@
         "sha256": "797a919fa23c36582f4d4b6de431ed5bcfc52553d3e90423acc5e7d4c5dd453e"
       },
       {
-        "chronology": "The preserved response bodies are deduplicated by content hash; their original browser-turn chronology was not reconstructed.",
+        "chronology": "The preserved response bodies are deduplicated by content hash. Their original browser-turn chronology cannot be reconstructed from the retained files.",
         "content_set_sha256": "88d0680e72768413bad275f25293dfeb445fd198d4b761988f4ea6fce05e2980",
         "source_kind": "preserved_chatgpt_pro_response_set",
         "unique_published_messages": 277

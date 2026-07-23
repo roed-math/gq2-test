@@ -66,9 +66,9 @@
     gammaA: editorial('detail.terms.gamma-a', '$\\Gamma_A$ denotes the candidate profinite group defined by the presentation being discussed. In the final Lean files, `GammaA` refers to the final presentation; earlier records can use similar notation for proposals later rejected.'),
   });
   const BRIEF_TERM_DEFINITIONS = Object.freeze({
-    candidateA1: editorial('record.terms.candidate-a1', 'A1: rejected after the rank calculation.'),
-    candidateA2: editorial('record.terms.candidate-a2', 'A2: locally promising, then structurally refuted.'),
-    finalCandidate: editorial('record.terms.final-candidate', 'Final candidate: the presentation proved in the paper.'),
+    candidateA1: editorial('record.terms.candidate-a1', 'A1 was rejected after the rank calculation.'),
+    candidateA2: editorial('record.terms.candidate-a2', 'A2 passed local checks and was later structurally refuted.'),
+    finalCandidate: editorial('record.terms.final-candidate', 'The final candidate is the presentation proved in the paper.'),
     h0: editorial('record.terms.h0', '$h_0$ is an auxiliary expression in the corrected wild relation.'),
     gammaA2: editorial('record.terms.gamma-a2', '$\\Gamma_{A2}$ is the group defined by the rejected A2 proposal.'),
     gammaA: editorial('record.terms.gamma-a', '$\\Gamma_A$ denotes the candidate profinite group defined by the presentation being discussed.'),
@@ -83,7 +83,7 @@
     candidateA1: editorial('candidate.link.a1', 'Candidate A1'),
     candidateA2: editorial('candidate.link.a2', 'Candidate A2'),
     finalCandidate: editorial('candidate.link.final', 'Proven presentation'),
-    h0: editorial('candidate.link.final', 'Proven presentation'),
+    h0: editorial('candidate.link.h0', 'Proven presentation'),
   });
   const TERM_PATTERNS = Object.freeze({
     candidateA1: /(?:\bCandidate\s+A1\b|\bA1\s+(?:candidate|proposal|presentation)\b|\bcandidate\s+called\s+A1\b)/i,
@@ -149,7 +149,7 @@
     definitions.replaceChildren(...terms.map((term) => {
       const paragraph = make('p', '', DETAIL_TERM_DEFINITIONS[term]);
       if (TERM_LINKS[term]) {
-        paragraph.append(' ', Object.assign(make('a', 'candidate-detail-link', editorial('detail.terms.view-presentation', 'View presentation details')), {href: TERM_LINKS[term]}));
+        paragraph.append(' ', Object.assign(make('a', 'candidate-detail-link', editorial('detail.terms.view-presentation', 'Presentation page')), {href: TERM_LINKS[term]}));
       }
       return paragraph;
     }));
@@ -164,7 +164,7 @@
     });
     if (!links.size) return;
     const paragraph = make('p', 'stage-candidate-links');
-    paragraph.append(`${editorial('candidate.link.label', 'Presentation details')}: `);
+    paragraph.append(`${editorial('candidate.link.label', 'Presentation details')} · `);
     [...links].forEach(([href, label], index) => {
       if (index) paragraph.append(' · ');
       paragraph.append(Object.assign(make('a', '', label), {href}));
@@ -1146,7 +1146,7 @@
   }
 
   function sourceLabel(kind) {
-    if (kind === 'assistant_only_redacted') return editorial('source.assistant-only', 'Assistant-only public record; human prompts, tool payloads, and hidden reasoning omitted');
+    if (kind === 'assistant_only_redacted') return editorial('source.assistant-only', 'Assistant-only public record. Human prompts, tool payloads, and hidden reasoning omitted.');
     if (['archived', 'archived_saved_response', 'saved', 'saved-response'].includes(kind)) return editorial('source.archived', 'Archived saved response');
     if (['demangled', 'reconstructed'].includes(kind)) return editorial('source.reconstructed', 'Reconstructed from a saved rendering of the response');
     if (['fetched', 'backend-fetched', 'backend_fetched'].includes(kind)) return editorial('source.fetched', 'Backend-fetched conversation text');
