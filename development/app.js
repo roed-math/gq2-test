@@ -392,6 +392,8 @@
 
   function matches(node) {
     if (disabledClasses.has(node.class) || disabledLanes.has(node.lane)) return false;
+    const selectedStages = selectedStageIds();
+    if (state.view === 'list' && selectedStages.length && !selectedStages.includes(stageIdFor(node))) return false;
     if (state.focus === 'pivotal' && node.class !== 'pivotal') return false;
     if (state.focus === 'decisive' && !DECISIVE.has(node.class) && node.class !== 'manual') return false;
     if (!state.query) return true;
@@ -519,6 +521,7 @@
     const active = [];
     if (state.query) active.push(editorial('filter.control.active-search', 'Search term applied'));
     if (state.focus !== 'all') active.push(editorial('filter.active.importance', 'Importance level selected'));
+    if (state.view === 'list' && selectedStageIds().length) active.push(editorial('filter.active.stage', 'Stage selected'));
     if (disabledClasses.size) active.push(editorial('filter.active.type', 'Some record types hidden'));
     if (disabledLanes.size) active.push(editorial('filter.active.conversation', 'Some conversations hidden'));
     $('activeFilters').textContent = active.join(' · ');
