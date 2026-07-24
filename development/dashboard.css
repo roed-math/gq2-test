@@ -329,13 +329,10 @@ a:focus-visible,
 }
 
 .compute-credit {
-  max-width: 68rem;
-  margin: 0.55rem auto 0;
-  padding-top: 0.45rem;
-  border-top: 1px solid var(--line);
+  max-width: 58rem;
+  margin: 0 auto 0.45rem;
   color: var(--muted);
   font: 0.78rem/1.4 var(--system);
-  text-align: center;
 }
 
 .compute-credit a {
@@ -1842,6 +1839,11 @@ a:focus-visible,
   border-top: 1px solid var(--line);
   color: var(--muted);
   font-size: 0.9rem;
+  text-align: center;
+}
+
+.project-footer p {
+  margin: 0;
 }
 
 .project-footer a {
