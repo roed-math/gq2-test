@@ -597,6 +597,7 @@ a:focus-visible,
 
 .chapter,
 .stage-button {
+  position: relative;
   display: block;
   width: 100%;
   padding: 0.75rem 0.2rem;
@@ -609,16 +610,48 @@ a:focus-visible,
   cursor: pointer;
 }
 
+.stage-button-action,
+.map-stage-button-action,
+.record-row-open {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.stage-button > :not(.stage-button-action),
+.map-stage-button > :not(.map-stage-button-action),
+.record-row > :not(.record-row-open) {
+  position: relative;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.candidate-inline-link {
+  position: relative;
+  z-index: 3;
+  color: var(--accent);
+  font-weight: inherit;
+  pointer-events: auto;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.14em;
+}
+
 .chapter:hover,
 .stage-button:hover,
 .chapter.active,
-.stage-button[aria-pressed="true"] {
+.stage-button.is-selected {
   color: var(--accent);
   background: transparent;
 }
 
 .chapter.active,
-.stage-button[aria-pressed="true"] {
+.stage-button.is-selected {
   box-shadow: inset 3px 0 0 var(--accent);
   padding-left: 0.7rem;
 }
@@ -960,8 +993,8 @@ a:focus-visible,
 }
 
 .map-stage-button:hover,
-.map-stage-button:focus-visible,
-.map-stage-button[aria-pressed="true"] {
+.map-stage-button:focus-within,
+.map-stage-button.is-selected {
   border-bottom-color: var(--accent);
   color: var(--accent);
 }
@@ -1451,6 +1484,7 @@ a:focus-visible,
 .row,
 .record-row,
 .mobile-record {
+  position: relative;
   display: grid;
   grid-template-columns: 0.8rem 4.2rem minmax(0, 1fr) auto;
   gap: 0.6rem;
@@ -1466,6 +1500,12 @@ a:focus-visible,
   color: var(--ink);
   text-align: left;
   cursor: pointer;
+}
+
+.stage-button:focus-within,
+.record-row:focus-within {
+  outline: 2px solid var(--accent);
+  outline-offset: -2px;
 }
 
 .row:hover,
@@ -2022,7 +2062,7 @@ a:focus-visible,
   }
 
   .chapter.active,
-  .stage-button[aria-pressed="true"] {
+  .stage-button.is-selected {
     box-shadow: inset 0 -3px 0 var(--accent);
     padding-left: 0.85rem;
   }
