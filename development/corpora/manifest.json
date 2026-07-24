@@ -1,2196 +1,300 @@
 {
   "counts": {
     "existing_public_records": 445,
-    "final_public_records": 473,
-    "generated_records": 28,
-    "roe_public_messages": 442,
-    "turturean_public_messages": 7388
+    "final_public_records": 474,
+    "generated_records": 29,
+    "roe_public_messages": 9978,
+    "turturean_public_messages": 9999
   },
-  "generated_utc": "2026-07-23T19:16:48+00:00",
+  "generated_utc": "2026-07-24T02:03:05+00:00",
+  "human_message_editorial_review": {
+    "human_message_occurrences_reviewed": 1078,
+    "method": "Manual editorial reading of every top-level human message. Automated patterns were used only as secondary safety flags.",
+    "raw_human_messages_published": 0,
+    "response_occurrences_excluded": 78,
+    "response_occurrences_included": 1000,
+    "unique_human_messages_reviewed": 837
+  },
   "inputs": {
     "roe_archive_sha256": "b4c939a7c4c74f300c33af9eb1a81ef49ecc1b31b569cc076e4e355b5e2fcb48",
-    "roe_session_files": [
-      {
-        "first_published_timestamp": "2026-07-07T19:58:08Z",
-        "last_published_timestamp": "2026-07-07T21:26:18Z",
-        "published_messages": 3,
-        "session": "0039e780",
-        "sha256": "5776f12c7c4e13907b7f8d41234a383128180120c618b2319d12cc18fe2e9fe6"
-      },
-      {
-        "first_published_timestamp": "2026-07-06T18:53:04Z",
-        "last_published_timestamp": "2026-07-07T11:38:20Z",
-        "published_messages": 15,
-        "session": "01e5a294",
-        "sha256": "c9a2670e0f420a7151e4d16ca5f26abcf3c73813c391c0327c9bf330cdab47f3"
-      },
-      {
-        "first_published_timestamp": "2026-07-07T00:01:01Z",
-        "last_published_timestamp": "2026-07-11T01:11:16Z",
-        "published_messages": 58,
-        "session": "07f15cc3",
-        "sha256": "7ac6df5e74c5c8d13ffc01a8100864b66d94d81ed066663bb2accc4dc2002229"
-      },
-      {
-        "first_published_timestamp": "2026-07-02T23:53:11Z",
-        "last_published_timestamp": "2026-07-06T13:39:41Z",
-        "published_messages": 49,
-        "session": "0a9e66c8",
-        "sha256": "0aeb2bfdd8327773eb0530f85a1f8fc4f46cf3a781efbff00ca183dee0dfc341"
-      },
-      {
-        "first_published_timestamp": "2026-07-03T11:02:19Z",
-        "last_published_timestamp": "2026-07-06T10:34:24Z",
-        "published_messages": 11,
-        "session": "3b23946a",
-        "sha256": "2e55d3f3bb18a34f3c20c8c58859e511d955542f953fcd27903b81a3cda93858"
-      },
-      {
-        "first_published_timestamp": "2026-07-07T14:56:12Z",
-        "last_published_timestamp": "2026-07-08T09:16:57Z",
-        "published_messages": 19,
-        "session": "3ed6d0c7",
-        "sha256": "c1d34956544b5d3a1a957d30d65230ec18e34f7d3e6e1bece8f8ae0d615c8b1d"
-      },
-      {
-        "first_published_timestamp": "2026-07-03T11:54:05Z",
-        "last_published_timestamp": "2026-07-06T12:11:58Z",
-        "published_messages": 24,
-        "session": "5544fb65",
-        "sha256": "917465385882e70bf90f6d6ed93764d21285d7bd435027524924e3acec1b7b7c"
-      },
-      {
-        "first_published_timestamp": "2026-07-03T09:00:42Z",
-        "last_published_timestamp": "2026-07-06T09:55:04Z",
-        "published_messages": 27,
-        "session": "6d440b27",
-        "sha256": "c1a22492b305bdcd2da07ebb561bf30b6ad1de1cb680363e92045234a49251bb"
-      },
-      {
-        "first_published_timestamp": "2026-07-03T11:55:03Z",
-        "last_published_timestamp": "2026-07-06T12:19:51Z",
-        "published_messages": 32,
-        "session": "85a579ac",
-        "sha256": "9cf1802211e51d9d2caddd156a0d5573c680e8b6c031a2fbe435a4f6d86e7d8c"
-      },
-      {
-        "first_published_timestamp": "2026-07-01T12:21:56Z",
-        "last_published_timestamp": "2026-07-01T22:27:06Z",
-        "published_messages": 8,
-        "session": "85d7dfd7",
-        "sha256": "716d7b263bfdf04914a162aabef2e05d90cbb7630d71b0a2e78cabf748865208"
-      },
-      {
-        "first_published_timestamp": "2026-07-03T00:05:01Z",
-        "last_published_timestamp": "2026-07-06T13:10:58Z",
-        "published_messages": 54,
-        "session": "898d983e",
-        "sha256": "ff50faac16748ef6a8ff46453a911dada11eccdd6ead75e17ca4ea65a16584d4"
-      },
-      {
-        "first_published_timestamp": "2026-07-06T21:22:33Z",
-        "last_published_timestamp": "2026-07-09T13:45:00Z",
-        "published_messages": 30,
-        "session": "8ccf5f4b",
-        "sha256": "7660247b030336b89caf2aaef73cecd7b100e384e8eaeaa332351ea1b92757dc"
-      },
-      {
-        "first_published_timestamp": "2026-07-07T14:05:54Z",
-        "last_published_timestamp": "2026-07-08T14:15:04Z",
-        "published_messages": 17,
-        "session": "965d5c62",
-        "sha256": "fb7dba7c114045b0bf1b6a6be131a3f586dbc24aeb11ad15c232ba6bbff61465"
-      },
-      {
-        "first_published_timestamp": "2026-07-06T19:01:12Z",
-        "last_published_timestamp": "2026-07-10T10:04:49Z",
-        "published_messages": 23,
-        "session": "9cd6c94c",
-        "sha256": "3a5943ea040b8e7773971b026379721c7a04d96eb16f61e6c3af0a43dd3a788c"
-      },
-      {
-        "first_published_timestamp": "2026-07-07T13:50:21Z",
-        "last_published_timestamp": "2026-07-07T21:31:59Z",
-        "published_messages": 3,
-        "session": "bb35d158",
-        "sha256": "4ce6cf83baf86dd9e219519adb1c75e6bd485a656728c0bae9a7d55d3125ea09"
-      },
-      {
-        "first_published_timestamp": "2026-07-07T15:38:36Z",
-        "last_published_timestamp": "2026-07-08T15:57:01Z",
-        "published_messages": 3,
-        "session": "bd22cccf",
-        "sha256": "d551138725722de9c5321ca51ce0fb6fa75a8f6a93b6af6bc1a4a10a2e06b004"
-      },
-      {
-        "first_published_timestamp": "2026-07-06T18:43:03Z",
-        "last_published_timestamp": "2026-07-09T19:25:15Z",
-        "published_messages": 16,
-        "session": "bf8998ac",
-        "sha256": "0680ff98c5f282305bfe871db8e56276ed2c8c186ae41255aa7c3345ffeebcc7"
-      },
-      {
-        "first_published_timestamp": "2026-07-02T01:36:38Z",
-        "last_published_timestamp": "2026-07-02T22:53:05Z",
-        "published_messages": 13,
-        "session": "c0bf230d",
-        "sha256": "266921aeb901bdce741d9fa023fde76deaf9d23373fb1d3a5e5f4e6de03feeac"
-      },
-      {
-        "first_published_timestamp": "2026-07-07T14:06:32Z",
-        "last_published_timestamp": "2026-07-07T19:45:40Z",
-        "published_messages": 14,
-        "session": "dca97dd6",
-        "sha256": "650d734a645830eb79e297fa877fd275459a65ab3ba8539e442fd1e0766fcaef"
-      },
-      {
-        "first_published_timestamp": "2026-07-06T23:43:02Z",
-        "last_published_timestamp": "2026-07-09T21:19:18Z",
-        "published_messages": 23,
-        "session": "e5ebf6ba",
-        "sha256": "b8e93914ff4a3677434f10e8977a630eda04b74a7f61276dff05978b443fdd39"
-      }
-    ],
-    "turturean_session_files": [
-      {
-        "first_timestamp": "2026-06-29T17:22:49.676Z",
-        "last_timestamp": "2026-06-30T18:24:49.998Z",
-        "session": "019f1466-8083-7600-ba4d-3a44f7a64f18",
-        "sha256": "8fe46c50a5c6ba75f6be8d6e820d3dc8cefa3798ccac24b41a0c543383a07f88"
-      },
-      {
-        "first_timestamp": "2026-06-29T17:24:49.435Z",
-        "last_timestamp": "2026-06-29T17:54:41.168Z",
-        "session": "019f1469-8c59-7a41-9426-c6d605012d2d",
-        "sha256": "e156a7558adf45a28711f4f9fcb3aa6b551e0ff42dda254533eaa09e3b5eade3"
-      },
-      {
-        "first_timestamp": "2026-06-29T17:25:01.718Z",
-        "last_timestamp": "2026-06-29T17:56:43.800Z",
-        "session": "019f1469-bc67-7a82-b9f6-4969ae45fd28",
-        "sha256": "f6f8702526abf9817018d63a3aefc0d32a10bb882409f46dfc444bf0eac4fdc1"
-      },
-      {
-        "first_timestamp": "2026-06-29T18:04:34.023Z",
-        "last_timestamp": "2026-06-29T18:16:49.208Z",
-        "session": "019f148d-ef12-73e2-a383-f75af6911c83",
-        "sha256": "20790fbfb47696a4c595dd38d851d72a695118c49f1d833abd844ac348839beb"
-      },
-      {
-        "first_timestamp": "2026-06-29T18:04:44.977Z",
-        "last_timestamp": "2026-06-29T18:19:42.451Z",
-        "session": "019f148e-1a0e-7691-b9d1-5a4f128c7160",
-        "sha256": "f8216ac2dd9e2ff3a2ad4d29af5eb5811e8e6db65c4fc996c0539b05b250f394"
-      },
-      {
-        "first_timestamp": "2026-06-29T18:04:57.272Z",
-        "last_timestamp": "2026-06-29T18:22:06.871Z",
-        "session": "019f148e-4a0e-7140-be37-69111fb32375",
-        "sha256": "0f4f6a30f7a06ce2bf2ebc222ac1a38a23fc1e3ca0b95ca58c40faf758e9d09d"
-      },
-      {
-        "first_timestamp": "2026-06-29T18:30:00.628Z",
-        "last_timestamp": "2026-06-29T18:39:05.959Z",
-        "session": "019f14a5-3a5e-7781-8034-cd6f5dad17a6",
-        "sha256": "1ed07cf9dc9230f389b27c0998f3b95ddbf1f120462f2b4f6ef08c086f772497"
-      },
-      {
-        "first_timestamp": "2026-06-29T18:30:13.560Z",
-        "last_timestamp": "2026-06-29T18:44:19.182Z",
-        "session": "019f14a5-6d0c-7ec2-b41c-12c0e84a2d2d",
-        "sha256": "8d13952f2da5c6b9d1fd55c4333ce31908d89ae06340e234736816f7af132a92"
-      },
-      {
-        "first_timestamp": "2026-06-29T18:30:26.200Z",
-        "last_timestamp": "2026-06-29T18:44:14.041Z",
-        "session": "019f14a5-9e5d-77c0-a058-ad59ef257195",
-        "sha256": "2bca0101ad8db057b6ec879748e1a99773c430e3e3bec1efa50c3749661d678e"
-      },
-      {
-        "first_timestamp": "2026-06-29T18:48:13.414Z",
-        "last_timestamp": "2026-06-29T19:00:06.882Z",
-        "session": "019f14b5-e721-7520-a8c8-1ba3b45d9cc3",
-        "sha256": "fd7b7a770ecdfae9ab5af3abe346e80ffcbabf5561f367b67a42dcfa79b56ea5"
-      },
-      {
-        "first_timestamp": "2026-06-29T18:48:25.918Z",
-        "last_timestamp": "2026-06-29T18:54:34.359Z",
-        "session": "019f14b6-1815-7132-ab9c-611c7519e947",
-        "sha256": "f402576b292735581d5f9778cd7202aec31575e894d3ef1f795062ef85bfe4c5"
-      },
-      {
-        "first_timestamp": "2026-06-29T19:05:34.922Z",
-        "last_timestamp": "2026-06-29T19:34:34.188Z",
-        "session": "019f14c5-cb83-7673-ae31-51768c897f27",
-        "sha256": "b0e80ab4f27eafce5fc87e2f41457eae5ea1fb6e9acb366a6b093426de786fe9"
-      },
-      {
-        "first_timestamp": "2026-06-29T19:05:46.421Z",
-        "last_timestamp": "2026-06-29T19:37:10.674Z",
-        "session": "019f14c5-f891-7cd0-849a-36b172d27af8",
-        "sha256": "cfdc8c1c16619fe843672c5ea1214f75c4b158fb789e790d4a8506b13b5b2e7e"
-      },
-      {
-        "first_timestamp": "2026-06-29T19:34:16.414Z",
-        "last_timestamp": "2026-06-29T19:38:58.931Z",
-        "session": "019f14e0-1015-78a3-9500-f72e0172d779",
-        "sha256": "aef2faf2227d64fa0f4ffb6944e76d5ba3d365c2b4f65ecdda35f9fa20e9ec50"
-      },
-      {
-        "first_timestamp": "2026-06-29T19:34:32.713Z",
-        "last_timestamp": "2026-06-29T19:39:55.009Z",
-        "session": "019f14e0-4fe6-7970-adf8-0d242e81fb1a",
-        "sha256": "70a694e14f90e4964d2d0b1d299bc5e201cee527e0b0ea036a7b40eaaad9d00d"
-      },
-      {
-        "first_timestamp": "2026-06-29T19:43:16.395Z",
-        "last_timestamp": "2026-06-29T19:54:25.662Z",
-        "session": "019f14e8-4d6d-71b2-8461-7014c50564dc",
-        "sha256": "2621c8b22bc58e8067806064e31c0a9255dca44b73028d99a715d96e2491e0d0"
-      },
-      {
-        "first_timestamp": "2026-06-29T19:43:33.826Z",
-        "last_timestamp": "2026-06-29T19:55:03.946Z",
-        "session": "019f14e8-919c-7500-8a07-e2d751d0a953",
-        "sha256": "e49e61caf46c2e27f6205306e7468c8d2100fc6e8188aafdf3aaab9b9c6826e5"
-      },
-      {
-        "first_timestamp": "2026-06-29T19:43:50.957Z",
-        "last_timestamp": "2026-06-29T19:54:34.686Z",
-        "session": "019f14e8-d484-7461-bf0f-978bc6ef8577",
-        "sha256": "682c98476732d63bbd4bf09932f242b34e8611a684818d972c8e1877c4ade728"
-      },
-      {
-        "first_timestamp": "2026-06-29T20:08:27.115Z",
-        "last_timestamp": "2026-06-29T20:19:49.103Z",
-        "session": "019f14ff-5a8e-7603-a4f1-1e00c6a00be2",
-        "sha256": "8a21dd797ff4a0860730ef603e8afb28301f97375d1e258b7aaec4f656cefb6a"
-      },
-      {
-        "first_timestamp": "2026-06-29T20:09:06.563Z",
-        "last_timestamp": "2026-06-29T20:18:33.232Z",
-        "session": "019f14ff-f4db-7bf3-9251-ae048e253864",
-        "sha256": "9684a0f60c4520724d2831b517fb797ed043337af3588f66e5ac84b7459ca516"
-      },
-      {
-        "first_timestamp": "2026-06-29T20:14:31.686Z",
-        "last_timestamp": "2026-06-29T20:23:25.751Z",
-        "session": "019f1504-eab0-76c3-9a4b-66e8e32419f3",
-        "sha256": "c5fd2ac7eae932bcf2c4207d7904702030e1585aeac1930234d19e68ee3498ee"
-      },
-      {
-        "first_timestamp": "2026-06-29T20:52:52.130Z",
-        "last_timestamp": "2026-06-29T20:59:56.997Z",
-        "session": "019f1528-04d7-71c0-90fa-5cdefba08035",
-        "sha256": "d8a2daf2566012c92d3dde40f3bd3c2db2937f5037dcc6324efc2c76783fdc24"
-      },
-      {
-        "first_timestamp": "2026-06-29T20:53:07.336Z",
-        "last_timestamp": "2026-06-29T20:59:35.075Z",
-        "session": "019f1528-4063-7941-9b39-b24427116ce3",
-        "sha256": "f0f68a75c59e298dd403d7adc0e03c7cb437a75dfcec5e5b077145e803447bc6"
-      },
-      {
-        "first_timestamp": "2026-06-29T20:53:22.203Z",
-        "last_timestamp": "2026-06-29T21:01:32.199Z",
-        "session": "019f1528-7a74-7bc2-9a17-4eaa19e711d1",
-        "sha256": "b72d2c2cfa3ea2780bb96b87f0d55b8d232929c55890aed323395b34a672ad64"
-      },
-      {
-        "first_timestamp": "2026-06-29T21:06:00.672Z",
-        "last_timestamp": "2026-06-29T21:09:18.719Z",
-        "session": "019f1534-0d1e-72d0-9237-434314cc8b67",
-        "sha256": "e02890dfaf558c2ff638ebba9ff3022823f3b5df3eba9f32bca731fa8e2d0167"
-      },
-      {
-        "first_timestamp": "2026-06-29T21:06:16.690Z",
-        "last_timestamp": "2026-06-29T21:14:54.044Z",
-        "session": "019f1534-4bce-70b0-a5df-8d6d9fd6816e",
-        "sha256": "95ab07d58d93d0f9d8aea459c4742e14d6b280675b895c50e26a890226dd934b"
-      },
-      {
-        "first_timestamp": "2026-06-29T21:06:34.746Z",
-        "last_timestamp": "2026-06-29T21:09:26.530Z",
-        "session": "019f1534-9256-7341-8774-2298e97631c9",
-        "sha256": "3bf68872a07e5e1cad707b04c88ad280fdeb18b5267bcc85ebf7836745f10e75"
-      },
-      {
-        "first_timestamp": "2026-06-29T21:23:37.834Z",
-        "last_timestamp": "2026-06-29T21:28:28.413Z",
-        "session": "019f1544-2e9f-75e3-b5ef-75a2df6c4dc5",
-        "sha256": "11fa1808856b7740811650a213b3ebff49de6ec6e6332acd5a4a76f778012970"
-      },
-      {
-        "first_timestamp": "2026-06-29T21:23:55.258Z",
-        "last_timestamp": "2026-06-29T21:30:37.771Z",
-        "session": "019f1544-72d4-79e0-9d3f-e5d19fbb7ce6",
-        "sha256": "b6c1e58d456972b1392dd88fdcfd67b985399ae5ab94a038709e9e16bbd46d94"
-      },
-      {
-        "first_timestamp": "2026-06-29T21:24:12.417Z",
-        "last_timestamp": "2026-06-29T21:27:51.279Z",
-        "session": "019f1544-b5d7-7972-bb99-9f49da7bf2ce",
-        "sha256": "e398e80ca2f4b9af7009d444cf4a18e149a29ea0a2697333232b9bc5c234517b"
-      },
-      {
-        "first_timestamp": "2026-06-29T21:38:07.412Z",
-        "last_timestamp": "2026-06-29T22:00:17.946Z",
-        "session": "019f1551-7366-73c0-870b-208279d6531c",
-        "sha256": "ae1d8c726e2be54ed55b2de7f593a6ef98e1c1936c85185a45b91ef2dd035b61"
-      },
-      {
-        "first_timestamp": "2026-06-29T21:38:20.266Z",
-        "last_timestamp": "2026-06-29T21:58:45.733Z",
-        "session": "019f1551-a5c3-7f41-a65a-ac90e409bc42",
-        "sha256": "580512cb4d4219f0ca7e8f1018d5a3a4e0a53dd8224a20ca25730efe69616a9c"
-      },
-      {
-        "first_timestamp": "2026-06-29T21:38:32.860Z",
-        "last_timestamp": "2026-06-29T21:58:34.364Z",
-        "session": "019f1551-d6f6-7830-ad19-2231a210c2a3",
-        "sha256": "1bc99991484168306b6df39daa28d03f745c72ba1d115b60ddc58ea9734968be"
-      },
-      {
-        "first_timestamp": "2026-06-29T21:38:47.083Z",
-        "last_timestamp": "2026-06-29T22:00:29.427Z",
-        "session": "019f1552-0e87-7391-9fa1-68a6941108d3",
-        "sha256": "52a707d06910477f69d2587efc7d2359ea96c532b3fca77a5304213a27bd1844"
-      },
-      {
-        "first_timestamp": "2026-06-29T22:06:41.073Z",
-        "last_timestamp": "2026-06-29T22:22:15.654Z",
-        "session": "019f156b-996a-76e0-8078-580719550142",
-        "sha256": "f916b4bee4f6ce02492b71eb21ff3c06fde245679ec3790bfd01b9e867f1c0fa"
-      },
-      {
-        "first_timestamp": "2026-06-29T22:10:05.582Z",
-        "last_timestamp": "2026-06-29T22:18:43.059Z",
-        "session": "019f156e-b850-7f82-93d4-7bf7a1d55d96",
-        "sha256": "303a7abdf158c97b7a9fd8fc4445ebc244769c2b9779d9f1d9e96aaf05d85b23"
-      },
-      {
-        "first_timestamp": "2026-06-29T22:10:24.808Z",
-        "last_timestamp": "2026-06-29T22:16:36.673Z",
-        "session": "019f156f-0383-77a1-b24d-4c4ee4578971",
-        "sha256": "451cbea0870dc9f8ef6e1f20e20e16990d2bf58245f073d0a813d89ee647a90a"
-      },
-      {
-        "first_timestamp": "2026-06-29T22:13:19.987Z",
-        "last_timestamp": "2026-06-29T22:19:21.489Z",
-        "session": "019f1571-afb6-7821-97cd-0e3666b31d0c",
-        "sha256": "08bdf6405431cf6885e0146ce765683097467074c8c3da8d0dadebd992d04856"
-      },
-      {
-        "first_timestamp": "2026-06-29T22:20:16.814Z",
-        "last_timestamp": "2026-06-29T22:29:02.334Z",
-        "session": "019f1578-0bfc-74f1-9279-ff52a01379da",
-        "sha256": "4be5d51cff4bf41caaac019d6102bf572fe5f07134c4e881f12dd1cfd8f165dc"
-      },
-      {
-        "first_timestamp": "2026-06-29T22:31:02.022Z",
-        "last_timestamp": "2026-06-29T22:40:36.675Z",
-        "session": "019f1581-e439-7673-a97f-6fe48f1329dc",
-        "sha256": "4dafeb3b86de71a5fbfee6c2c8a2f68cfb695390596b516ab082050365e807dc"
-      },
-      {
-        "first_timestamp": "2026-06-29T22:31:18.877Z",
-        "last_timestamp": "2026-06-29T22:39:00.150Z",
-        "session": "019f1582-2638-73e0-ba1a-23a692397de5",
-        "sha256": "e65cddc7c48cbad21fda6a8e405901e22feb0b0e4c3acd1f729b3ee9d4800de5"
-      },
-      {
-        "first_timestamp": "2026-06-29T22:31:33.522Z",
-        "last_timestamp": "2026-06-29T22:39:05.586Z",
-        "session": "019f1582-5f6c-7873-8ef3-28dd8caa248c",
-        "sha256": "ab25a64d10b7477f27fb26ceb1029b4886a926afe5da9bb5e5a9ec7ce54aff31"
-      },
-      {
-        "first_timestamp": "2026-06-29T22:31:49.875Z",
-        "last_timestamp": "2026-06-29T22:39:27.423Z",
-        "session": "019f1582-9f4c-78f2-91eb-0dd9f099548f",
-        "sha256": "18ea988a316f4e6f82f56814cef1f59570cb0e1dd55d6166d478f03cc2319845"
-      },
-      {
-        "first_timestamp": "2026-06-29T22:43:04.160Z",
-        "last_timestamp": "2026-06-29T22:51:08.928Z",
-        "session": "019f158c-e916-7dd3-9030-559c0bc8e635",
-        "sha256": "7e76b266791f7409cacc9443a7d12ad86ad135d9bfd7c344b37ce9372936a872"
-      },
-      {
-        "first_timestamp": "2026-06-29T22:43:04.212Z",
-        "last_timestamp": "2026-06-29T22:53:22.819Z",
-        "session": "019f158c-e96e-7613-a68c-43fb2b68ab32",
-        "sha256": "281a8565bbe739d04903972b8a660a79ef32e6ddf290fa926df02019e97cb451"
-      },
-      {
-        "first_timestamp": "2026-06-29T22:43:04.267Z",
-        "last_timestamp": "2026-06-29T22:49:22.202Z",
-        "session": "019f158c-e9a6-7992-86e8-b9e7b2de86ce",
-        "sha256": "c543af29fbe778a461872688befe9fbd354a4043d0305094a81aa7d8ee96fff2"
-      },
-      {
-        "first_timestamp": "2026-06-29T22:43:04.314Z",
-        "last_timestamp": "2026-06-29T22:49:56.106Z",
-        "session": "019f158c-e9d3-74e3-b2c2-709e8138c64e",
-        "sha256": "70ccdaa07111d8428ed2b573bd5714a37c549fc2b001947f6beaae38a35ca1a9"
-      },
-      {
-        "first_timestamp": "2026-06-29T23:04:27.874Z",
-        "last_timestamp": "2026-06-29T23:16:19.429Z",
-        "session": "019f15a0-7f92-75b1-ad75-372d347426cf",
-        "sha256": "d7ac1709071228213e8d1a0346c35c6852b9d6d308f1b477d31d0b01594ed301"
-      },
-      {
-        "first_timestamp": "2026-06-29T23:04:27.914Z",
-        "last_timestamp": "2026-06-29T23:10:30.917Z",
-        "session": "019f15a0-7fe9-7de3-8ca3-dd8db340ae0b",
-        "sha256": "ed408bb71c58ebd9a3ce43437e08b9b33948f30e58078abf78a042a0f026c4b5"
-      },
-      {
-        "first_timestamp": "2026-06-29T23:04:49.497Z",
-        "last_timestamp": "2026-06-29T23:10:20.026Z",
-        "session": "019f15a0-d433-70e3-b7c7-58f6da18598e",
-        "sha256": "27b5d8585245d90b31e4570d78554af15267afa6d429c92e213f423230deecd2"
-      },
-      {
-        "first_timestamp": "2026-06-29T23:20:46.769Z",
-        "last_timestamp": "2026-06-29T23:28:12.858Z",
-        "session": "019f15af-6f5f-75e0-8800-359f68be93d9",
-        "sha256": "d24f47d9d2288fd8d959d0e3aebf32ebdb4c1a08118922b5ba11c6f81316e568"
-      },
-      {
-        "first_timestamp": "2026-06-29T23:21:02.275Z",
-        "last_timestamp": "2026-06-29T23:28:14.149Z",
-        "session": "019f15af-ac1b-7db0-9d80-aaf24bff548d",
-        "sha256": "d9200add6d922ba1942daa87196ea85494c2fda0bfadeb8cf1ee08d7eb5e0d9c"
-      },
-      {
-        "first_timestamp": "2026-06-29T23:21:17.717Z",
-        "last_timestamp": "2026-06-29T23:29:29.657Z",
-        "session": "019f15af-e86f-78d1-b5a4-42b683e1d97d",
-        "sha256": "af4e79fb50b6a84a210c19adc7000404d3a31a9d31caaaaf0b4bb39823972858"
-      },
-      {
-        "first_timestamp": "2026-06-29T23:21:32.066Z",
-        "last_timestamp": "2026-06-29T23:29:16.086Z",
-        "session": "019f15b0-2078-79b1-a191-22529cbe54a0",
-        "sha256": "945d3cf82f3693d07a8966a22ec4e40f5de83671126a4719fe1a6150b20dd96f"
-      },
-      {
-        "first_timestamp": "2026-06-29T23:34:28.896Z",
-        "last_timestamp": "2026-06-29T23:45:24.954Z",
-        "session": "019f15bb-fae0-7d12-9660-99237afc49cd",
-        "sha256": "955675013c0da87309bbe731279478809483b5d2168e913a53bd18a3ce575bf9"
-      },
-      {
-        "first_timestamp": "2026-06-29T23:34:48.133Z",
-        "last_timestamp": "2026-06-29T23:41:25.936Z",
-        "session": "019f15bc-461f-7261-9f38-d2baf37ca092",
-        "sha256": "c8c4e00b069c4a97b9fd8ad90906010e35725cac5267ea6ece2efbdc321fcd33"
-      },
-      {
-        "first_timestamp": "2026-06-29T23:35:10.876Z",
-        "last_timestamp": "2026-06-29T23:41:31.942Z",
-        "session": "019f15bc-9ef4-7941-9020-288da54dc1f8",
-        "sha256": "1fe9bc45eb29430c20346d0d59434a01fadc521521c8f0a2a2e5e957462a8caa"
-      },
-      {
-        "first_timestamp": "2026-06-29T23:35:34.580Z",
-        "last_timestamp": "2026-06-29T23:44:14.754Z",
-        "session": "019f15bc-fb88-7a92-a967-fd73532c41a8",
-        "sha256": "a8e7872199505657183962745de355471cc9c1ceb3226ce2e0a172da322d9a07"
-      },
-      {
-        "first_timestamp": "2026-06-29T23:35:58.182Z",
-        "last_timestamp": "2026-06-29T23:43:35.887Z",
-        "session": "019f15bd-57b9-76b2-8291-b0bf5ec7cf00",
-        "sha256": "5c90f72c6ad4b6c216f8c5f6a6fce7fa46c14e93f6f79787c8c2ffc35d9fb9b1"
-      },
-      {
-        "first_timestamp": "2026-06-29T23:56:34.434Z",
-        "last_timestamp": "2026-06-30T00:01:27.946Z",
-        "session": "019f15d0-34b0-7823-9590-669b765fbfeb",
-        "sha256": "6490045572527582a02e07aac4c995c2d861ecf9972de327b40870b01d19b9f3"
-      },
-      {
-        "first_timestamp": "2026-06-29T23:56:49.258Z",
-        "last_timestamp": "2026-06-30T00:04:14.983Z",
-        "session": "019f15d0-6ec6-7e12-8eda-78c46ab8f760",
-        "sha256": "2853e2af4d5e62b37e2f55dfb8956fcd5d129a467c1497b3c227992bf639a91d"
-      },
-      {
-        "first_timestamp": "2026-06-29T23:57:07.712Z",
-        "last_timestamp": "2026-06-30T00:04:26.316Z",
-        "session": "019f15d0-b6da-7df1-a620-f2965eb2cb9d",
-        "sha256": "7a3a922de7bca829e848b508901ad5904bad8085d9398e43cb6f565ac3a80238"
-      },
-      {
-        "first_timestamp": "2026-06-29T23:58:01.374Z",
-        "last_timestamp": "2026-06-30T00:02:51.944Z",
-        "session": "019f15d1-8875-7e03-9687-517c445aa4b6",
-        "sha256": "bf218bfebf13a717b0e548b38b3d566f981a9e9654ccf1b115a7f0d80f9032e3"
-      },
-      {
-        "first_timestamp": "2026-06-30T00:09:01.584Z",
-        "last_timestamp": "2026-06-30T00:13:02.413Z",
-        "session": "019f15db-9b49-7cd2-a17f-4138cdddb0dc",
-        "sha256": "f9382e25e4f3924e5f9b3f3a4b528f2ef1221723ebe858897bf9fa3cbf755501"
-      },
-      {
-        "first_timestamp": "2026-06-30T00:09:21.336Z",
-        "last_timestamp": "2026-06-30T00:17:05.169Z",
-        "session": "019f15db-e892-7053-a678-c9885864d521",
-        "sha256": "b73ce56166d94563003bae9910f8268814fd0dec22a49c552ab4b050f8fd7df9"
-      },
-      {
-        "first_timestamp": "2026-06-30T00:09:40.898Z",
-        "last_timestamp": "2026-06-30T00:13:56.610Z",
-        "session": "019f15dc-34f4-75a0-b8a7-c24a692c831b",
-        "sha256": "0b83967c25c81ccd82b6de8f544ea5d182b441b2b9436d98449fb1a9c51144cb"
-      },
-      {
-        "first_timestamp": "2026-06-30T00:09:59.935Z",
-        "last_timestamp": "2026-06-30T00:14:51.133Z",
-        "session": "019f15dc-7f53-72f0-aaa5-81bf6ecc8a90",
-        "sha256": "76473d396bb2c07434d5f01b5bf79082b96c202753ede850346fbf1f0c2227ee"
-      },
-      {
-        "first_timestamp": "2026-06-30T00:21:58.785Z",
-        "last_timestamp": "2026-06-30T00:30:01.992Z",
-        "session": "019f15e7-7726-77e3-a4e5-c7c0473e9fb5",
-        "sha256": "9a89c9f3148ed7b2dbbed2eac41c61e4edae68ba8fca4122d651e23ab6f9a63b"
-      },
-      {
-        "first_timestamp": "2026-06-30T00:22:21.284Z",
-        "last_timestamp": "2026-06-30T00:31:41.944Z",
-        "session": "019f15e7-cf39-7e83-bd2e-c5e7685abb2e",
-        "sha256": "d1724f9d2954c7b97624c19f3f12d78b49c2866349ec0d2c18b12c195a91e18e"
-      },
-      {
-        "first_timestamp": "2026-06-30T00:22:48.810Z",
-        "last_timestamp": "2026-06-30T00:25:20.869Z",
-        "session": "019f15e8-3abd-7a91-a2fd-ce521a06672a",
-        "sha256": "91f202bd8759ef61c4a578868c3cfcac7faf46e2fb7fe2bc519da2002af4c729"
-      },
-      {
-        "first_timestamp": "2026-06-30T00:23:10.864Z",
-        "last_timestamp": "2026-06-30T00:27:06.568Z",
-        "session": "019f15e8-90e7-7350-9161-b5ef458b874f",
-        "sha256": "250571b2576614df82d0769faf72435974ed1f893e8fd075f9e4a4781d699bc8"
-      },
-      {
-        "first_timestamp": "2026-06-30T00:23:27.921Z",
-        "last_timestamp": "2026-06-30T00:29:50.792Z",
-        "session": "019f15e8-d388-76d0-9298-25ca9bb872cf",
-        "sha256": "087f64ca2e15a6c2650daf4b4a1f183c0a94464fe055bd9cf8281a7914cb089e"
-      },
-      {
-        "first_timestamp": "2026-06-30T00:37:16.072Z",
-        "last_timestamp": "2026-06-30T00:44:08.074Z",
-        "session": "019f15f5-7662-76e1-ad35-999400509f2b",
-        "sha256": "7c3eece95c53b9758d512e33c9b3c25e2299609be4a6f847a988ac457aa81ba8"
-      },
-      {
-        "first_timestamp": "2026-06-30T00:37:16.122Z",
-        "last_timestamp": "2026-06-30T00:44:09.828Z",
-        "session": "019f15f5-76b7-7741-acfd-5d1736d28cd3",
-        "sha256": "b08c128294a0f9d7797fb5843519addc31af4f07dffc04a2da31394deb8a6c25"
-      },
-      {
-        "first_timestamp": "2026-06-30T00:37:16.168Z",
-        "last_timestamp": "2026-06-30T00:44:44.052Z",
-        "session": "019f15f5-76e4-7fe3-b798-1247dc50ac58",
-        "sha256": "6bc9a4a6bb07dc22cbe4cbba20eae25751fe31842b967861e5388b6c4d6e44a6"
-      },
-      {
-        "first_timestamp": "2026-06-30T00:37:16.212Z",
-        "last_timestamp": "2026-06-30T00:46:31.247Z",
-        "session": "019f15f5-7710-7f82-8b42-b1e4731d6b84",
-        "sha256": "49e5be927e04f11f8b35fc91446f4e4eef14beb1dc9bb5f4eaed7cb316789de4"
-      },
-      {
-        "first_timestamp": "2026-06-30T00:37:16.292Z",
-        "last_timestamp": "2026-06-30T00:44:00.211Z",
-        "session": "019f15f5-7743-74e3-ab35-06d010ce7e8d",
-        "sha256": "74707c567d6617451ae994f1780ad50a0b614354274f0aab90c045fe42505045"
-      },
-      {
-        "first_timestamp": "2026-06-30T00:51:18.919Z",
-        "last_timestamp": "2026-06-30T01:03:38.328Z",
-        "session": "019f1602-52ce-78d3-b911-9bc73eda4505",
-        "sha256": "0d261554a255cd2dde3dbb7acf898533b6e6fc7be542eeb846b8c1a7e73c8d2e"
-      },
-      {
-        "first_timestamp": "2026-06-30T00:51:18.970Z",
-        "last_timestamp": "2026-06-30T01:01:07.765Z",
-        "session": "019f1602-5316-7f90-81ff-55fed7a74eb9",
-        "sha256": "2cfeb0fe083cbda5f28b3f4b0db3a0805f50dc706324369c14ecb51feef6642b"
-      },
-      {
-        "first_timestamp": "2026-06-30T00:51:19.019Z",
-        "last_timestamp": "2026-06-30T01:00:06.242Z",
-        "session": "019f1602-5342-7f91-812f-55041532ffa8",
-        "sha256": "760a6c6bd6c7e33856f4731fc4ccfb89817dc046a21e0cf47b9d192c623af372"
-      },
-      {
-        "first_timestamp": "2026-06-30T00:51:19.066Z",
-        "last_timestamp": "2026-06-30T01:05:51.828Z",
-        "session": "019f1602-5377-7ed2-a81b-dca446ccd61b",
-        "sha256": "36a6b99bb0f960260d50e8cf8f0b687bc41d08d291e2dc7bd639ec0b7bfc55e1"
-      },
-      {
-        "first_timestamp": "2026-06-30T00:51:19.111Z",
-        "last_timestamp": "2026-06-30T00:57:08.915Z",
-        "session": "019f1602-53a2-7091-805a-5f60265158f8",
-        "sha256": "db2a1b3c905a51860715e6f5bf94f716c791e26baf217aae4c4c727b6ffab7b5"
-      },
-      {
-        "first_timestamp": "2026-06-30T00:51:19.153Z",
-        "last_timestamp": "2026-06-30T00:56:20.125Z",
-        "session": "019f1602-53d0-7361-887d-6a7b808a3ab8",
-        "sha256": "15fad24e1f8954effd6c410e917e6c3cf86a9d5037b554150dd1204beeac0c5d"
-      },
-      {
-        "first_timestamp": "2026-06-30T05:45:17.169Z",
-        "last_timestamp": "2026-06-30T05:50:33.477Z",
-        "session": "019f170f-762a-7960-8687-7467eb964b1a",
-        "sha256": "381420a0483a62f9ca7c41224e290f22288b5975e762f71b755ffa985f49891b"
-      },
-      {
-        "first_timestamp": "2026-06-30T05:45:32.951Z",
-        "last_timestamp": "2026-06-30T05:53:59.882Z",
-        "session": "019f170f-b3e8-7391-b524-7f4fb8255324",
-        "sha256": "ad453b88b19e60b77f6c92c88871eae57fd8e85a7594024f724059092ee382d6"
-      },
-      {
-        "first_timestamp": "2026-06-30T05:45:48.220Z",
-        "last_timestamp": "2026-06-30T05:51:24.232Z",
-        "session": "019f170f-ef93-7c13-b327-16f9f253c5e6",
-        "sha256": "08a2c6329777b5270d46d62855cd662165871132d58d611bba22542211cd289b"
-      },
-      {
-        "first_timestamp": "2026-06-30T05:46:07.854Z",
-        "last_timestamp": "2026-06-30T05:54:18.283Z",
-        "session": "019f1710-3c3e-7382-9f24-4b198d5fe14d",
-        "sha256": "798f3b28bc565d5bb5c5af6d7a6b4e755b302f10935721638345105f2be91f8b"
-      },
-      {
-        "first_timestamp": "2026-06-30T05:46:24.112Z",
-        "last_timestamp": "2026-06-30T05:55:06.768Z",
-        "session": "019f1710-7bc3-7b83-82a6-98859caf7e75",
-        "sha256": "77145c56b1b0f0e0dae1ed2d870ebfea1de15c1949bd1ce77d7c8cd0d1a4b81c"
-      },
-      {
-        "first_timestamp": "2026-06-30T05:46:42.030Z",
-        "last_timestamp": "2026-06-30T05:51:41.669Z",
-        "session": "019f1710-c1c8-7053-a82e-cfcaedf36b06",
-        "sha256": "393201a57ed734024aaeec4b7224989069a17a7e5e4bf427e64da26897a5412f"
-      },
-      {
-        "first_timestamp": "2026-06-30T06:02:49.668Z",
-        "last_timestamp": "2026-06-30T06:09:01.408Z",
-        "session": "019f171f-856b-73c2-bcf0-eaeb03ebe13f",
-        "sha256": "7fb2d7d124fb0538b1c0acc5299300bfbfbe90311511cabac4d9b1fdc7be5ed9"
-      },
-      {
-        "first_timestamp": "2026-06-30T06:03:23.633Z",
-        "last_timestamp": "2026-06-30T06:08:57.043Z",
-        "session": "019f1720-0a45-7433-b969-549cbe0eef3a",
-        "sha256": "6b59e5bba23bb3cf5c0d3ee77a47247fa6e21d9334eb12066df8e4191fe35075"
-      },
-      {
-        "first_timestamp": "2026-06-30T06:03:52.559Z",
-        "last_timestamp": "2026-06-30T06:10:34.905Z",
-        "session": "019f1720-7b47-7e02-9264-fa47bf835533",
-        "sha256": "8d3a5b45fcaf2a52982b9523e50dd8a3d02a1000eead2afc970f062c10857e3e"
-      },
-      {
-        "first_timestamp": "2026-06-30T06:04:07.712Z",
-        "last_timestamp": "2026-06-30T06:09:20.047Z",
-        "session": "019f1720-b675-7f90-aeaa-1eac22ec8fe9",
-        "sha256": "9e81d42f879af3c04765bb68e02d9c880f338e9184d750293b2ae4508174a245"
-      },
-      {
-        "first_timestamp": "2026-06-30T06:04:24.557Z",
-        "last_timestamp": "2026-06-30T06:08:34.744Z",
-        "session": "019f1720-f83a-7a81-a4d7-eff637d9f066",
-        "sha256": "edbef4b1a286dcba7f339668177f15f7073c88de0f623893aa39b1c9e02d4b81"
-      },
-      {
-        "first_timestamp": "2026-06-30T06:04:39.257Z",
-        "last_timestamp": "2026-06-30T06:07:10.968Z",
-        "session": "019f1721-31af-76c3-9758-d80723eb41ce",
-        "sha256": "56db54653482285957c2821200c0f59e41501970d53c673abb692b13537c0c37"
-      },
-      {
-        "first_timestamp": "2026-06-30T06:16:51.652Z",
-        "last_timestamp": "2026-06-30T06:25:08.621Z",
-        "session": "019f172c-5e83-7bc0-bdba-c9d147e68b8d",
-        "sha256": "9bf024c8d51a877c638851d38171d10b55dc91a0b2fb5b1a2c28769511639bce"
-      },
-      {
-        "first_timestamp": "2026-06-30T06:16:51.701Z",
-        "last_timestamp": "2026-06-30T06:24:44.100Z",
-        "session": "019f172c-5ecc-7931-b316-0b3f1644cda4",
-        "sha256": "a1e546c3097228e65b77144fe0badb08deee2ba58006e85134fc1438f74fbea6"
-      },
-      {
-        "first_timestamp": "2026-06-30T06:16:51.749Z",
-        "last_timestamp": "2026-06-30T06:24:20.855Z",
-        "session": "019f172c-5f03-7162-bc8b-71a3fd5324aa",
-        "sha256": "9bbb311a1666f8bf892c34309d2134e6f591455dac19e1b3a0a937ca5394fdaf"
-      },
-      {
-        "first_timestamp": "2026-06-30T06:16:51.798Z",
-        "last_timestamp": "2026-06-30T06:25:47.856Z",
-        "session": "019f172c-5f2c-7110-a79b-4883a25354fd",
-        "sha256": "9b6c875daa949825c4640375d96a011c280a42bb3d737af43db0ec69cabd8de2"
-      },
-      {
-        "first_timestamp": "2026-06-30T06:16:51.892Z",
-        "last_timestamp": "2026-06-30T06:30:10.777Z",
-        "session": "019f172c-5f63-7841-afea-ffad9fe9aa51",
-        "sha256": "b287c04931a11f89223ca748f133ef0678df2aeb155bf422fb62ae6c9cd71a36"
-      },
-      {
-        "first_timestamp": "2026-06-30T06:35:30.579Z",
-        "last_timestamp": "2026-06-30T06:41:53.027Z",
-        "session": "019f173d-7146-7d81-ac4f-c22695747b81",
-        "sha256": "b5c7f1e0e45253f41d65ee9a38a6f471f2b1e29a11085a01467552484a568afc"
-      },
-      {
-        "first_timestamp": "2026-06-30T06:35:30.627Z",
-        "last_timestamp": "2026-06-30T06:42:19.389Z",
-        "session": "019f173d-719a-7241-95b4-09657843a162",
-        "sha256": "347460d4f28c671cf4d64468e40e2e467e776636573f667fc042c86e0bab19c7"
-      },
-      {
-        "first_timestamp": "2026-06-30T06:35:30.672Z",
-        "last_timestamp": "2026-06-30T06:40:23.432Z",
-        "session": "019f173d-71cc-7042-9a67-e8f67c150407",
-        "sha256": "b4ddd2e2bd771fcd391cd31c1d3cd125d3cd617938ef9855fa39c16118b4179d"
-      },
-      {
-        "first_timestamp": "2026-06-30T06:35:30.717Z",
-        "last_timestamp": "2026-06-30T06:43:13.882Z",
-        "session": "019f173d-71f7-7fd3-aea9-2d38814f2c13",
-        "sha256": "646b771b64445ce033a3549c5ee281d81731fe7ed03f0c6a73449c51dc69c999"
-      },
-      {
-        "first_timestamp": "2026-06-30T06:35:30.764Z",
-        "last_timestamp": "2026-06-30T06:40:25.422Z",
-        "session": "019f173d-7224-7c31-afb2-0d1d54befd71",
-        "sha256": "e1122b41155bdb9ca91de6daa31c63c2931f0ea7738e41d6fef1374c97e4136b"
-      },
-      {
-        "first_timestamp": "2026-06-30T06:48:08.807Z",
-        "last_timestamp": "2026-06-30T06:53:48.097Z",
-        "session": "019f1749-032a-75d2-a3f6-1d3332e9b6eb",
-        "sha256": "e03c2311ea0b2a4d38f0b5a0f1912fd162b9348c2c8c228c864a84c9c1c0ad2c"
-      },
-      {
-        "first_timestamp": "2026-06-30T06:48:57.855Z",
-        "last_timestamp": "2026-06-30T06:58:38.347Z",
-        "session": "019f1749-c2d5-7102-bba9-e6324d88575e",
-        "sha256": "aec288e6ea07d01d0bce1869e8158aba42398432d7c7fcb74f346fd81ddcee2b"
-      },
-      {
-        "first_timestamp": "2026-06-30T06:49:15.899Z",
-        "last_timestamp": "2026-06-30T06:55:14.792Z",
-        "session": "019f174a-0950-7252-8cd6-1c47737db0fc",
-        "sha256": "01059392c2ac7168631e7c7be26217a1694bbe2fd518adf1a3dc2fd536181496"
-      },
-      {
-        "first_timestamp": "2026-06-30T06:49:37.057Z",
-        "last_timestamp": "2026-06-30T06:56:20.924Z",
-        "session": "019f174a-5bf6-7180-96ce-45e24c8e30b4",
-        "sha256": "e525bf9a323ed3258b4041d077d60c7f0fade08d791691d74c4b67dbf120f505"
-      },
-      {
-        "first_timestamp": "2026-06-30T06:54:58.965Z",
-        "last_timestamp": "2026-06-30T07:02:16.019Z",
-        "session": "019f174f-4552-7320-acde-cf259b465419",
-        "sha256": "48ed60f2933676254d0b218b00639cfa33d9e736a7a1b291cd7ad5d19dfcb8d5"
-      },
-      {
-        "first_timestamp": "2026-06-30T07:05:47.608Z",
-        "last_timestamp": "2026-06-30T07:12:11.915Z",
-        "session": "019f1759-2b1b-74c2-a35d-ff082ac308aa",
-        "sha256": "650a633c868bb569161619629b93e9fbba1a661ce1089f0ea3d2a44d533b07a8"
-      },
-      {
-        "first_timestamp": "2026-06-30T07:06:24.122Z",
-        "last_timestamp": "2026-06-30T07:12:06.532Z",
-        "session": "019f1759-b9cf-7c22-b476-31c63de57c00",
-        "sha256": "267f6b16f0ea525aead7f1c0015d951f8085aefb050a58b86b81e8a4d6398d92"
-      },
-      {
-        "first_timestamp": "2026-06-30T07:06:51.360Z",
-        "last_timestamp": "2026-06-30T07:12:46.881Z",
-        "session": "019f175a-2439-7402-81ae-ac642baf289d",
-        "sha256": "93df81f2eeb66257cd6eca80b7d3472dcb21155aad9b135090936ea1656dbafc"
-      },
-      {
-        "first_timestamp": "2026-06-30T07:07:12.868Z",
-        "last_timestamp": "2026-06-30T07:13:11.473Z",
-        "session": "019f175a-783d-7e71-9782-4fffbafdab2b",
-        "sha256": "ffe6d42f7c529306962fcf8b6d0caf41c820f964d887625b35408dc065a9eb5b"
-      },
-      {
-        "first_timestamp": "2026-06-30T07:22:12.527Z",
-        "last_timestamp": "2026-06-30T07:30:30.257Z",
-        "session": "019f1768-3276-7f70-8a08-782d2494239c",
-        "sha256": "838a49da4fcd0cd70c4273b25dba834ad1b010bc7821df630da9698a989a33bb"
-      },
-      {
-        "first_timestamp": "2026-06-30T07:22:27.375Z",
-        "last_timestamp": "2026-06-30T07:30:15.027Z",
-        "session": "019f1768-6c89-7da3-84cd-471604f20801",
-        "sha256": "c8991a75b8cd0f8c51d4fbe0a9909b74e6148d0cf4e9de0f9eddd61a5e350499"
-      },
-      {
-        "first_timestamp": "2026-06-30T07:22:41.364Z",
-        "last_timestamp": "2026-06-30T07:29:42.489Z",
-        "session": "019f1768-a312-7aa0-bca7-9543a8ec0c9a",
-        "sha256": "cefd3d2c3ee43183d2324d1d7040fa678f8afed7b118cb5f1feecbddb9c79e75"
-      },
-      {
-        "first_timestamp": "2026-06-30T07:22:54.519Z",
-        "last_timestamp": "2026-06-30T07:28:24.135Z",
-        "session": "019f1768-d67f-7fc0-8a97-30aed7248b64",
-        "sha256": "9e6df230f19fe6c9bed57241331f97a951126deab99b18b914365b4105ee5568"
-      },
-      {
-        "first_timestamp": "2026-06-30T07:23:08.516Z",
-        "last_timestamp": "2026-06-30T07:29:09.393Z",
-        "session": "019f1769-0d39-71f3-9c4b-ce6158560d9b",
-        "sha256": "ac854e05355f85ddb29497e0759bba8acae25a1ca74dc0ef3343e1d9accb3af2"
-      },
-      {
-        "first_timestamp": "2026-06-30T07:36:39.897Z",
-        "last_timestamp": "2026-06-30T07:44:38.455Z",
-        "session": "019f1775-6e8c-7431-93d2-78acbfcfb707",
-        "sha256": "339fc6f8cbb47228d55a56b0ec7e15c428f609b66897f71b87e8d730e2615e9f"
-      },
-      {
-        "first_timestamp": "2026-06-30T07:36:55.320Z",
-        "last_timestamp": "2026-06-30T07:49:59.137Z",
-        "session": "019f1775-aaeb-76a0-b629-420465a3cd66",
-        "sha256": "e8d03bdfc5aa5f5a658b37f2cc3c23088f1f5060a791f1ee0730cb8eebb291f1"
-      },
-      {
-        "first_timestamp": "2026-06-30T07:37:09.362Z",
-        "last_timestamp": "2026-06-30T07:44:46.165Z",
-        "session": "019f1775-e1ca-7290-88b3-9f07d9af948f",
-        "sha256": "26c07f8c3eef990d971794c54e7ba0d21089a17a6a84ac0015bfe059a3c8632a"
-      },
-      {
-        "first_timestamp": "2026-06-30T07:37:21.764Z",
-        "last_timestamp": "2026-06-30T07:50:06.731Z",
-        "session": "019f1776-1234-70b2-84f7-5fc99c03a1f7",
-        "sha256": "b3fb48574fa7eff0211d65d2bf7faaedcc73e750a1412cc587fc5c196ee9c943"
-      },
-      {
-        "first_timestamp": "2026-06-30T07:37:33.287Z",
-        "last_timestamp": "2026-06-30T07:45:49.191Z",
-        "session": "019f1776-3f3e-7dd0-961c-d40cf969ab05",
-        "sha256": "c42c8c435e52ae8856a26814e6ddaa82a275fdfda266c1ba7e6c6efd4b636bd4"
-      },
-      {
-        "first_timestamp": "2026-06-30T07:52:19.093Z",
-        "last_timestamp": "2026-06-30T07:59:39.233Z",
-        "session": "019f1783-c345-77b3-92fd-883d23fa9c0c",
-        "sha256": "be4b99fe5c5059f1a9d3627fdacb97c7a70179919410fc878b1c38ce35e9669d"
-      },
-      {
-        "first_timestamp": "2026-06-30T07:52:34.614Z",
-        "last_timestamp": "2026-06-30T08:05:35.734Z",
-        "session": "019f1784-000c-7342-8b38-d7f73d79aab1",
-        "sha256": "e051480ffc1fbcebd4983d7be9847594b73e1b64622d5b4e5d8c599d846b0d93"
-      },
-      {
-        "first_timestamp": "2026-06-30T07:52:49.235Z",
-        "last_timestamp": "2026-06-30T08:05:28.583Z",
-        "session": "019f1784-3927-7593-b6ac-c1a295aa4d90",
-        "sha256": "083ae609707506cd09fb8caf47e04ae0de4b0f8496fe14f4b6da981ed1295396"
-      },
-      {
-        "first_timestamp": "2026-06-30T07:53:03.590Z",
-        "last_timestamp": "2026-06-30T08:05:38.108Z",
-        "session": "019f1784-713c-7dc1-8c4b-73ee63e1f295",
-        "sha256": "05cb9179af758e0b7459a40c25bc59748ae5815aa1c869b174d783cf1430bc2e"
-      },
-      {
-        "first_timestamp": "2026-06-30T07:53:20.641Z",
-        "last_timestamp": "2026-06-30T08:05:36.142Z",
-        "session": "019f1784-b3d5-7fe3-8980-cda8afd7649c",
-        "sha256": "8d5272bf3827d1e9b169c4053b85a3a4851c58367aff1c0c5f8db5365e11822d"
-      },
-      {
-        "first_timestamp": "2026-06-30T08:17:23.069Z",
-        "last_timestamp": "2026-06-30T08:28:18.037Z",
-        "session": "019f179a-b628-7db0-accd-4b4cec435070",
-        "sha256": "1cedab403aad439c8fb2e4fca0489d034dc44f8270e9c6a446f87283c3ae6384"
-      },
-      {
-        "first_timestamp": "2026-06-30T08:17:38.629Z",
-        "last_timestamp": "2026-06-30T08:28:34.869Z",
-        "session": "019f179a-f31c-7860-b750-8c77a4cf8562",
-        "sha256": "2c49ee4ca8d6b04f4709cec6add96527472df018ee191a38c797cfb96cbeb607"
-      },
-      {
-        "first_timestamp": "2026-06-30T08:17:53.356Z",
-        "last_timestamp": "2026-06-30T08:28:59.310Z",
-        "session": "019f179b-2c98-7323-ac4d-6f62581640f3",
-        "sha256": "e141d2ff042abbf33039d4630234663dd9c12259c1191c2771d93caf7a6516d4"
-      },
-      {
-        "first_timestamp": "2026-06-30T08:18:09.760Z",
-        "last_timestamp": "2026-06-30T08:27:43.592Z",
-        "session": "019f179b-6cb5-76d3-acc4-594b55ebfd2d",
-        "sha256": "0d06400cd02c831097c9c7d83cf10a51bc7663754518e7b8cd83a6db1b7b5bbb"
-      },
-      {
-        "first_timestamp": "2026-06-30T08:33:33.346Z",
-        "last_timestamp": "2026-06-30T08:33:35.588Z",
-        "session": "019f17a9-8448-77d2-a10a-30e0d72532d8",
-        "sha256": "c8628cd255749ccf8c809d661b481234755be578b7babd65cc61b4bb1047c332"
-      },
-      {
-        "first_timestamp": "2026-06-30T08:33:47.800Z",
-        "last_timestamp": "2026-06-30T08:33:49.544Z",
-        "session": "019f17a9-bcf0-7b60-9873-ba78c07a6641",
-        "sha256": "2cd6ff7afe285b052f3424a17ea9ab1ee5390e62badc61076d5505545d15ffb3"
-      },
-      {
-        "first_timestamp": "2026-06-30T11:22:22.099Z",
-        "last_timestamp": "2026-06-30T11:33:27.505Z",
-        "session": "019f1844-11b8-7ed3-8eab-8982c528591e",
-        "sha256": "5ecd80625dd959248f0de9c842f7a57af329bca38a242007eeef83e2f776b8eb"
-      },
-      {
-        "first_timestamp": "2026-06-30T11:32:54.469Z",
-        "last_timestamp": "2026-06-30T11:47:49.145Z",
-        "session": "019f184d-b7fa-7390-80bd-7e6809ddd367",
-        "sha256": "04f0f45247d87c11785ac9b56ef5f4d031dbd3550531a81e667d841c9375f5a8"
-      },
-      {
-        "first_timestamp": "2026-06-30T11:58:37.466Z",
-        "last_timestamp": "2026-06-30T12:04:16.862Z",
-        "session": "019f1865-4345-7da2-b224-3491b186a92a",
-        "sha256": "7e64d8472993eb8bd0f688df329858a95ac2577a5abbd072f1cfbab52ce7d4f0"
-      },
-      {
-        "first_timestamp": "2026-06-30T12:01:20.036Z",
-        "last_timestamp": "2026-06-30T12:06:48.610Z",
-        "session": "019f1867-be77-7dd2-8b8d-14ebdac78477",
-        "sha256": "2a6261539a15f5830ece4bfada2b21fd26e50d6f8ec39eec3b59f433237fb231"
-      },
-      {
-        "first_timestamp": "2026-06-30T12:03:46.926Z",
-        "last_timestamp": "2026-06-30T12:09:46.961Z",
-        "session": "019f1869-fc25-7d41-a7c2-8adcd7a110d2",
-        "sha256": "711a167fba332b6677142e232a667de781ec0ad79c9e7e4da1aa594c3ae770d3"
-      },
-      {
-        "first_timestamp": "2026-06-30T12:22:44.615Z",
-        "last_timestamp": "2026-06-30T12:28:17.556Z",
-        "session": "019f187b-582c-7732-8c9d-1da25e25092a",
-        "sha256": "4e0626c05bed2285eaacd1b6f1eca4e85856344de66dcfc4817cf2914d4b2cfa"
-      },
-      {
-        "first_timestamp": "2026-06-30T12:22:44.671Z",
-        "last_timestamp": "2026-06-30T12:31:03.843Z",
-        "session": "019f187b-5899-7f80-ab98-2c2e20830a37",
-        "sha256": "7316150267fbe88026c54fd66e6d235f295ef59390b36881e99b0335945732d9"
-      },
-      {
-        "first_timestamp": "2026-06-30T12:22:44.722Z",
-        "last_timestamp": "2026-06-30T12:29:05.035Z",
-        "session": "019f187b-58ca-7c42-b233-dcf52ad83ebe",
-        "sha256": "5a6d5f6cf664ccd7ca9482c01297ace62947aa391fc897f5c0325dfdbb28c325"
-      },
-      {
-        "first_timestamp": "2026-06-30T12:22:44.770Z",
-        "last_timestamp": "2026-06-30T12:27:39.319Z",
-        "session": "019f187b-58f8-7862-ae72-151f4d9e0804",
-        "sha256": "324309f7a0f17ea64bab85271cd98325ea4a1edfff83ec2b506a86bc31af09b7"
-      },
-      {
-        "first_timestamp": "2026-06-30T12:28:07.733Z",
-        "last_timestamp": "2026-06-30T12:38:48.607Z",
-        "session": "019f1880-4673-7652-825e-9e6d07e11092",
-        "sha256": "0e18c196dffc4cc3184377bf5833a6f564eec33e12f80ee520a5780bc70273d3"
-      },
-      {
-        "first_timestamp": "2026-06-30T12:39:31.252Z",
-        "last_timestamp": "2026-06-30T12:43:07.011Z",
-        "session": "019f188a-b467-7362-afeb-9e495ae2a964",
-        "sha256": "43284d5ac5d7f251c20f4fc66f2f7b8f410ad46c5f6b14ce8325424c3422f6d0"
-      },
-      {
-        "first_timestamp": "2026-06-30T12:39:31.312Z",
-        "last_timestamp": "2026-06-30T12:47:21.673Z",
-        "session": "019f188a-b4ce-7912-b223-78453f3e67c7",
-        "sha256": "320c13ebe32c7a54960acfd9b771f9b4b7b9a6b067de9e14c902d124841d4633"
-      },
-      {
-        "first_timestamp": "2026-06-30T12:39:31.354Z",
-        "last_timestamp": "2026-06-30T12:47:09.643Z",
-        "session": "019f188a-b4f9-7233-9530-9f278d53cb76",
-        "sha256": "64c389b19cdf27c1e31ba516bf61a1ac513a2f6c95e2308bb16be214a5057ffe"
-      },
-      {
-        "first_timestamp": "2026-06-30T12:39:31.397Z",
-        "last_timestamp": "2026-06-30T12:45:50.882Z",
-        "session": "019f188a-b522-7953-a764-ac03c31b4bdc",
-        "sha256": "9933b9d6611bd923625db259d1f0d9423901cbefd52ee63dc4f69e4ee7f64327"
-      },
-      {
-        "first_timestamp": "2026-06-30T12:43:30.684Z",
-        "last_timestamp": "2026-06-30T12:48:56.816Z",
-        "session": "019f188e-5bbe-7183-8de8-528115f2e66d",
-        "sha256": "54ff65e2432948a4981008e742287295bfa90f4adcca6381f9413d1ccb993647"
-      },
-      {
-        "first_timestamp": "2026-06-30T13:31:08.198Z",
-        "last_timestamp": "2026-06-30T13:37:13.430Z",
-        "session": "019f18b9-f5cd-7431-bca6-6874609be7a6",
-        "sha256": "0ba6c26c53d3d4d947e4f9dc0e7277700f4de0ddd4e42d3034bbe98586f26884"
-      },
-      {
-        "first_timestamp": "2026-06-30T13:32:00.231Z",
-        "last_timestamp": "2026-06-30T13:36:53.897Z",
-        "session": "019f18ba-c140-7653-99f8-9e6baec860ff",
-        "sha256": "d96a80f2b5bef4c410e3932069274aadc68fee77c44c02ecd30781298445a484"
-      },
-      {
-        "first_timestamp": "2026-06-30T13:32:14.300Z",
-        "last_timestamp": "2026-06-30T13:37:41.403Z",
-        "session": "019f18ba-f836-7183-8a42-a4e6ecc04752",
-        "sha256": "598bda369a68d794e6e6f6b66efccc1ce6813661323ce96838d9a090c3a87fb1"
-      },
-      {
-        "first_timestamp": "2026-06-30T13:50:27.284Z",
-        "last_timestamp": "2026-06-30T13:54:40.230Z",
-        "session": "019f18cb-a580-7fb1-9de8-7253ebdf24b1",
-        "sha256": "5ebbe435e061066d5c25dd7e2825211ca50910d4f05f53d88578cf47e2586cb6"
-      },
-      {
-        "first_timestamp": "2026-06-30T13:50:27.336Z",
-        "last_timestamp": "2026-06-30T13:56:05.999Z",
-        "session": "019f18cb-a5e0-7830-a774-3394edda9daf",
-        "sha256": "db454d7594e2c3d0960bbe1ec37f49721a9beec851d0bedafdb0a4b9f899ab78"
-      },
-      {
-        "first_timestamp": "2026-06-30T13:50:27.381Z",
-        "last_timestamp": "2026-06-30T13:56:10.103Z",
-        "session": "019f18cb-a615-70f3-8728-0e6ae58d6c51",
-        "sha256": "a7feac32eeb963f2a6bff31747d7801f4360105d0aa2af050172eaa77aea1d21"
-      },
-      {
-        "first_timestamp": "2026-06-30T14:05:50.213Z",
-        "last_timestamp": "2026-06-30T14:10:31.130Z",
-        "session": "019f18d9-baaf-7322-868d-ce24bec6ef4c",
-        "sha256": "a4720e67a580792ffe89b6f8fe198f5573b4d2cc3812045f8d55aafe9f845ca2"
-      },
-      {
-        "first_timestamp": "2026-06-30T14:06:04.029Z",
-        "last_timestamp": "2026-06-30T14:11:52.275Z",
-        "session": "019f18d9-f0d7-7790-974f-2af8b9200cf2",
-        "sha256": "da51f073ca320fd500e2a78bb200a3ba4192e1c1d04eefff825129ac53bc8a84"
-      },
-      {
-        "first_timestamp": "2026-06-30T14:06:25.675Z",
-        "last_timestamp": "2026-06-30T14:13:06.749Z",
-        "session": "019f18da-4542-7892-8784-5606c14a5427",
-        "sha256": "a829ba031554516b7bc504e51b70a87c25e1ad1d95e4abe1b16dca0d606fb84a"
-      },
-      {
-        "first_timestamp": "2026-06-30T14:06:37.897Z",
-        "last_timestamp": "2026-06-30T14:10:32.646Z",
-        "session": "019f18da-7521-7e12-ae49-926d5b131ba2",
-        "sha256": "89234f910590ba68c43501d1f90f06bc28b194e0117e0c9b10a8c02b8ec6be8a"
-      },
-      {
-        "first_timestamp": "2026-06-30T14:17:37.381Z",
-        "last_timestamp": "2026-06-30T14:21:40.472Z",
-        "session": "019f18e4-8523-7803-90f4-4f3122f5e5cc",
-        "sha256": "ce20a47cb60a347ccad04deebbb09987af3e7264919dfcfcd98d3f04d0e9a3e7"
-      },
-      {
-        "first_timestamp": "2026-06-30T14:17:50.114Z",
-        "last_timestamp": "2026-06-30T14:23:48.963Z",
-        "session": "019f18e4-b6f6-72b2-a8b0-ab2c1a4ad9ae",
-        "sha256": "020f6c2bda31c673c4e725cc9029c17068ea315e1f12f0748a3858be8610f9dd"
-      },
-      {
-        "first_timestamp": "2026-06-30T14:18:24.915Z",
-        "last_timestamp": "2026-06-30T14:22:26.240Z",
-        "session": "019f18e5-3ee3-7bf1-9169-095dfda15b82",
-        "sha256": "a46a7f0887052581e9083502126379a55731e6e25cc24ba268eb2b98e9b746f1"
-      },
-      {
-        "first_timestamp": "2026-06-30T14:18:39.258Z",
-        "last_timestamp": "2026-06-30T14:25:33.792Z",
-        "session": "019f18e5-76f3-7ff2-9578-86df5f934b5c",
-        "sha256": "0eb67bb4f74ef0e7aea086e8310eba8fe41414a6f0a404611c0790a0dff04dd8"
-      },
-      {
-        "first_timestamp": "2026-06-30T14:22:01.594Z",
-        "last_timestamp": "2026-06-30T14:27:18.678Z",
-        "session": "019f18e8-8d36-7ed0-bd7c-29bb46d803bd",
-        "sha256": "45c8cd4ac4ed6de779f5ee50dc57e8c3e6252359ea6d5076c80469a6e1c4467f"
-      },
-      {
-        "first_timestamp": "2026-06-30T14:22:45.651Z",
-        "last_timestamp": "2026-06-30T14:28:06.987Z",
-        "session": "019f18e9-3967-7c83-a451-26ddacf1590f",
-        "sha256": "27ea9306427cd4067b7142423c9c350d8a8a022f522d661613e6ddba88b278b3"
-      },
-      {
-        "first_timestamp": "2026-06-30T14:24:07.671Z",
-        "last_timestamp": "2026-06-30T14:28:12.450Z",
-        "session": "019f18ea-79cd-7b80-952a-d37c73007f86",
-        "sha256": "a4b2f5245a4b592169e5ef543456f5241e14ab69e54b5120ddd54a0135313728"
-      },
-      {
-        "first_timestamp": "2026-06-30T14:25:52.944Z",
-        "last_timestamp": "2026-06-30T14:31:06.530Z",
-        "session": "019f18ec-14f1-7101-81c4-dc360204a089",
-        "sha256": "f3dfff57f6bc51272c6c3c88335955d96c8fbb6d0520ba83cc82ff42e0d2c439"
-      },
-      {
-        "first_timestamp": "2026-06-30T14:37:56.122Z",
-        "last_timestamp": "2026-06-30T14:44:50.704Z",
-        "session": "019f18f7-1dd5-7362-8a9d-bfefdf9178cf",
-        "sha256": "7a8a8f4f0e782025120baeaee7386b6047303970ca9adcdd9524cedb3ed5736c"
-      },
-      {
-        "first_timestamp": "2026-06-30T14:38:09.575Z",
-        "last_timestamp": "2026-06-30T14:43:36.432Z",
-        "session": "019f18f7-5279-7330-8e4d-28495a530864",
-        "sha256": "346616e37b841786b2276cb827b5d122a74360fca3dcf3bd7384fb7d620e9a5c"
-      },
-      {
-        "first_timestamp": "2026-06-30T14:38:23.067Z",
-        "last_timestamp": "2026-06-30T14:44:09.804Z",
-        "session": "019f18f7-8730-7c52-8bba-4b59e833f55e",
-        "sha256": "be8e46e035e9f35cc4a8d077b401bff191c12d21169f55dd8be407eda8d45602"
-      },
-      {
-        "first_timestamp": "2026-06-30T14:38:37.715Z",
-        "last_timestamp": "2026-06-30T14:46:03.063Z",
-        "session": "019f18f7-c068-76e0-b838-b67449636705",
-        "sha256": "0e70ac73180145b6e116ab7646f62fa9ec1fd4b639f9df79bb23584ff650be22"
-      },
-      {
-        "first_timestamp": "2026-06-30T14:53:43.015Z",
-        "last_timestamp": "2026-06-30T14:58:05.319Z",
-        "session": "019f1905-909c-77d0-83ff-5b9bedad7fe6",
-        "sha256": "0e1ed0b1947f6b5e2758775e7ff37959f1236e6fb5906fc51a3bc4c3bcf5d644"
-      },
-      {
-        "first_timestamp": "2026-06-30T14:53:57.331Z",
-        "last_timestamp": "2026-06-30T15:03:15.161Z",
-        "session": "019f1905-c8ab-7a90-95d3-f31a091cbe31",
-        "sha256": "7d17e82fd87694abaea22983f42dbcee89256a14a01894f988a58ea4359e8136"
-      },
-      {
-        "first_timestamp": "2026-06-30T14:54:10.260Z",
-        "last_timestamp": "2026-06-30T14:59:04.286Z",
-        "session": "019f1905-fb2e-73e0-9716-44098fae0ca2",
-        "sha256": "c36e6817e372344aaa196ab4b0df3439b393cda2af13a9b187960aa41c1e85de"
-      },
-      {
-        "first_timestamp": "2026-06-30T14:54:23.610Z",
-        "last_timestamp": "2026-06-30T15:00:00.586Z",
-        "session": "019f1906-2f52-74a0-b905-d63168748396",
-        "sha256": "6300dc9595acf14d2ae405698cb49be36c7c329debfe0f81cf2702a56f0d6d3f"
-      },
-      {
-        "first_timestamp": "2026-06-30T15:42:47.217Z",
-        "last_timestamp": "2026-06-30T15:49:47.355Z",
-        "session": "019f1932-7d54-7f52-b39c-0625edabedd2",
-        "sha256": "1c937b589cbb26578233aafb1d48cf878f9935f6c3f61be725bbf2754853dec7"
-      },
-      {
-        "first_timestamp": "2026-06-30T15:43:03.389Z",
-        "last_timestamp": "2026-06-30T15:49:31.882Z",
-        "session": "019f1932-bcb3-71c2-ba81-85e8a7c07979",
-        "sha256": "1db8712eded3686f0ecd76f1fb2217b9f700662997704eaaf6c6f428703167a3"
-      },
-      {
-        "first_timestamp": "2026-06-30T15:43:34.598Z",
-        "last_timestamp": "2026-06-30T15:54:02.043Z",
-        "session": "019f1933-3695-7131-9429-2a9918ddcca4",
-        "sha256": "271d3ec0088745fcb0b767faa3dc25b37c930c20ad770ecf75bd6690e279e8bb"
-      },
-      {
-        "first_timestamp": "2026-06-30T15:43:48.578Z",
-        "last_timestamp": "2026-06-30T15:48:49.843Z",
-        "session": "019f1933-6d33-77d2-ae78-4642fbc25851",
-        "sha256": "48551ebfa2f89d5313c7487e61c4d71b2f73310061fce5cee165149a256c41a6"
-      },
-      {
-        "first_timestamp": "2026-06-30T15:54:20.480Z",
-        "last_timestamp": "2026-06-30T16:02:57.160Z",
-        "session": "019f193d-118d-7363-84be-b7db59d6ea2a",
-        "sha256": "0873e137a90903f4fe213594c74ff517a694b3aae6247a47aa234356cc0a8ce3"
-      },
-      {
-        "first_timestamp": "2026-06-30T15:58:08.452Z",
-        "last_timestamp": "2026-06-30T16:03:49.974Z",
-        "session": "019f1940-8be1-7233-a1ed-a3cbff43af7e",
-        "sha256": "2ce685a2c1b551f60cbee6f6381a3afebdfc53c8b473f3cc28c9d6af5962ccf2"
-      },
-      {
-        "first_timestamp": "2026-06-30T15:58:21.596Z",
-        "last_timestamp": "2026-06-30T16:06:28.419Z",
-        "session": "019f1940-bf72-7d42-b6cd-edaf06bf0bb2",
-        "sha256": "a890fde8fc0f332db0e1acfb0e1ffba44821243f95afd290b3aec7606f45e7c9"
-      },
-      {
-        "first_timestamp": "2026-06-30T15:58:32.992Z",
-        "last_timestamp": "2026-06-30T16:04:56.881Z",
-        "session": "019f1940-ebf8-7bf0-a3f4-e21d0f66b7dd",
-        "sha256": "b7dba835e0a873624b2b62a45936c16c8b69fae8bdf802ec2c771ed5560d4499"
-      },
-      {
-        "first_timestamp": "2026-06-30T16:11:13.367Z",
-        "last_timestamp": "2026-06-30T16:18:22.021Z",
-        "session": "019f194c-861a-7b82-b458-d777d6c6297a",
-        "sha256": "fa862b00038fbb345ffadcf6e9a87892f0c4486baf1be5272b5d390473bfd3d0"
-      },
-      {
-        "first_timestamp": "2026-06-30T16:11:25.611Z",
-        "last_timestamp": "2026-06-30T16:19:28.384Z",
-        "session": "019f194c-b5fa-7cf0-ba12-4bd90ee206af",
-        "sha256": "78fad916e62bbebdf615c1020f3df36ba01c9b50b97dddb4362ef9f4353b5bb8"
-      },
-      {
-        "first_timestamp": "2026-06-30T16:11:38.018Z",
-        "last_timestamp": "2026-06-30T16:19:50.126Z",
-        "session": "019f194c-e675-7580-8462-1b98343dae6d",
-        "sha256": "2ab3f4f5f238a5570d296267f2f49d0e9d5a3d88356dd08637fcaf629c7507b5"
-      },
-      {
-        "first_timestamp": "2026-06-30T16:11:51.695Z",
-        "last_timestamp": "2026-06-30T16:17:07.024Z",
-        "session": "019f194d-1bdd-79e3-859f-e15c03f866d4",
-        "sha256": "eb85fa002ea9f8c612f784a2722a69208772d47ccd6cd4355c05fd30dec358b7"
-      },
-      {
-        "first_timestamp": "2026-06-30T16:24:52.607Z",
-        "last_timestamp": "2026-06-30T16:30:05.657Z",
-        "session": "019f1959-063d-7ca2-a783-ccd528017d4b",
-        "sha256": "f613d6de164c38f6ecb9829ca5b61f21290f41b79556f0676611680b1af04bc4"
-      },
-      {
-        "first_timestamp": "2026-06-30T16:25:05.029Z",
-        "last_timestamp": "2026-06-30T16:30:18.115Z",
-        "session": "019f1959-36d7-7d30-8427-342b8f138f70",
-        "sha256": "f84643575bc52c97e13acb264a493b3292d22ea4ca2f90125a051c0cef9d90fb"
-      },
-      {
-        "first_timestamp": "2026-06-30T16:25:51.228Z",
-        "last_timestamp": "2026-06-30T16:34:37.582Z",
-        "session": "019f1959-eb55-7a32-a580-94ddaa084034",
-        "sha256": "8d6ef28a478604a174bf1906265c816152f65503f53802a4c1516032e28716e9"
-      },
-      {
-        "first_timestamp": "2026-06-30T16:26:04.079Z",
-        "last_timestamp": "2026-06-30T16:32:48.389Z",
-        "session": "019f195a-1d7d-7532-ab52-27ef7264e3b2",
-        "sha256": "49595a6d0fcf887b36ee7d300d982f3022ae2d65f8a075e249ffa1b247abf8d9"
-      },
-      {
-        "first_timestamp": "2026-06-30T16:38:58.536Z",
-        "last_timestamp": "2026-06-30T16:44:38.108Z",
-        "session": "019f1965-ee86-78b0-a19f-85220fc06863",
-        "sha256": "d759fd5c3891726a33748ef4c0c436c7c2a738b71c375b241b3d77cda43152cf"
-      },
-      {
-        "first_timestamp": "2026-06-30T16:39:12.164Z",
-        "last_timestamp": "2026-06-30T16:44:16.571Z",
-        "session": "019f1966-23f0-7290-8581-3f019765d5e5",
-        "sha256": "9f3b45aa0d386730280a11f59a51e1538b44c754fa0235c5da24104019bd8d9e"
-      },
-      {
-        "first_timestamp": "2026-06-30T16:39:31.422Z",
-        "last_timestamp": "2026-06-30T16:47:59.664Z",
-        "session": "019f1966-6f2a-7630-b6be-7a5d0627d9ca",
-        "sha256": "0fc2adef083547ae420bd99fc43ff1bf511094b6bae25a584b8a345b01360596"
-      },
-      {
-        "first_timestamp": "2026-06-30T16:39:48.345Z",
-        "last_timestamp": "2026-06-30T16:44:40.917Z",
-        "session": "019f1966-b143-7041-ac92-1c8079abb8ab",
-        "sha256": "bf0e9684eea8590e95897e9bffc2c846ebefe095fd2da45328eca83036c51644"
-      },
-      {
-        "first_timestamp": "2026-06-30T16:51:51.368Z",
-        "last_timestamp": "2026-06-30T16:59:06.716Z",
-        "session": "019f1971-b977-72e0-a3f0-6f1aba9130e4",
-        "sha256": "54faed3e637107ee5a295a104b426655f0e8803fcc5f72f152d318776c64c9e8"
-      },
-      {
-        "first_timestamp": "2026-06-30T16:52:04.481Z",
-        "last_timestamp": "2026-06-30T16:59:11.047Z",
-        "session": "019f1971-eccd-7da2-b494-e0b653a51302",
-        "sha256": "6115b97230ffc4fb5d8ea9699016de1c1bda544ec21fc8fafe56bb8241966c5c"
-      },
-      {
-        "first_timestamp": "2026-06-30T16:52:21.936Z",
-        "last_timestamp": "2026-06-30T16:58:21.022Z",
-        "session": "019f1972-30f8-7143-8703-e41050feaa02",
-        "sha256": "b43c10d844035eb640d82db6a10fe6e269bbdae45086669b217b1b5fb410170e"
-      },
-      {
-        "first_timestamp": "2026-06-30T16:52:36.456Z",
-        "last_timestamp": "2026-06-30T16:59:32.327Z",
-        "session": "019f1972-69af-7a20-a0f3-543c0b031f23",
-        "sha256": "1fb0fb22ac3aa9c4ed7aba78b83cd378e102cbd89706f66cecdd7e62eb193e30"
-      },
-      {
-        "first_timestamp": "2026-06-30T17:09:55.216Z",
-        "last_timestamp": "2026-06-30T17:16:44.464Z",
-        "session": "019f1982-432f-7610-92d0-5837ca19f18b",
-        "sha256": "6b6d18d545067c4b45b560a0b149a8ca616c7e64ba022985e8aaad39618fae88"
-      },
-      {
-        "first_timestamp": "2026-06-30T17:10:07.984Z",
-        "last_timestamp": "2026-06-30T17:15:53.698Z",
-        "session": "019f1982-7537-7441-86df-8cf886d132bf",
-        "sha256": "4960f1365fcb71bd48657d7b1ed60e4bb8592dd2dac03cb629f9db5dbf2c2bb2"
-      },
-      {
-        "first_timestamp": "2026-06-30T17:10:51.007Z",
-        "last_timestamp": "2026-06-30T17:19:05.281Z",
-        "session": "019f1983-1d44-7413-a381-7be286b77378",
-        "sha256": "5b3677b3ed414ce8a0779529aa1c7bcc7c25e0b5bd1600716b01e6c9c83aca0c"
-      },
-      {
-        "first_timestamp": "2026-06-30T17:11:05.413Z",
-        "last_timestamp": "2026-06-30T17:18:19.022Z",
-        "session": "019f1983-558e-7721-b467-41d063fe3c60",
-        "sha256": "b85a829cc4c3f2d1eafc8f2064104007a65cef24ba9ef0e07255dde56ad4cefa"
-      },
-      {
-        "first_timestamp": "2026-06-30T17:25:15.941Z",
-        "last_timestamp": "2026-06-30T17:32:27.756Z",
-        "session": "019f1990-4fbd-71f3-b155-e1b8d52f8c15",
-        "sha256": "8d427cffbddd62dc5ce2db13abf80a8b67a89066ba8c47fa65f89c1023576024"
-      },
-      {
-        "first_timestamp": "2026-06-30T17:25:31.387Z",
-        "last_timestamp": "2026-06-30T17:31:11.954Z",
-        "session": "019f1990-8c45-7441-9a5a-f4dfa9f5f4b9",
-        "sha256": "47717b82d3c359a4262c74eff1a13a37839a865a0e98768cf11512b2cb32fe66"
-      },
-      {
-        "first_timestamp": "2026-06-30T17:25:49.773Z",
-        "last_timestamp": "2026-06-30T17:35:51.787Z",
-        "session": "019f1990-d41a-7c72-b599-79e3fe6e55d3",
-        "sha256": "064d446c91b773506557dbde79b034550ac2c05dcdcf39ffa32217942273f013"
-      },
-      {
-        "first_timestamp": "2026-06-30T17:26:07.711Z",
-        "last_timestamp": "2026-06-30T17:32:51.934Z",
-        "session": "019f1991-1a2c-7bc2-9b3e-15d6dcc1f361",
-        "sha256": "4c5cdf415e06ad20a00fff1d3af4414668662e413617f9131aa8c56f446f862b"
-      },
-      {
-        "first_timestamp": "2026-06-30T17:40:44.590Z",
-        "last_timestamp": "2026-06-30T17:50:24.604Z",
-        "session": "019f199e-7b5a-7d72-8025-db77dcd259a6",
-        "sha256": "bbfcf2b4a42cfb12e9215224213f748a85597dea6fcf41e5a0abd93798409602"
-      },
-      {
-        "first_timestamp": "2026-06-30T17:40:44.645Z",
-        "last_timestamp": "2026-06-30T17:46:48.759Z",
-        "session": "019f199e-7bb7-7c73-88b6-63425ad7d14f",
-        "sha256": "0e2aa0b4811712557f790a55c0d9ede45aabcb7a844127c7c307f22dc1342414"
-      },
-      {
-        "first_timestamp": "2026-06-30T17:41:20.352Z",
-        "last_timestamp": "2026-06-30T17:46:53.554Z",
-        "session": "019f199f-072d-7453-b8e5-d121b3b3e9d4",
-        "sha256": "f6503a4184470a702b45b4fb24b653270a0682b17c4c39a11ec7f61e111ee708"
-      },
-      {
-        "first_timestamp": "2026-06-30T17:41:20.413Z",
-        "last_timestamp": "2026-06-30T17:47:12.094Z",
-        "session": "019f199f-0770-7472-8dca-6f0772ebece5",
-        "sha256": "29f8d04b7955065622ced0ce24946a10d4ffa524216238990305b9a9e74f00b5"
-      },
-      {
-        "first_timestamp": "2026-06-30T18:09:38.539Z",
-        "last_timestamp": "2026-06-30T18:16:18.882Z",
-        "session": "019f19b8-f0a4-7221-b5db-3c0620d28629",
-        "sha256": "3e8010e59bdcc5261ce94cb3ebfc2baf3f29bde8448e17115ed26ec08f188a09"
-      },
-      {
-        "first_timestamp": "2026-06-30T18:09:38.601Z",
-        "last_timestamp": "2026-06-30T18:16:16.507Z",
-        "session": "019f19b8-f0f9-7ab0-8413-afd2bb6aade8",
-        "sha256": "42f49d8702e52572b63e960056f6bf03b47eb5b0717236cf006ba0baba6d103c"
-      },
-      {
-        "first_timestamp": "2026-06-30T18:09:38.651Z",
-        "last_timestamp": "2026-06-30T18:17:46.808Z",
-        "session": "019f19b8-f139-7611-8846-18bbd969f298",
-        "sha256": "6fffeaab90994c5c07d40f6e8054f21bd98c791b3ac76c88daf8ab2d2eae79d6"
-      },
-      {
-        "first_timestamp": "2026-06-30T18:09:38.693Z",
-        "last_timestamp": "2026-06-30T18:17:22.951Z",
-        "session": "019f19b8-f163-74d1-8a64-22902fad5634",
-        "sha256": "ff77b9847d4b7892150d0b4c6bff6e2d255b0bb236ebd65e2c5e3d421d22b13d"
-      },
-      {
-        "first_timestamp": "2026-07-09T22:07:53.940Z",
-        "last_timestamp": "2026-07-19T17:27:31.335Z",
-        "session": "019f48eb-a1df-7392-a794-944e158642b3",
-        "sha256": "716ede97aadb9359b662fd785bb0d568999a0cc10fc577b0122f2053e123d3f6"
-      },
-      {
-        "first_timestamp": "2026-07-09T22:08:12.114Z",
-        "last_timestamp": "2026-07-09T22:46:56.843Z",
-        "session": "019f48ec-9515-7202-b65d-af469e3c3165",
-        "sha256": "821aa66e89a4dc941a12cd92da4b0dde6110cd8a5c43d195493e8f407a5505c2"
-      },
-      {
-        "first_timestamp": "2026-07-09T22:08:15.598Z",
-        "last_timestamp": "2026-07-10T00:24:14.561Z",
-        "session": "019f48ec-a2bb-70f1-9360-e39900288be1",
-        "sha256": "fc206296fc1e60f92a3f23e180315281a5ceda2130b9b6fdabb8bdf96d81ad19"
-      },
-      {
-        "first_timestamp": "2026-07-09T22:08:19.314Z",
-        "last_timestamp": "2026-07-09T22:45:51.594Z",
-        "session": "019f48ec-b148-7170-8024-f44adc4c3dc8",
-        "sha256": "dfb59c054f968dd355e46a916eb2eeb1649811eeb5a717309adebce79f13757e"
-      },
-      {
-        "first_timestamp": "2026-07-09T22:46:16.807Z",
-        "last_timestamp": "2026-07-09T23:08:03.117Z",
-        "session": "019f490f-71a5-7aa3-80ad-5825ed6e1375",
-        "sha256": "0968c53450196eade83be7ddf9814c4dadef6c72e25e35b99298d214455d37f8"
-      },
-      {
-        "first_timestamp": "2026-07-09T22:53:04.187Z",
-        "last_timestamp": "2026-07-09T23:00:06.937Z",
-        "session": "019f4915-a8dc-7262-b54a-ab058db35ca2",
-        "sha256": "64207d846b2128d8f23c3ad3e4b9c4a14811ff973c298f143ec498971358e455"
-      },
-      {
-        "first_timestamp": "2026-07-09T23:07:46.243Z",
-        "last_timestamp": "2026-07-09T23:28:48.979Z",
-        "session": "019f4923-1e7e-79c2-8df7-1906207977f6",
-        "sha256": "c24d088f38e7f31ff2982bb171a1c80b683bcc6e9a362c7137828e53f472405a"
-      },
-      {
-        "first_timestamp": "2026-07-09T23:08:32.060Z",
-        "last_timestamp": "2026-07-09T23:13:06.008Z",
-        "session": "019f4923-d195-7c01-bb2b-b15fc446fbcd",
-        "sha256": "7e718596588a53e65a979124e64525e1735e68384c33902bb9db5e0d039c512c"
-      },
-      {
-        "first_timestamp": "2026-07-09T23:13:17.207Z",
-        "last_timestamp": "2026-07-10T00:09:36.713Z",
-        "session": "019f4928-2b6d-7501-a4bf-7bbf887f32e9",
-        "sha256": "1238eddc81e4636cb7a64b9c5be3118faee7468e6eebf8e8b0f891b20f5fa9fc"
-      },
-      {
-        "first_timestamp": "2026-07-09T23:28:59.445Z",
-        "last_timestamp": "2026-07-09T23:35:43.992Z",
-        "session": "019f4936-8bf4-7ac0-a245-df84ca912cb3",
-        "sha256": "d78f71d9ba1322395430ca4171e78718d8844ec64ddf52949ef0c9b9bd125fb1"
-      },
-      {
-        "first_timestamp": "2026-07-09T23:35:52.267Z",
-        "last_timestamp": "2026-07-09T23:48:51.291Z",
-        "session": "019f493c-d8a1-7883-9a1e-6dc5a01cd6af",
-        "sha256": "ae2b8b35ceaa305cd0ded601fb5744926ec4be1409131aec895f562c80a1585a"
-      },
-      {
-        "first_timestamp": "2026-07-09T23:49:19.603Z",
-        "last_timestamp": "2026-07-10T00:10:07.144Z",
-        "session": "019f4949-2a35-7461-8473-fcd47d0822af",
-        "sha256": "5cef9f6ea215f057f819c7add8d9a017f1f675d4aceaf1e97c616b01bc5cf945"
-      },
-      {
-        "first_timestamp": "2026-07-10T00:10:56.045Z",
-        "last_timestamp": "2026-07-10T00:18:49.855Z",
-        "session": "019f495c-f26b-7ba2-b68a-5c0ac0ba6dde",
-        "sha256": "8d38fb97c78448f6c56c7f856a6f5bb0abc22f3bf94d5681e1b045d8816e813f"
-      },
-      {
-        "first_timestamp": "2026-07-10T00:19:00.298Z",
-        "last_timestamp": "2026-07-10T00:24:14.573Z",
-        "session": "019f4964-561a-7231-bd99-1555e0e3277c",
-        "sha256": "4cd609176e4c833251c6261d421b725db87e2da49356f16847f4d2b0be0a06d5"
-      },
-      {
-        "first_timestamp": "2026-07-10T00:25:58.718Z",
-        "last_timestamp": "2026-07-10T01:00:56.731Z",
-        "session": "019f496a-b648-79c1-aab5-2a4681fde79e",
-        "sha256": "58927239473223922412a060715f1c25a70a29a9dd21446cb5ec43795e6918d6"
-      },
-      {
-        "first_timestamp": "2026-07-10T00:26:04.537Z",
-        "last_timestamp": "2026-07-10T01:52:42.385Z",
-        "session": "019f496a-cd3b-7203-a4b0-9fc61d54a648",
-        "sha256": "5dcc05e7da38bd67d3e4dbb4205043d4e02c063b3843d5b731c3f3fa408bab74"
-      },
-      {
-        "first_timestamp": "2026-07-10T00:26:10.941Z",
-        "last_timestamp": "2026-07-10T01:31:41.873Z",
-        "session": "019f496a-e63a-7b52-b7b0-7eeb14f12deb",
-        "sha256": "7825650120a4667157b2fb31bcdbcbea44d1784883af009f2c9019e5cba6a3c2"
-      },
-      {
-        "first_timestamp": "2026-07-10T01:38:33.626Z",
-        "last_timestamp": "2026-07-10T02:21:19.134Z",
-        "session": "019f49ad-29b2-7320-9ad4-1cd1aa6c88f4",
-        "sha256": "c18cc83213853b2215921aa2ae405e12e868136f031f026397d09b44c1a58d57"
-      },
-      {
-        "first_timestamp": "2026-07-10T01:38:42.636Z",
-        "last_timestamp": "2026-07-10T01:47:00.859Z",
-        "session": "019f49ad-4d49-7381-817f-0ce5d366804b",
-        "sha256": "ae093111fa3dfb2800b9a93f0801bd9aca0e6bb41aebe36463c6ec20a374adad"
-      },
-      {
-        "first_timestamp": "2026-07-10T01:55:57.633Z",
-        "last_timestamp": "2026-07-10T02:03:18.818Z",
-        "session": "019f49bd-177f-7441-9240-38c29fe57454",
-        "sha256": "1cf225ee93751f02314e2b3f1e3b928951d7d5a7858f6ec6f5f87fbec721663c"
-      },
-      {
-        "first_timestamp": "2026-07-10T01:56:03.368Z",
-        "last_timestamp": "2026-07-10T02:03:49.778Z",
-        "session": "019f49bd-2e12-7662-b13d-9a36e1516e6a",
-        "sha256": "57e79753299cf3c923041376ddac1362897e896ee5041fd11df1d81d042dfd27"
-      },
-      {
-        "first_timestamp": "2026-07-10T02:08:32.902Z",
-        "last_timestamp": "2026-07-10T02:12:54.265Z",
-        "session": "019f49c8-9dab-74a0-921e-8e6b8b3af015",
-        "sha256": "5ae7e7a24eddc6705bafa3fe4b1b75debeb1b13a4901377d9d4ebfe4c062f250"
-      },
-      {
-        "first_timestamp": "2026-07-10T02:08:38.861Z",
-        "last_timestamp": "2026-07-10T02:12:04.701Z",
-        "session": "019f49c8-b4ce-77d1-b687-aa6c5dd14b9d",
-        "sha256": "1df1991a3709769a7707cdcd4afcf98815ee4da00226f01b4795fed497fd35f2"
-      },
-      {
-        "first_timestamp": "2026-07-10T02:16:01.743Z",
-        "last_timestamp": "2026-07-10T02:17:35.264Z",
-        "session": "019f49cf-7708-7ea1-88b8-9c7f058695b0",
-        "sha256": "d09cc9af03b9af04be777bc00e01aaf92915526ac27a72103ac1ae1174ab4584"
-      },
-      {
-        "first_timestamp": "2026-07-10T02:19:01.835Z",
-        "last_timestamp": "2026-07-10T02:28:23.495Z",
-        "session": "019f49d2-3724-7ec1-a820-56fbb42426b9",
-        "sha256": "e781fda0d5a5c59ac5b2c2c143f3e1b476a7ca53709c0df1231fa96a57aa26e9"
-      },
-      {
-        "first_timestamp": "2026-07-10T02:19:06.822Z",
-        "last_timestamp": "2026-07-10T02:30:39.913Z",
-        "session": "019f49d2-49de-70c2-86a4-9cfeca429877",
-        "sha256": "9704812157389ce8d106cb711b1eac087bfae43b1daa9df8bedc83f41cb13cf4"
-      },
-      {
-        "first_timestamp": "2026-07-10T03:03:04.029Z",
-        "last_timestamp": "2026-07-10T03:05:55.877Z",
-        "session": "019f49fa-86f1-7242-9a80-015c48d28359",
-        "sha256": "191700ecfe19ff138a78f4a1c96db96d9970fe33a82feb4a5e41b9bd14b57bb9"
-      },
-      {
-        "first_timestamp": "2026-07-10T04:41:25.289Z",
-        "last_timestamp": "2026-07-10T04:48:04.301Z",
-        "session": "019f4a54-9374-71b2-a2ea-fa7a6cef5681",
-        "sha256": "20831cb790f26d5fa0c3102ed33e80fe534cbf446cc5b54704342a45b1108a62"
-      },
-      {
-        "first_timestamp": "2026-07-10T04:41:29.733Z",
-        "last_timestamp": "2026-07-10T04:46:03.601Z",
-        "session": "019f4a54-a541-7b51-8311-9b4704fc97d1",
-        "sha256": "b9da5b98e09e7b72b342f52d8ec551ad19db25d1fe4b6923c3f8f2d4cbf820e3"
-      },
-      {
-        "first_timestamp": "2026-07-10T04:41:35.581Z",
-        "last_timestamp": "2026-07-10T04:47:18.313Z",
-        "session": "019f4a54-bc01-7883-a606-eae0e554415b",
-        "sha256": "a05b9d44961dc68d7c1f95b3b9486218be09291484f7a942112d0bba18bb0f3e"
-      },
-      {
-        "first_timestamp": "2026-07-10T04:54:11.705Z",
-        "last_timestamp": "2026-07-10T04:56:19.006Z",
-        "session": "019f4a60-455c-7802-9432-d463cae76be3",
-        "sha256": "545119666f010e6b4cd3696c2af766743e148dedefb444337ac19a08c84fab89"
-      },
-      {
-        "first_timestamp": "2026-07-10T05:04:10.356Z",
-        "last_timestamp": "2026-07-10T05:11:24.757Z",
-        "session": "019f4a69-6823-7df1-9a35-fa8a4470ec38",
-        "sha256": "d656201f177292a66d2a5805bb06b3e562eb77e026c02c207df57b36c0819b0e"
-      },
-      {
-        "first_timestamp": "2026-07-10T05:04:15.828Z",
-        "last_timestamp": "2026-07-10T05:11:26.524Z",
-        "session": "019f4a69-7d5d-7c00-95ff-2ef658e67274",
-        "sha256": "dbb2a6e3c4dc38899a74a5be9cb2b6cacdbf400f45bc5ddbb81ac36cdf887b0f"
-      },
-      {
-        "first_timestamp": "2026-07-10T05:04:19.482Z",
-        "last_timestamp": "2026-07-10T05:11:28.381Z",
-        "session": "019f4a69-8c1b-7c53-956b-ac87a8e3ec6b",
-        "sha256": "41adc7c0247d06c334647977b4060919394628eb578c78dd8eb433bd0e3e97a4"
-      },
-      {
-        "first_published_timestamp": "2026-06-29T13:46:26.922Z",
-        "last_published_timestamp": "2026-06-29T13:46:26.922Z",
-        "published_messages": 1,
-        "session": "agent-a022bf0f5eb703085",
-        "sha256": "89c722e235c8b9aeda35b86fbbcb0073c397466bd13d673260cc48343c431b53"
-      },
-      {
-        "first_published_timestamp": "2026-06-29T06:13:23.776Z",
-        "last_published_timestamp": "2026-06-29T06:19:28.335Z",
-        "published_messages": 2,
-        "session": "agent-a033890e1016ba0f5",
-        "sha256": "f8cf184e5cec30b74d3708cf495222f55fce877b94bf1f34250b118f4b6a8680"
-      },
-      {
-        "first_published_timestamp": "2026-06-29T16:52:26.244Z",
-        "last_published_timestamp": "2026-06-29T16:52:53.697Z",
-        "published_messages": 2,
-        "session": "agent-a0edaad86f1ea67b4",
-        "sha256": "94752538e7f93bd38c58ad5ec030367e8302b4cd4c2709622c2a579aee0907ef"
-      },
-      {
-        "first_published_timestamp": "2026-06-29T10:36:00.650Z",
-        "last_published_timestamp": "2026-06-29T10:36:00.650Z",
-        "published_messages": 1,
-        "session": "agent-a2099d943b4e52d12",
-        "sha256": "5008795ed4a23e5b3b2d9aaef8d171f4e5847cd930c995d5c2280b367ed8d5bc"
-      },
-      {
-        "first_published_timestamp": "2026-06-29T12:31:51.525Z",
-        "last_published_timestamp": "2026-06-29T12:31:51.525Z",
-        "published_messages": 1,
-        "session": "agent-a2e769339c8b3566b",
-        "sha256": "66a68d7fe40afd08a7817979851a0370938ebf665c1b721518ab4392869872ce"
-      },
-      {
-        "first_published_timestamp": "2026-06-29T06:12:19.897Z",
-        "last_published_timestamp": "2026-06-29T06:32:10.179Z",
-        "published_messages": 3,
-        "session": "agent-a332f267c15116df2",
-        "sha256": "78ec980bd4503f2754d83469307e7cc01b245e96ac2f53070ef67688e7444256"
-      },
-      {
-        "first_published_timestamp": "2026-06-29T04:02:44.737Z",
-        "last_published_timestamp": "2026-06-29T04:02:44.737Z",
-        "published_messages": 1,
-        "session": "agent-a374fc444be6f86ca",
-        "sha256": "5a147bc9dd9f8feac6cf526ada4e1d34a6de6e867d18b0fb3998ce3bc9bedf22"
-      },
-      {
-        "first_published_timestamp": "2026-06-29T09:55:31.912Z",
-        "last_published_timestamp": "2026-06-29T09:55:31.912Z",
-        "published_messages": 1,
-        "session": "agent-a40a92e3ba9528c2f",
-        "sha256": "457a7966b3c321bc045297ce1f293bdba56d31a9cf4a856e9511507866894b36"
-      },
-      {
-        "first_published_timestamp": "2026-06-29T04:45:18.085Z",
-        "last_published_timestamp": "2026-06-29T04:50:20.997Z",
-        "published_messages": 2,
-        "session": "agent-a4bfcc1b13eb1ea04",
-        "sha256": "055e932d5294e4ab62cc71911aa57e94191db5d33f555742f5d1c6b5a6685455"
-      },
-      {
-        "first_published_timestamp": "2026-06-29T07:34:19.880Z",
-        "last_published_timestamp": "2026-06-29T07:55:35.960Z",
-        "published_messages": 2,
-        "session": "agent-a66bfd811aca12aa3",
-        "sha256": "223924dee11c04a18783ee5b1b46acb6e68e11c7f1eda75dc574d7d0e42d170a"
-      },
-      {
-        "first_published_timestamp": "2026-06-29T05:50:02.707Z",
-        "last_published_timestamp": "2026-06-29T05:50:02.707Z",
-        "published_messages": 1,
-        "session": "agent-a6f9485014a17f870",
-        "sha256": "9eb5740222ba59b4f10333df6b3fbc0c7374e813cfde5954d00dfedaff9b9fc5"
-      },
-      {
-        "first_published_timestamp": "2026-06-29T07:09:36.342Z",
-        "last_published_timestamp": "2026-06-29T07:45:03.206Z",
-        "published_messages": 3,
-        "session": "agent-a7e915dcc68da69c9",
-        "sha256": "1f4e2fcde933459e8f086593b360058b92683b1f4c218cbed2972e6017268c70"
-      },
-      {
-        "first_published_timestamp": "2026-06-29T08:00:28.282Z",
-        "last_published_timestamp": "2026-06-29T08:00:28.282Z",
-        "published_messages": 1,
-        "session": "agent-a8d2ed91a10797065",
-        "sha256": "d8bba18f329b8da0a5e61d73a18f479e75a412ed90354db1ed32f998bf5029bb"
-      },
-      {
-        "first_published_timestamp": "2026-06-29T14:49:13.839Z",
-        "last_published_timestamp": "2026-06-29T14:49:13.839Z",
-        "published_messages": 1,
-        "session": "agent-a95fbc027f9ee8d32",
-        "sha256": "d6d64ef231c51acc2a6206b1e8ebe0c1f72bc2e7d2ae14e4c157b465714ce168"
-      },
-      {
-        "first_published_timestamp": "2026-06-29T03:49:08.829Z",
-        "last_published_timestamp": "2026-06-29T03:49:08.829Z",
-        "published_messages": 1,
-        "session": "agent-a9651378280eff300",
-        "sha256": "803bf2748d2e223880e6b8b0775341f0d35893dcf29f0f88bbc8a204c762a848"
-      },
-      {
-        "first_published_timestamp": "2026-06-29T08:52:11.792Z",
-        "last_published_timestamp": "2026-06-29T08:52:11.792Z",
-        "published_messages": 1,
-        "session": "agent-aa62bd8d4ede2ca54",
-        "sha256": "b126a65d9b56753b80e3f3993bac1be163260b3b6fc9232bc105e64df06ac5ef"
-      },
-      {
-        "first_published_timestamp": "2026-06-29T13:26:40.224Z",
-        "last_published_timestamp": "2026-06-29T13:26:40.224Z",
-        "published_messages": 1,
-        "session": "agent-aa75bd568f4a6f383",
-        "sha256": "f1a27bd557ae033039c14fd4b793e799228aaabbfe4402cb4cd2277d7e36cc2c"
-      },
-      {
-        "first_published_timestamp": "2026-06-29T12:59:35.812Z",
-        "last_published_timestamp": "2026-06-29T12:59:35.812Z",
-        "published_messages": 1,
-        "session": "agent-aab5cdb75cbb238e0",
-        "sha256": "c6643a0ddbf358347cae73f98e6d189d8d947d2d38dcf8d162e23b8d368d8503"
-      },
-      {
-        "first_published_timestamp": "2026-06-29T08:44:39.889Z",
-        "last_published_timestamp": "2026-06-29T08:44:39.889Z",
-        "published_messages": 1,
-        "session": "agent-aabbd4d0307d48ca3",
-        "sha256": "1bb5e578eb7dd28d5c632c20e3a5abbd7f123d539616055fe30000a51f6d999e"
-      },
-      {
-        "first_published_timestamp": "2026-06-29T05:14:31.292Z",
-        "last_published_timestamp": "2026-06-29T05:28:20.895Z",
-        "published_messages": 2,
-        "session": "agent-aafea1763de9db516",
-        "sha256": "e02d95c105fa0a6e086b1b423bae699380e7c9d9b7c062d2bae42907b77b6d5a"
-      },
-      {
-        "first_published_timestamp": "2026-06-29T10:29:55.274Z",
-        "last_published_timestamp": "2026-06-29T10:29:55.274Z",
-        "published_messages": 1,
-        "session": "agent-acbc9c2e1d155f745",
-        "sha256": "5bd02ebe45078c7c44c478074c42a3afce82362a324add5a0943e177ec363478"
-      },
-      {
-        "first_published_timestamp": "2026-06-29T09:40:01.319Z",
-        "last_published_timestamp": "2026-06-29T09:58:43.772Z",
-        "published_messages": 3,
-        "session": "agent-ace02f07b7d64cd29",
-        "sha256": "737deab1b4182435eb22c8d7d9887788d9a8b04d4f4491d58483a15c877e8416"
-      },
-      {
-        "first_published_timestamp": "2026-06-29T07:59:22.434Z",
-        "last_published_timestamp": "2026-06-29T07:59:22.434Z",
-        "published_messages": 1,
-        "session": "agent-aef16ae86c5143a4c",
-        "sha256": "d1a8a0c6b0046df75d51006295911654b2821574b3f91cd4d15a3a0687bf4db7"
-      },
-      {
-        "first_published_timestamp": "2026-06-29T17:09:13.126Z",
-        "last_published_timestamp": "2026-06-29T17:09:13.126Z",
-        "published_messages": 1,
-        "session": "agent-afd75c3358e3a33eb",
-        "sha256": "14ee3871ecbc638c8b643e93cf5d2b1bb7b8850d97127f0dfefd053bb43b118d"
-      },
-      {
-        "first_published_timestamp": "2026-06-29T08:42:19.507Z",
-        "last_published_timestamp": "2026-06-29T08:42:19.507Z",
-        "published_messages": 1,
-        "session": "agent-afe6847a876819f51",
-        "sha256": "820a00c15560e742cb24c2e822c474d0a3f6904f2a1832c26af71700edaaf67c"
-      },
-      {
-        "first_published_timestamp": "2026-07-02T04:02:38.739Z",
-        "last_published_timestamp": "2026-07-02T04:03:25.941Z",
-        "published_messages": 4,
-        "session": "f16332ba-8e57-43e2-a9e9-c45baee5e62f",
-        "sha256": "3d0115501e9d0bb19e18e10a97ccb4e88f36e881536a6226753e0a07f866448b"
-      },
-      {
-        "first_published_timestamp": "2026-07-07T18:03:19.289Z",
-        "last_published_timestamp": "2026-07-07T18:03:19.289Z",
-        "published_messages": 1,
-        "session": "agent-ae5f2157fc52fc508",
-        "sha256": "ef8ab830eea25a49f04335be786b63410520d302de507c547ca3784e081f7f2e"
-      },
-      {
-        "first_published_timestamp": "2026-07-07T18:19:48.513Z",
-        "last_published_timestamp": "2026-07-08T19:03:28.088Z",
-        "published_messages": 45,
-        "session": "067d44ad-c59f-475e-9630-40b0d1faf58c",
-        "sha256": "0aabeb0213f659324e5b162ed03be68c924681a7a7c5c6ef148d2279e7e33676"
-      },
-      {
-        "first_published_timestamp": "2026-07-08T14:52:28.710Z",
-        "last_published_timestamp": "2026-07-08T14:52:28.710Z",
-        "published_messages": 1,
-        "session": "agent-a011d2a66c7d7fd27",
-        "sha256": "c1214a1ef7007c072c31b45cf0e973df28d233c0daf37d8a4412a965af1fe3cb"
-      },
-      {
-        "first_published_timestamp": "2026-07-08T23:07:05.826Z",
-        "last_published_timestamp": "2026-07-08T23:07:05.826Z",
-        "published_messages": 1,
-        "session": "agent-a215850b58cb0925d",
-        "sha256": "091f5c40721b6e564a66a722506332d217e351693f5d8d3292badb3910188678"
-      },
-      {
-        "first_published_timestamp": "2026-07-08T20:04:17.650Z",
-        "last_published_timestamp": "2026-07-08T20:04:17.650Z",
-        "published_messages": 1,
-        "session": "agent-a3e4ea0416f123d81",
-        "sha256": "f1e140605f4709b83ee99f61cf35f56b11099f2e56cfa2b361df49c26ce1c3e2"
-      },
-      {
-        "first_published_timestamp": "2026-07-09T14:12:44.095Z",
-        "last_published_timestamp": "2026-07-09T14:39:43.550Z",
-        "published_messages": 5,
-        "session": "agent-a5b01d8b1b9269378",
-        "sha256": "15c7b6fb0e04618d4d503cf61d7c827556c0381b78d5eadfec13c9b2b5e4d4eb"
-      },
-      {
-        "first_published_timestamp": "2026-07-09T02:58:32.154Z",
-        "last_published_timestamp": "2026-07-09T03:25:52.096Z",
-        "published_messages": 2,
-        "session": "agent-a66cff8e7102dcdc3",
-        "sha256": "fbed95193e284381f9d038ab3d5fb8790a4d7f1d88e7efad625cb85883aabdfc"
-      },
-      {
-        "first_published_timestamp": "2026-07-09T03:58:20.347Z",
-        "last_published_timestamp": "2026-07-09T05:47:23.377Z",
-        "published_messages": 2,
-        "session": "agent-a79ecd4b4b1d8cff8",
-        "sha256": "b53916bab8d40d78540abe7cd527aebdbe992ddc9f45a53c5b79ba088aeb6fbe"
-      },
-      {
-        "first_published_timestamp": "2026-07-08T15:24:41.922Z",
-        "last_published_timestamp": "2026-07-08T15:24:41.922Z",
-        "published_messages": 1,
-        "session": "agent-ac1e2c75e4e4db6d5",
-        "sha256": "5d062a6c31ec0119ca15cae211f8a8ff723cc5d25c41a4a9b315614c409a9e5b"
-      },
-      {
-        "first_published_timestamp": "2026-07-08T23:45:02.551Z",
-        "last_published_timestamp": "2026-07-08T23:45:02.551Z",
-        "published_messages": 1,
-        "session": "agent-ac7ddb76cec7f58ee",
-        "sha256": "293d3acba68f9bdfa5ce5032a94423811ad2ca50ff86f63083b0e6982bc61280"
-      },
-      {
-        "first_published_timestamp": "2026-07-08T21:31:30.435Z",
-        "last_published_timestamp": "2026-07-08T21:47:17.807Z",
-        "published_messages": 3,
-        "session": "agent-af9a83b5a17129c43",
-        "sha256": "7a4a6232ddba5ebebfdca3ec983c087210d77b8e180f6782c1367bfb3905028b"
-      },
-      {
-        "first_published_timestamp": "2026-07-09T11:53:59.838Z",
-        "last_published_timestamp": "2026-07-09T11:53:59.838Z",
-        "published_messages": 1,
-        "session": "agent-afcea9b1557105657",
-        "sha256": "57b83dc02ea7f68a9df377164e69e143c6b5a289c68f0b06e4d5df39dab0644f"
-      },
-      {
-        "first_published_timestamp": "2026-07-06T21:42:39.350Z",
-        "last_published_timestamp": "2026-07-09T23:51:02.547Z",
-        "published_messages": 148,
-        "session": "1edd2c8d-1b67-4708-889e-883925ccc2bd",
-        "sha256": "beb01e711ca862c8da3414c576f6986900fb1229739da24cf5dcf089729d82f9"
-      },
-      {
-        "first_published_timestamp": "2026-07-06T22:35:13.269Z",
-        "last_published_timestamp": "2026-07-06T22:35:13.269Z",
-        "published_messages": 1,
-        "session": "3156a6af-71cf-4992-b826-9198ebfabbd1",
-        "sha256": "797a919fa23c36582f4d4b6de431ed5bcfc52553d3e90423acc5e7d4c5dd453e"
-      },
-      {
-        "chronology": "The preserved response bodies are deduplicated by content hash. Their original browser-turn chronology cannot be reconstructed from the retained files.",
-        "content_set_sha256": "88d0680e72768413bad275f25293dfeb445fd198d4b761988f4ea6fce05e2980",
-        "source_kind": "preserved_chatgpt_pro_response_set",
-        "unique_published_messages": 277
-      }
-    ]
+    "roe_sources": {
+      "first_timestamp": "2026-07-01T12:20:18Z",
+      "last_timestamp": "2026-07-11T01:11:16Z",
+      "published_messages": 9978,
+      "source_file_count": 20,
+      "source_set_sha256": "936f5ba4e29cc75c5ad94feccf7305656b3fae3a767b6dfe206a643fb576f327"
+    },
+    "turturean_sources": {
+      "first_timestamp": "2026-06-29T01:24:13Z",
+      "last_timestamp": "2026-07-19T17:27:31.335Z",
+      "published_messages": 3145,
+      "source_file_count": 361,
+      "source_set_sha256": "fb41845fdb109f58ebf97f48b32df3d7018719edfa7ba1b7c29d117398186c12"
+    }
   },
   "outputs": [
     {
       "key": "turturean_formalization__20260629",
-      "messages": 2510,
+      "messages": 4141,
       "models": [
         "ChatGPT Pro (browser; backend not recorded)",
         "GPT-5.5 (Codex)",
         "Opus 4.8"
       ],
-      "sha256": "157f859d04282b5a5298eba9c878e5106c0354f96445c2279172801221daf77f"
+      "sha256": "6ee52793b84b6bafb86981ddbac51bd24665d9fec5f262fa7ae375786c2f469f"
     },
     {
       "key": "turturean_formalization__20260630",
-      "messages": 4363,
+      "messages": 4095,
       "models": [
         "GPT-5.5 (Codex)",
         "gpt-5.3-codex-spark"
       ],
-      "sha256": "4ad045419fec1d646689afea435dd584dceaf6e1519054d45585f47ea1b32ce3"
+      "sha256": "3ddd95dda65ea70200d86437d7de89dce897c682df659848ac7ef36172e08ae5"
+    },
+    {
+      "key": "turturean_formalization__20260701",
+      "messages": 7,
+      "models": [
+        "Fable 5",
+        "Opus 4.8"
+      ],
+      "sha256": "584162aacea852602f9961ed3dac3fe7fe4ee5c3dff45465c928542c767032f8"
     },
     {
       "key": "turturean_formalization__20260702",
-      "messages": 4,
+      "messages": 34,
       "models": [
         "Fable 5"
       ],
-      "sha256": "45c5d57feb6c7b754677514f0e8f43b7b079bf068f1fb7c4440e3ad153b8d6a8"
+      "sha256": "3349b1a0fbe5596434ba618096d28cb8466e89145aa9fc324921815680294fed"
     },
     {
       "key": "turturean_formalization__20260706",
-      "messages": 2,
-      "models": [
-        "Fable 5",
-        "Opus 4.8"
-      ],
-      "sha256": "f3375df7d2f3332cc07d76686e6c31e89e30b227ee97deb8e8f356bac212380c"
-    },
-    {
-      "key": "turturean_formalization__20260707",
-      "messages": 76,
-      "models": [
-        "Fable 5",
-        "Opus 4.8"
-      ],
-      "sha256": "0f923e16b192b3cbf3d6bd6ce894d45d3753e827acfd8c8b31787828115d78f6"
-    },
-    {
-      "key": "turturean_formalization__20260708",
-      "messages": 58,
-      "models": [
-        "Fable 5",
-        "Opus 4.8"
-      ],
-      "sha256": "daf8bd5c1cb0952aecc8e02e56207184cf4ac25fbdb1ee64a03497bf52a55df3"
-    },
-    {
-      "key": "turturean_formalization__20260709",
-      "messages": 206,
-      "models": [
-        "Fable 5",
-        "GPT-5.6 Sol (Codex)"
-      ],
-      "sha256": "9e2ea39f0491e683b05ed42df162693a8458463f55e4598fbd52c395448585e4"
-    },
-    {
-      "key": "turturean_formalization__20260710",
-      "messages": 169,
-      "models": [
-        "GPT-5.6 Sol (Codex)"
-      ],
-      "sha256": "10eb442d9565e0435be74969ddf0d488be8388224fae6715f8633c3ef893a61d"
-    },
-    {
-      "key": "roe_formalization__85d7dfd7",
-      "messages": 8,
-      "models": [
-        "Opus 4.8"
-      ],
-      "sha256": "9ae6cb1d3d0789abff004a730c24ecb7021f7bd5cb00ae050fa6f9798118b14d"
-    },
-    {
-      "key": "roe_formalization__c0bf230d",
-      "messages": 13,
-      "models": [
-        "Opus 4.8"
-      ],
-      "sha256": "557b7bc92b2f1a9dc0bd5ff86bd4af0633dc2a35f5f0479190c96aa6ce4497ec"
-    },
-    {
-      "key": "roe_formalization__0a9e66c8",
-      "messages": 49,
-      "models": [
-        "Fable 5",
-        "Opus 4.8"
-      ],
-      "sha256": "c0224619e30f05e85a18187e5a8851f7c4829d4e2b760d74917782ce55e35884"
-    },
-    {
-      "key": "roe_formalization__898d983e",
-      "messages": 54,
-      "models": [
-        "Fable 5",
-        "Opus 4.8"
-      ],
-      "sha256": "cb106184d4535961f253b56debefc620735e41740abb30633703fa76e20f1278"
-    },
-    {
-      "key": "roe_formalization__6d440b27",
-      "messages": 27,
-      "models": [
-        "Fable 5",
-        "Opus 4.8"
-      ],
-      "sha256": "2d18bef22185acf620bbc490b01bb6ed6a4440878f6ef6493bc53c321e217379"
-    },
-    {
-      "key": "roe_formalization__3b23946a",
-      "messages": 11,
-      "models": [
-        "Fable 5",
-        "Opus 4.8"
-      ],
-      "sha256": "a485acf73c3cbc9ffa5fde6094995e8a697640b394f0a8e7758b5c5dc7f1a04d"
-    },
-    {
-      "key": "roe_formalization__5544fb65",
-      "messages": 24,
-      "models": [
-        "Fable 5",
-        "Opus 4.8"
-      ],
-      "sha256": "2edad9efa478ed23dbe962b6a890548c3719b3ded20ce35dafd2524b3daf4889"
-    },
-    {
-      "key": "roe_formalization__85a579ac",
-      "messages": 32,
-      "models": [
-        "Fable 5",
-        "Opus 4.8"
-      ],
-      "sha256": "a4ace2f5e66ea2549acec58976a1dcee59a42e7120445a4324c4b6d2aed944b1"
-    },
-    {
-      "key": "roe_formalization__bf8998ac",
-      "messages": 16,
-      "models": [
-        "Fable 5",
-        "Opus 4.8"
-      ],
-      "sha256": "2c5fd41ff343b2bc020a2cc8b5ea5d5e177b9233bf149523b8c0679afe738064"
-    },
-    {
-      "key": "roe_formalization__01e5a294",
-      "messages": 15,
-      "models": [
-        "Fable 5",
-        "Opus 4.8"
-      ],
-      "sha256": "bd768898f4ca1c9867afd46f31bb54174b08f62d1bd967496fcd4973846286fa"
-    },
-    {
-      "key": "roe_formalization__9cd6c94c",
-      "messages": 23,
-      "models": [
-        "Fable 5",
-        "Opus 4.8"
-      ],
-      "sha256": "56e5a38a0228d53b1ce66dd6ec44e16c23799ff1acdb938e77755afe5ccd8079"
-    },
-    {
-      "key": "roe_formalization__8ccf5f4b",
-      "messages": 30,
-      "models": [
-        "Fable 5",
-        "Opus 4.8"
-      ],
-      "sha256": "0379cb692a709004e9f0290b71f708eae1e0b32db702db71e5cf6d49b0ee5e04"
-    },
-    {
-      "key": "roe_formalization__e5ebf6ba",
-      "messages": 23,
-      "models": [
-        "Fable 5",
-        "Opus 4.8"
-      ],
-      "sha256": "938a7b8499a6733cb76d98aeea9c56e739984d1a6045349eac607d8ee6097180"
-    },
-    {
-      "key": "roe_formalization__07f15cc3",
-      "messages": 58,
-      "models": [
-        "Fable 5",
-        "Opus 4.8"
-      ],
-      "sha256": "10353f14a5345daba3d50caf72ac4486513ac6635b46edfdb8fadb3daf3cda7b"
-    },
-    {
-      "key": "roe_formalization__bb35d158",
-      "messages": 3,
-      "models": [
-        "Fable 5",
-        "Opus 4.8"
-      ],
-      "sha256": "f45d99338e1e6feae4c3b0f0b8d28a61cd9b2bff0f56d33847d4503b9a85c7aa"
-    },
-    {
-      "key": "roe_formalization__965d5c62",
-      "messages": 17,
-      "models": [
-        "Fable 5",
-        "Opus 4.8"
-      ],
-      "sha256": "552ffef5fef0338138578ad18c685dc5fa9cf64bf9381d3db460e531e305cece"
-    },
-    {
-      "key": "roe_formalization__dca97dd6",
-      "messages": 14,
-      "models": [
-        "Fable 5",
-        "Opus 4.8"
-      ],
-      "sha256": "75f0571e466243cee936e8dddf9342d026d28f7e1b9adc6bdf3b5168e81c329c"
-    },
-    {
-      "key": "roe_formalization__3ed6d0c7",
-      "messages": 19,
-      "models": [
-        "Fable 5",
-        "Opus 4.8"
-      ],
-      "sha256": "2fa8597c6efb088cc39d907d6fb4c8001831e72e8e0f5877705bf70d858466eb"
-    },
-    {
-      "key": "roe_formalization__bd22cccf",
-      "messages": 3,
-      "models": [
-        "Fable 5",
-        "Opus 4.8"
-      ],
-      "sha256": "b587bb76725c007c0675165555661122484260d13548de60e9475555b963738f"
-    },
-    {
-      "key": "roe_formalization__0039e780",
-      "messages": 3,
+      "messages": 25,
       "models": [
         "Fable 5"
       ],
-      "sha256": "993ef03c2c7cffe066b4ea9b3c2d9fda55cd45398d063f56dcefe85b27be14d3"
+      "sha256": "bbc13b3bb37dc892edac24845243993e59e1dadbce0cbdc84f8e9941e52173b1"
+    },
+    {
+      "key": "turturean_formalization__20260707",
+      "messages": 176,
+      "models": [
+        "Fable 5",
+        "Opus 4.8"
+      ],
+      "sha256": "0cbd4efa399c474841b21711d796fcd99cc667d875ae360a91f0ad338ca72de4"
+    },
+    {
+      "key": "turturean_formalization__20260708",
+      "messages": 560,
+      "models": [
+        "Fable 5",
+        "Opus 4.8"
+      ],
+      "sha256": "fede156841f3df1617d549b779a13d2fbc52a4d3cc566a25aa6b971247f0cd58"
+    },
+    {
+      "key": "turturean_formalization__20260709",
+      "messages": 797,
+      "models": [
+        "Fable 5",
+        "GPT-5.6 Sol (Codex)",
+        "Opus 4.8"
+      ],
+      "sha256": "e978244f30d984978afe82ca232c6b34d2748931cd6d3093b554153f6a6e7cea"
+    },
+    {
+      "key": "turturean_formalization__20260710",
+      "messages": 164,
+      "models": [
+        "GPT-5.6 Sol (Codex)"
+      ],
+      "sha256": "361b7b3421822b8375589bbdf64f1a61126afb5144c24ef5a8e09a54b5c9e53e"
+    },
+    {
+      "key": "roe_formalization__session_01",
+      "messages": 222,
+      "models": [
+        "Opus 4.8"
+      ],
+      "sha256": "6eb2d1fdc02a0418b0062520bdeb9fa9b21375f088cfc6fd3e8a81214fb65c4f"
+    },
+    {
+      "key": "roe_formalization__session_02",
+      "messages": 330,
+      "models": [
+        "Fable 5",
+        "Opus 4.8"
+      ],
+      "sha256": "7abe1c0d7031edd7d125fb84eed382e3e770c0c5010953effffd9e78cca32d7f"
+    },
+    {
+      "key": "roe_formalization__session_03",
+      "messages": 976,
+      "models": [
+        "Fable 5",
+        "Opus 4.8"
+      ],
+      "sha256": "11f02a105055895f2ce0801b701d17d46b4218a8ddd9c8bafa576e59299af6b5"
+    },
+    {
+      "key": "roe_formalization__session_04",
+      "messages": 925,
+      "models": [
+        "Fable 5",
+        "Opus 4.8"
+      ],
+      "sha256": "d5f144a1181a5c82afdf1a9c1335e6cc9400c8f27345ee0fe13cf57ebabb161e"
+    },
+    {
+      "key": "roe_formalization__session_05",
+      "messages": 1100,
+      "models": [
+        "Fable 5",
+        "Opus 4.8"
+      ],
+      "sha256": "1b9d039cc47990802441d539d11ef9874cacec831645aee00a6d24c836631c4e"
+    },
+    {
+      "key": "roe_formalization__session_06",
+      "messages": 897,
+      "models": [
+        "Fable 5",
+        "Opus 4.8"
+      ],
+      "sha256": "2368ba0c6e95c777a74c6363e237aa392c58169c65087fce4585e1a26e8bc268"
+    },
+    {
+      "key": "roe_formalization__session_07",
+      "messages": 975,
+      "models": [
+        "Fable 5",
+        "Opus 4.8"
+      ],
+      "sha256": "d3ab7a03c85b42851140a8d4c5493c5ec17e4101c0b2322ef11d4a3754e31cc5"
+    },
+    {
+      "key": "roe_formalization__session_08",
+      "messages": 831,
+      "models": [
+        "Fable 5",
+        "Opus 4.8"
+      ],
+      "sha256": "e8404a5a32bbb47e1622a27ab2af835dc2e6b97f7be278f648de47d520a7ae35"
+    },
+    {
+      "key": "roe_formalization__session_09",
+      "messages": 641,
+      "models": [
+        "Fable 5",
+        "Opus 4.8"
+      ],
+      "sha256": "4e9dbab67ea2db8b0f8ac3cf1f037cc088bce47cdc7c2022d3bd91d9f9dcb0d7"
+    },
+    {
+      "key": "roe_formalization__session_10",
+      "messages": 318,
+      "models": [
+        "Fable 5",
+        "Opus 4.8"
+      ],
+      "sha256": "18f5ecd73a0c95daa98302aa25ea5e5bb3c6b69ba675475cb61440bd1e2f5c9f"
+    },
+    {
+      "key": "roe_formalization__session_11",
+      "messages": 469,
+      "models": [
+        "Fable 5",
+        "Opus 4.8"
+      ],
+      "sha256": "2c13a6f52828b95ae69edbe086d5e07ee78ac3e3e847f0cb05b5724da5b7e482"
+    },
+    {
+      "key": "roe_formalization__session_12",
+      "messages": 446,
+      "models": [
+        "Fable 5",
+        "Opus 4.8"
+      ],
+      "sha256": "6d9245e3b271fcab3be68d8b13e3f28a52ad78b8fb9dddf867030af1b9c37c25"
+    },
+    {
+      "key": "roe_formalization__session_13",
+      "messages": 649,
+      "models": [
+        "Fable 5",
+        "Opus 4.8"
+      ],
+      "sha256": "7bef2f2f0632e76c1374a3db61910fb5739c2924fc8e18193da559c05cec8397"
+    },
+    {
+      "key": "roe_formalization__session_14",
+      "messages": 326,
+      "models": [
+        "Fable 5",
+        "Opus 4.8"
+      ],
+      "sha256": "a0eb0445a4343940af85d92eabfa61a67c714b90786a56fe4f2096654f149b65"
+    },
+    {
+      "key": "roe_formalization__session_15",
+      "messages": 134,
+      "models": [
+        "Fable 5",
+        "Opus 4.8"
+      ],
+      "sha256": "3c6f06485fed7128597b21fa9405ac21c2d8822845b98c9e184cf3a43b79e322"
+    },
+    {
+      "key": "roe_formalization__session_16",
+      "messages": 202,
+      "models": [
+        "Fable 5",
+        "Opus 4.8"
+      ],
+      "sha256": "c29f32646730504c7cd6b3a5d858939e5307992eec9d327b62e681600e9ce29b"
+    },
+    {
+      "key": "roe_formalization__session_17",
+      "messages": 107,
+      "models": [
+        "Fable 5",
+        "Opus 4.8"
+      ],
+      "sha256": "78756b269ea74c841e5fc3501d6dd7e0caf8e395f8f9f71ab82569dbe369cbef"
+    },
+    {
+      "key": "roe_formalization__session_18",
+      "messages": 120,
+      "models": [
+        "Fable 5",
+        "Opus 4.8"
+      ],
+      "sha256": "e7358d09d1d272956976085feec66ccb0cb19725035f1839117a70edf5f65056"
+    },
+    {
+      "key": "roe_formalization__session_19",
+      "messages": 159,
+      "models": [
+        "Fable 5",
+        "Opus 4.8"
+      ],
+      "sha256": "706176ea925742d643bad49826a3964818d1383f2318133ae8b5199c9ad14698"
+    },
+    {
+      "key": "roe_formalization__session_20",
+      "messages": 151,
+      "models": [
+        "Fable 5",
+        "Opus 4.8"
+      ],
+      "sha256": "43efd0be3f202fcb0e3b3088ace2318a4d794c8f49a35285f60216ab90a98198"
     }
   ],
   "policy": {
+    "human_messages": "Raw human text is omitted. Every top-level human message was read during a private editorial review; model responses to private, personal, or unrelated turns were excluded.",
     "included": "formalization records"
   },
   "schema_version": 1

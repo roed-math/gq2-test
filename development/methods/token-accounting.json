@@ -8,22 +8,22 @@
   "exclusions": [
     "All GPT-5.2 and GPT-5.4 attempts before the successful second-half-of-June campaign.",
     "The June 27–28 presentation-comparison lane, which did not establish a result used by either Lean proof.",
-    "Human messages, tool payloads, and hidden reasoning from the published formalization corpora.",
+    "Raw human messages, tool payloads, and hidden reasoning from the published formalization corpora. Every top-level human message was read in a private editorial review.",
     "Unrelated QuantumJune, Epochal, BFSS, and website-maintenance sessions."
   ],
   "formalization_phase": {
     "estimate": {
-      "hidden_reasoning_central": 60877250,
-      "hidden_reasoning_high": 121754500,
-      "hidden_reasoning_low": 24350900,
-      "non_cache_measured_plus_reasoning_central": 654589639,
-      "non_cache_measured_plus_reasoning_high": 715466889,
-      "non_cache_measured_plus_reasoning_low": 618063289,
-      "processed_total_central": 19909135120,
-      "processed_total_high": 19970012370,
-      "processed_total_low": 19872608770
+      "hidden_reasoning_central": 60660250,
+      "hidden_reasoning_high": 121320500,
+      "hidden_reasoning_low": 24264100,
+      "non_cache_measured_plus_reasoning_central": 622304205,
+      "non_cache_measured_plus_reasoning_high": 682964455,
+      "non_cache_measured_plus_reasoning_low": 585908055,
+      "processed_total_central": 18859155366,
+      "processed_total_high": 18919815616,
+      "processed_total_low": 18822759216
     },
-    "estimated_chatgpt_pro_thinking_seconds": 243509,
+    "estimated_chatgpt_pro_thinking_seconds": 242641,
     "formalization_plan": {
       "messages": {
         "assistant": 4
@@ -37,12 +37,12 @@
       "visible_tokens_total": 21317
     },
     "preserved_chatgpt_pro_outputs": {
-      "bytes": 960725,
+      "bytes": 957591,
       "candidate_files": 346,
       "chronology": "The preserved response bodies are deduplicated by content hash. Their original browser-turn chronology cannot be reconstructed from the retained files.",
-      "content_set_sha256": "88d0680e72768413bad275f25293dfeb445fd198d4b761988f4ea6fce05e2980",
-      "unique_content_hashes": 278,
-      "visible_tokens_o200k": 223505
+      "content_set_sha256": "2afa811ebaffc6482f89f069d5a33f449765b4df4e93737e2bbfbabde360c533",
+      "unique_content_hashes": 277,
+      "visible_tokens_o200k": 222767
     },
     "reasoning_rates_tokens_per_second": {
       "central": 250,
@@ -50,10 +50,10 @@
       "low": 100
     },
     "roe": {
-      "non_cache_measured": 238118245,
+      "non_cache_measured": 237670739,
       "official_archive": "https://math.mit.edu/~roed/gq2-lean-session-logs.tar.gz",
-      "processed_measured": 9234303694,
-      "public_messages": 442,
+      "processed_measured": 9228803766,
+      "public_messages": 9978,
       "usage": {
         "Fable 5": {
           "cache_create": 62526484,
@@ -63,26 +63,26 @@
           "output": 17422802
         },
         "Opus 4.8": {
-          "cache_create": 123028762,
-          "cache_read": 5903188514,
-          "calls": 12775,
-          "input": 2592434,
-          "output": 31167630
+          "cache_create": 122617400,
+          "cache_read": 5898136092,
+          "calls": 12762,
+          "input": 2590794,
+          "output": 31133126
         }
       }
     },
     "scope": "Lean autoformalization, June 29–July 10, 2026, counted separately.",
     "turturean": {
-      "non_cache_measured": 355594144,
-      "processed_measured": 10613709354,
-      "public_messages": 7388,
+      "non_cache_measured": 323973216,
+      "processed_measured": 9569447266,
+      "public_messages": 9999,
       "usage": {
         "Fable 5": {
-          "cache_create": 128735361,
-          "cache_read": 2644055120,
-          "calls": 6720,
-          "input": 1117253,
-          "output": 6744897
+          "cache_create": 111877373,
+          "cache_read": 1787363065,
+          "calls": 5021,
+          "input": 781280,
+          "output": 3675067
         },
         "GPT-5.5 (Codex)": {
           "cached_input": 954362496,
@@ -101,16 +101,24 @@
           "total": 6105059182
         },
         "Opus 4.8": {
-          "cache_create": 50557693,
-          "cache_read": 654474682,
-          "calls": 2870,
-          "input": 792574,
-          "output": 2500660
+          "cache_create": 40101516,
+          "cache_read": 498525577,
+          "calls": 2401,
+          "input": 670213,
+          "output": 1722061
         }
       }
     }
   },
-  "generated_utc": "2026-07-23T19:16:48+00:00",
+  "generated_utc": "2026-07-24T02:03:05+00:00",
+  "human_message_editorial_review": {
+    "human_message_occurrences_reviewed": 1078,
+    "method": "Manual editorial reading of every top-level human message. Automated patterns were used only as secondary safety flags.",
+    "raw_human_messages_published": 0,
+    "response_occurrences_excluded": 78,
+    "response_occurrences_included": 1000,
+    "unique_human_messages_reviewed": 837
+  },
   "schema_version": 1,
   "solution_phase": {
     "claude_controller_usage": {
@@ -171,7 +179,7 @@
         "user": 66
       },
       "records": 23,
-      "thinking_hours": 0,
+      "thinking_hours": 0.0,
       "thinking_seconds": 0,
       "visible_tokens_o200k": {
         "assistant": 109317,
