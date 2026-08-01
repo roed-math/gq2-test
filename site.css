@@ -1,0 +1,603 @@
+/* Shared stylesheet for the landing page and subpages.
+   Font paths are relative to this file (site root). */
+:root {
+  --ink: #16181d;
+  --muted: #565d66;
+  --accent: #1e5c3a;            /* the paper's Lean green: accent = formalization */
+  --accent-ink: #ffffff;
+  --paper: #f6f6f3;
+  --card: #ffffff;
+  --line: #dcdedb;
+  --panel: #f0f1ee;             /* inset panels; matches dashboard.css */
+  --focus: #2169a8;             /* :target and focus outlines; matches dashboard.css */
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ink: #e8e9ec;
+    --muted: #9aa1ab;
+    --accent: #3f9c6b;
+    --accent-ink: #0d1210;
+    --paper: #16181c;
+    --card: #1e2126;
+    --line: #33373d;
+    --panel: #22262b;
+    --focus: #77b7ea;
+  }
+}
+@font-face {
+  font-family: "Computer Modern Serif";
+  src: url("paper/fonts/cmunrm.woff") format("woff");
+  font-weight: normal; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "Computer Modern Serif";
+  src: url("paper/fonts/cmunbx.woff") format("woff");
+  font-weight: bold; font-style: normal; font-display: swap;
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { background: var(--paper); }
+body {
+  width: min(68rem, 100%);
+  margin: 0 auto;
+  padding: clamp(2.5rem, 6vw, 5rem) clamp(1.25rem, 4vw, 3rem) 3rem;
+  color: var(--ink);
+  font-family: "Computer Modern Serif", Georgia, "Times New Roman", serif;
+  line-height: 1.55;
+}
+
+/* ---------------- hero ---------------- */
+.hero {
+  max-width: 62rem;
+  margin: 0 auto clamp(3rem, 6vw, 4.5rem);
+  text-align: center;
+}
+h1 {
+  max-width: 34ch;
+  margin: 0 auto;
+  font-size: clamp(2rem, 4.5vw, 3.2rem);
+  font-weight: 700;
+  line-height: 1.12;
+  letter-spacing: -0.01em;
+  text-wrap: balance;
+}
+.sub { margin: 1.1rem 0 0.9rem; color: var(--muted); font-size: 1.1rem; }
+.gist {
+  margin: 0 auto 2rem;
+  max-width: 56ch;
+  font-size: 1.02rem;
+}
+.actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.8rem; }
+.actions a {
+  padding: 0.75rem 1.25rem;
+  border: 1.5px solid var(--accent);
+  border-radius: 999px;
+  font: 650 0.95rem/1 system-ui, sans-serif;
+  text-decoration: none;
+  transition: filter .15s ease, background .15s ease;
+}
+.actions .primary { color: var(--accent-ink); background: var(--accent); }
+.actions .primary:hover { filter: brightness(1.12); }
+.actions .secondary { color: var(--accent); background: transparent; }
+.actions .secondary:hover { background: rgba(40, 160, 90, 0.08); }
+.actions a:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+.actions + .actions { margin-top: 0.8rem; }
+
+/* --------------- subpage header --------------- */
+.page-header { margin-bottom: clamp(2rem, 5vw, 3.5rem); }
+.page-header .back {
+  font: 650 0.9rem/1 system-ui, sans-serif;
+  color: var(--accent);
+  text-decoration: none;
+}
+.page-header .back:hover { text-decoration: underline; }
+.page-header h1 {
+  margin: 0.9rem 0 0;
+  max-width: none;
+  font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+  text-align: left;
+}
+
+/* ---------------- prose sections ---------------- */
+/* Per-page version identifiers in the footer: one generated line (between the
+   versions:begin/end comment markers, kept in sync with status.json by
+   scripts/gen-status.py) reading "Manuscript <date> · Built with PaperForge",
+   where the date is a knowl that expands the full identifiers in place. */
+footer .version-line {
+  margin-bottom: 0.55rem;
+  font-size: 0.84rem;
+  line-height: 1.7;
+}
+footer .vknowl {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px dashed var(--muted);
+  cursor: pointer;
+}
+footer .vknowl:hover { color: var(--ink); border-bottom-color: var(--accent); }
+footer .vknowl[aria-expanded="true"] {
+  color: var(--ink);
+  border-bottom: 1px solid var(--accent);
+}
+/* The expanded panel opens in place, knowl-style, splitting the footer line. */
+footer .vknowl-panel {
+  display: block;
+  margin: 0.55rem auto;
+  max-width: 62rem;
+  padding: 0.7rem 1.1rem;
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--accent);
+  border-radius: 6px;
+  background: var(--card);
+  color: var(--muted);
+  text-align: left;
+}
+footer .vknowl-panel[hidden] { display: none; }
+footer .vknowl-panel pre {
+  margin: 0 0 0.5rem;
+  padding: 0.55rem 0.8rem;
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  background: var(--panel);
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
+
+/* Homepage background knowls: dashed-underline terms opening an inline
+   panel extracted from the paper's background appendix (bg-knowls.js). */
+.prose .bgknowl {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px dashed var(--muted);
+  cursor: pointer;
+}
+.prose .bgknowl:hover { color: var(--ink); border-bottom-color: var(--accent); }
+.prose .bgknowl.bgknowl-open {
+  color: var(--ink);
+  border-bottom: 1px solid var(--accent);
+}
+.bg-knowl-panel {
+  margin: 0.6rem 0 0.9rem;
+  padding: 0.7rem 1.1rem;
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--accent);
+  border-radius: 6px;
+  background: var(--card);
+  font-size: 0.95rem;
+}
+.bg-knowl-panel .bg-knowl-title {
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 0.35rem;
+}
+.bg-knowl-foot { margin-top: 0.4rem; font-size: 0.9rem; }
+/* Statement knowls carry the paper's display equations and Lean badges.
+   Wide equations scroll inside the panel rather than widening the column. */
+.bg-knowl-panel .katex-display {
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0.15rem 0;
+  margin: 0.6rem 0;
+}
+.bg-knowl-panel .para { margin: 0.4rem 0; }
+.bg-knowl-panel .lean-link {
+  display: inline-block;
+  margin: 0.3rem 0.35rem 0 0;
+  padding: 0.02rem 0.55rem;
+  font-size: 0.78rem;
+  border: 1px solid var(--accent);
+  border-radius: 999px;
+  color: var(--accent);
+  text-decoration: none;
+}
+.bg-knowl-panel .lean-link:hover {
+  background: var(--accent);
+  color: var(--accent-ink);
+}
+
+/* Status-badge legend (presentations comparison page, #status-badges). */
+.badge-legend { margin: 0 auto 1.5rem; }
+.badge-legend > div { margin-bottom: 0.75rem; }
+.badge-legend dt { margin-bottom: 0.2rem; }
+.badge-legend dd { margin: 0; color: var(--muted); }
+footer .version-line code {
+  font-size: 0.92em;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 0 0.3em;
+}
+
+.two-col {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(21rem, 1fr));
+  column-gap: 3rem;
+  align-items: start;
+}
+.prose { max-width: 66ch; }
+.prose p { margin: 0 0 1rem; }
+.prose a { color: var(--ink); text-decoration-color: rgba(40, 160, 90, 0.5); }
+.prose a:hover { text-decoration-color: var(--accent); }
+
+/* baseline for links anywhere in page content (cards, intros, stage lists):
+   browser-default blue is near-invisible on the dark background */
+main a {
+  color: var(--ink);
+  text-decoration-color: rgba(40, 160, 90, 0.5);
+}
+main a:hover { text-decoration-color: var(--accent); }
+
+.account-page .page-header,
+.account-page main,
+.account-page footer {
+  width: min(100%, 60rem);
+  margin-inline: auto;
+}
+.account-page .prose { max-width: none; }
+
+/* ---------------- resource sections ---------------- */
+h2 {
+  margin: 2.6rem 0 1rem;
+  font: 700 0.78rem/1.2 system-ui, sans-serif;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.resource-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+  gap: 1rem;
+}
+/* Fixed two-column variant.  With four cards, auto-fit fits three across and
+   strands the fourth on its own row; this keeps them 2 + 2.  Both tracks are
+   minmax(0, 1fr): a bare 1fr floors the column at min-content, which the wide
+   display math inside a card overshoots, pushing the page into a horizontal
+   scroll.  The math scrolls within .pres-math instead. */
+.resource-grid.grid-2col { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@media (max-width: 46rem) {
+  .resource-grid.grid-2col { grid-template-columns: minmax(0, 1fr); }
+}
+.resource-card {
+  padding: 1.3rem 1.4rem;
+  border: 1px solid var(--line);
+  border-radius: 0.8rem;
+  background: var(--card);
+  box-shadow: 0 6px 18px rgba(24, 32, 29, 0.05);
+}
+.resource-card a.res-title {
+  color: var(--ink);
+  font-size: 1.12rem;
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-color: rgba(40, 160, 90, 0.5);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.25em;
+}
+.resource-card a.res-title:hover { text-decoration-color: var(--accent); }
+.resource-card p { margin: 0.5rem 0 0; color: var(--muted); font-size: 0.95rem; }
+.badge {
+  display: inline-block;
+  margin-left: 0.5rem;
+  padding: 0.14rem 0.55rem;
+  border-radius: 999px;
+  vertical-align: 0.12em;
+  font: 700 0.66rem/1.4 system-ui, sans-serif;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  background: rgba(40, 160, 90, 0.08);
+}
+.res-title-soon { color: var(--ink); font-size: 1.12rem; font-weight: 700; }
+.card-heading,
+.stage-heading {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.55rem;
+}
+.card-heading .badge,
+.stage-heading .badge { margin-left: 0; }
+.section-intro {
+  max-width: 66ch;
+  color: var(--muted);
+}
+.stage-list {
+  margin-top: 1rem;
+  border-top: 1px solid var(--line);
+}
+.stage {
+  padding: 0.8rem 0;
+  border-bottom: 1px solid var(--line);
+}
+.stage:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+.stage-title {
+  color: var(--ink);
+  font-weight: 700;
+}
+a.stage-title {
+  text-decoration: underline;
+  text-decoration-color: rgba(40, 160, 90, 0.5);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.25em;
+}
+a.stage-title:hover { text-decoration-color: var(--accent); }
+.stage p { font-size: 0.91rem; }
+
+/* ---------------- presentations page ---------------- */
+.badge-solid { color: var(--accent-ink); background: var(--accent); }
+.badge-amber {
+  color: #a3660d;
+  border-color: #c9862a;
+  background: rgba(201, 134, 42, 0.1);
+}
+.badge-neutral {
+  color: var(--muted);
+  border-color: var(--muted);
+  background: rgba(120, 128, 136, 0.08);
+}
+.badge-red {          /* incorrect candidates */
+  color: #c4453c;
+  border-color: #c4453c;
+  background: rgba(196, 69, 60, 0.08);
+}
+@media (prefers-color-scheme: dark) {
+  .badge-amber { color: #d9a24a; }
+}
+.card-heading .badge + .badge { margin-left: 0.35rem; }
+.pres-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1.6rem;
+  margin: 0.75rem 0 0;
+  padding-top: 0.6rem;
+  border-top: 1px solid var(--line);
+}
+.pres-meta > div { display: flex; gap: 0.45rem; align-items: baseline; }
+.pres-meta dt {
+  font: 700 0.66rem/1.4 system-ui, sans-serif;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.pres-meta dd { margin: 0; font-size: 0.92rem; color: var(--ink); }
+.pres-code {
+  margin: 0.9rem 0 0;
+  padding: 0.85rem 1rem;
+  border: 1px solid var(--line);
+  border-radius: 0.55rem;
+  background: var(--paper);
+  font: 0.84rem/1.55 ui-monospace, SFMono-Regular, Menlo, monospace;
+  color: var(--ink);
+  overflow-x: auto;
+  white-space: pre;
+}
+.pres-math { margin-top: 0.9rem; overflow-x: auto; }
+.axiom-list { display: grid; gap: 1rem; }
+.axiom-card .pres-math { overflow-x: visible; }
+.pres-math > p.axiom-stmt { color: var(--ink); }
+.axiom-sig { white-space: normal; overflow-wrap: anywhere; }
+/* doc-gen4's own whitespace model: a forced break after the declaration
+   name, hanging indents, and pre-wrap only inside .fn groups — where the
+   Lean pretty-printer's intentional newlines live. Newlines between spans
+   are markup formatting and collapse as normal whitespace. */
+.axiom-sig .decl_header, .lknowl-panel .decl_header {
+  white-space: normal;
+  overflow-wrap: anywhere;
+  text-indent: -6ex;
+  padding-left: 6ex;
+}
+.axiom-sig .decl_name::after, .lknowl-panel .decl_name::after {
+  content: "\A";
+  white-space: pre;
+}
+.axiom-sig .fn, .lknowl-panel .fn {
+  display: inline-block;
+  text-indent: -1ex;
+  padding-left: 1ex;
+  white-space: pre-wrap;
+  vertical-align: top;
+}
+.axiom-sig .impl_arg, .axiom-sig .implicits,
+.lknowl-panel .impl_arg, .lknowl-panel .implicits { white-space: normal; }
+.axiom-lean { margin-top: 0.8rem; }
+.axiom-lean > summary {
+  cursor: pointer;
+  font: 650 0.9rem/1.3 system-ui, sans-serif;
+  color: var(--accent);
+}
+.axiom-lean-links { margin: 0.5rem 0 0; font-size: 0.92rem; }
+.axiom-hint { color: var(--muted); }
+
+.dead-ends-section {
+  margin-top: 3.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--line);
+}
+
+.dead-ends-disclosure > summary {
+  width: fit-content;
+  margin: 1rem 0;
+  padding: 0.65rem 0.8rem;
+  border: 1px solid var(--line);
+  border-radius: 0.45rem;
+  color: var(--accent);
+  background: var(--card);
+  font: 700 0.9rem/1.3 system-ui, sans-serif;
+  cursor: pointer;
+}
+
+.dead-end-grid {
+  margin-top: 1rem;
+}
+
+.resource-card:target {
+  outline: 3px solid var(--focus);
+  outline-offset: 3px;
+}
+
+.account-crosslink {
+  padding: 0.75rem 0.9rem;
+  border-left: 3px solid var(--accent);
+  background: var(--panel);
+}
+
+/* nested Lean knowls inside axiom statements */
+a.lk {
+  color: var(--accent);
+  text-decoration: underline dotted 1.5px;
+  text-underline-offset: 0.2em;
+  cursor: pointer;
+}
+a.lk.lk-open {
+  text-decoration-style: solid;
+  text-decoration-thickness: 2px;
+  font-weight: 700;
+}
+.lknowl-panel {
+  margin: 0.55em 0 0.75em;
+  padding: 0.55em 0.8em;
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--accent);
+  border-radius: 0 0.45rem 0.45rem 0;
+  background: var(--card);
+  font-size: 0.95em;
+}
+.lknowl-panel .attributes { color: var(--muted); font-size: 0.9em; }
+.lknowl-eqns { margin: 0.4em 0 0; }
+.lknowl-eqns > summary {
+  cursor: pointer;
+  font: 650 0.78rem/1.4 system-ui, sans-serif;
+  color: var(--muted);
+}
+.lknowl-eqns ul { list-style: none; margin: 0.3em 0 0; padding-left: 0.2em; }
+.lknowl-eqns li { white-space: normal; overflow-wrap: anywhere; }
+.lknowl-panel p {
+  margin: 0.45em 0 0;
+  font-family: Georgia, serif;
+  white-space: normal;
+}
+.lknowl-panel ul.structure_fields {
+  list-style: none;
+  margin: 0.45em 0 0;
+  text-indent: -2ex;
+  padding-left: 2ex;
+}
+.lknowl-panel .structure_field_doc { text-indent: 0; }
+.lknowl-panel li.structure_field {
+  margin: 0.35em 0;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+.lknowl-panel li.structure_field p { font-size: 0.94em; color: var(--muted); }
+.lknowl-foot {
+  margin-top: 0.5em !important;
+  font-family: system-ui, sans-serif !important;
+  font-size: 0.86em;
+}
+.pres-math > p {
+  margin: 0.6rem 0 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+.pres-math .katex-display { margin: 0.55rem 0; }
+.pres-math .katex { font-size: 1.02em; }
+
+/* ---------------- comparison subpage (presentations/comparison/) ---------------- */
+/* LMFDB-style knowls: dashed-underlined phrase, click to unfold a panel */
+.knowl { margin: 0.85rem 0; }
+.knowl > summary {
+  width: fit-content;
+  cursor: pointer;
+  list-style: none;
+  font-weight: 700;
+  color: var(--accent);
+  text-decoration: underline dashed 1.5px;
+  text-underline-offset: 0.24em;
+}
+.knowl > summary::-webkit-details-marker { display: none; }
+.knowl > summary::after {
+  content: "\25B8";
+  display: inline-block;
+  margin-left: 0.4em;
+  font-size: 0.75em;
+  transition: transform .15s ease;
+}
+.knowl[open] > summary { text-decoration-style: solid; }
+.knowl[open] > summary::after { transform: rotate(90deg); }
+.knowl-panel {
+  max-width: 72ch;
+  margin: 0.55rem 0 0.9rem;
+  padding: 0.7rem 1rem 0.85rem;
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--accent);
+  border-radius: 0 0.55rem 0.55rem 0;
+  background: var(--card);
+  overflow-x: auto;
+}
+.knowl-panel > p { margin: 0.55rem 0 0; }
+.knowl-panel > p:first-child { margin-top: 0; }
+.knowl-panel .katex-display { margin: 0.6rem 0; }
+.knowl-note { color: var(--muted); font-size: 0.92rem; }
+a.knowl-open {
+  color: var(--accent);
+  text-decoration: underline dashed 1.5px;
+  text-underline-offset: 0.2em;
+}
+.cmp-h3 {
+  margin: 1.8rem 0 0.6rem;
+  font: 700 1.05rem/1.3 inherit;
+}
+.cmp-list {
+  max-width: 66ch;
+  margin: 0.4rem 0 1rem;
+  padding-left: 1.4rem;
+  color: var(--muted);
+}
+.cmp-list li { margin: 0.3rem 0; }
+.cmp-table-wrap { overflow-x: auto; margin: 1.2rem 0 1.4rem; }
+.cmp-table { border-collapse: collapse; font-size: 0.97rem; }
+.cmp-table caption {
+  caption-side: top;
+  padding-bottom: 0.45rem;
+  text-align: left;
+  font: 700 0.72rem/1.3 system-ui, sans-serif;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  white-space: nowrap;
+}
+.cmp-table th, .cmp-table td { padding: 0.38rem 1.1rem; }
+.cmp-table th:first-child, .cmp-table td:first-child { padding-left: 0.2rem; }
+.cmp-table thead th {
+  border-bottom: 2px solid var(--ink);
+  text-align: left;
+  font-weight: 700;
+}
+.cmp-table th.num, .cmp-table td.num {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+.cmp-table tbody td { border-bottom: 1px solid var(--line); }
+.cmp-table tbody tr:last-child td { border-bottom: 0; }
+.cmp-table tfoot td { border-top: 2px solid var(--ink); font-weight: 700; }
+
+footer {
+  margin-top: 3.2rem;
+  padding-top: 1.1rem;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+footer a { color: var(--ink); text-decoration-color: rgba(40,160,90,.5); }
+footer .pf-credit { white-space: nowrap; }
+footer .pf-glyph {
+  width: 1.15em;
+  height: 1.15em;
+  margin-right: 0.25em;
+  vertical-align: -0.22em;
+}

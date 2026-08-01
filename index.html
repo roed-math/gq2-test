@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="An explicit marked profinite presentation of the absolute Galois group of the 2-adic numbers: four generators, two word relations, and a pro-2 condition on the wild generators, with an interactive web edition and two separately initiated Lean 4 formalizations.">
+<title>A Presentation of the Absolute Galois Group of Q₂</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="alternate icon" href="favicon.ico" sizes="16x16 32x32 48x48">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="stylesheet" href="site.css">
+<link rel="stylesheet" href="vendor/katex.min.css">
+<script defer src="vendor/katex.min.js"></script>
+<script defer src="vendor/auto-render.min.js"></script>
+<script defer src="bg-knowls.js"></script>
+<script>
+  // Delimiters for every KaTeX pass on this page (the dollar and \( \[ pairs
+  // are the dev page's set). The environment pairs are for the background
+  // knowls: their HTML is lifted verbatim out of the PreTeXt paper, which
+  // writes display math as an AMS environment rather than \[ \], and
+  // auto-render only recognizes what is listed here — anything else is left
+  // on the page as raw LaTeX source.
+  window.GQ2_MATH_DELIMS = [
+    { left: "$$", right: "$$", display: true },
+    { left: "$",  right: "$",  display: false },
+    { left: "\\(", right: "\\)", display: false },
+    { left: "\\[", right: "\\]", display: true },
+    { left: "\\begin{equation*}", right: "\\end{equation*}", display: true },
+    { left: "\\begin{equation}",  right: "\\end{equation}",  display: true },
+    { left: "\\begin{align*}",    right: "\\end{align*}",    display: true },
+    { left: "\\begin{align}",     right: "\\end{align}",     display: true },
+    { left: "\\begin{alignat*}",  right: "\\end{alignat*}",  display: true },
+    { left: "\\begin{alignat}",   right: "\\end{alignat}",   display: true },
+    { left: "\\begin{gather*}",   right: "\\end{gather*}",   display: true },
+    { left: "\\begin{gather}",    right: "\\end{gather}",    display: true }
+  ];
+  // deferred scripts run before DOMContentLoaded, so renderMathInElement
+  // is defined by the time this fires.
+  window.addEventListener("DOMContentLoaded", function () {
+    renderMathInElement(document.body, {
+      delimiters: window.GQ2_MATH_DELIMS,
+      throwOnError: false
+    });
+  });
+</script>
+</head>
+<body>
+
+<header class="hero">
+  <h1>A Presentation of the Absolute Galois Group of $\mathbb{Q}_2$</h1>
+  <p class="sub">David Roe and David Turturean</p>
+  <p class="gist">An explicit marked profinite presentation: four generators, two
+  word relations, and a pro-2 condition on the wild generators, together with
+  two separately initiated Lean&nbsp;4 formalizations.</p>
+  <nav class="actions">
+    <a class="primary" href="paper/">Read the interactive paper</a>
+    <a class="secondary" href="paper.pdf">Download the PDF</a>
+    <a class="secondary" href="presentations/">Compare presentations</a>
+    <a class="primary" href="https://leanprover.zulipchat.com/#narrow/channel/583339-AI-authored-projects/topic/Absolute.20Galois.20group.20of.20Q_2/with/612943018">Discuss on Zulip</a>
+  </nav>
+  <nav class="actions">
+    <a class="primary" href="formalizations/">Explore the formalizations</a>
+    <a class="secondary" href="verifier/">Learn about the verifier</a>
+    <a class="secondary" href="reproducibility/">Reproduce the builds</a>
+    <a class="primary" href="development/">Trace the development</a>
+  </nav>
+</header>
+
+<main>
+
+  <div class="two-col">
+  <section>
+  <h2>The problem</h2>
+  <div class="prose">
+    <p>The absolute Galois group of a field gathers all of its Galois theory
+    into a single object: its closed subgroups correspond to the field's
+    algebraic extensions, so a concrete description of the group is a concrete
+    description of every extension at once.  Number theorists use $p$-adic
+    fields to collect congruence information into a convenient algebraic
+    package, and they have played an increasingly important role in recent years,
+    from the Langlands program to perfectoid spaces.  For odd primes $p$,
+    Jannsen and Wingberg gave explicit generators and relations for the
+    absolute Galois group in the early 1980s, building on the work of Demushkin,
+    Serre, and Labute on its <a class="bgknowl" data-bg="bg-demushkin" href="paper/paper.html#bg-demushkin">maximal pro-$p$ quotient</a>. The prime 2 resisted:
+    Zel&#x2019;venski&#x12D; described the
+    Galois group of the maximal extension without simple ramification for
+    2-adic base fields of odd degree, and Diekert obtained structure results for dyadic fields under
+    additional hypotheses.  Jarden and Shusterman later proved that
+    $G_{\mathbb{Q}_2}$ is finitely presented and determined the minimal
+    numbers of generators and relations abstractly, but no explicit
+    presentation of the absolute Galois group of $\mathbb{Q}_2$
+    (concrete generators and concrete relations) was known.</p>
+    <p>The missing dyadic case was recently posed as one of
+    <a href="https://epoch.ai/frontiermath/open-problems/q2-absolute-galois">Epoch
+    AI's FrontierMath open problems</a> by the first author.  This paper closes
+    it, giving an explicit presentation in an enriched, <em><a class="bgknowl" data-bg="marked-sense" href="paper/paper.html#sec-introduction-and-main-theorem-2-11">marked</a></em> sense
+    that goes back to Jannsen and Wingberg's description for odd $p$.
+    Beyond completing the local story,
+    such presentations matter because these local absolute Galois groups fit into
+    the more mysterious absolute Galois group of $\mathbb{Q}$, and an explicit presentation
+    turns questions about extensions, their counts, and their symmetries into
+    finite computations.</p>
+  </div>
+  </section>
+
+  <section>
+  <h2>The theorem</h2>
+  <div class="prose">
+    <p>The absolute Galois group of $\mathbb{Q}_2$ is the <a class="bgknowl" data-bg="bg-profinite" href="paper/paper.html#bg-profinite">profinite group</a>
+    generated by four marked elements $\sigma,\tau,x_0,x_1$, subject to the
+    tame relation $\tau^\sigma=\tau^2$, one explicit wild word relation, and
+    the requirement that the closed normal subgroup generated by the wild
+    generators $x_0,x_1$ be pro-2.  The precise statement is
+    <a class="bgknowl" data-bg="thm-main" href="paper/paper.html#thm-main">Theorem&nbsp;1.2</a> of <a href="paper/">the paper</a>.</p>
+    <p>The proof characterizes the finite quotients of the candidate group by
+    <a class="bgknowl" data-bg="marked-sense" href="paper/paper.html#sec-introduction-and-main-theorem-2-11">admissible generating quadruples</a>, then shows that the candidate and
+    $G_{\mathbb{Q}_2}$ admit exactly the same number of surjections onto every
+    finite group: the tame and maximal pro-2 quotients are <a class="bgknowl" data-bg="prop-markedDem" href="paper/paper.html#prop-markedDem">matched in marked
+    form</a>, lifting problems through elementary abelian layers are compared
+    (<a class="bgknowl" data-bg="bg-fox-calculus" href="paper/paper.html#bg-fox-calculus">Fox&ndash;Jacobian calculus</a> on the candidate side, <a class="bgknowl" data-bg="bg-tate-duality" href="paper/paper.html#bg-tate-duality">local Tate duality</a> on
+    the Galois side, with a <a class="bgknowl" data-bg="bg-quadratic-f2" href="paper/paper.html#bg-quadratic-f2">quadratic Gauss-sum comparison</a> in the self-dual
+    case), and an induction driven by <a class="bgknowl" data-bg="bg-fourier" href="paper/paper.html#bg-fourier">Fourier inversion</a> closes the count.
+    Profinite reconstruction then gives the isomorphism.</p>
+    <p>The result has been checked at three levels.  The manuscript carries the
+    complete proof but has not yet been externally peer reviewed.  Two
+    separately initiated Lean&nbsp;4 formalizations verify the theorem,
+    Roe's down to <a href="formalizations/axioms/">nine named interfaces to the
+    classical literature</a> and Turturean's down to seven external inputs
+    after a <a href="formalizations/">documented later adaptation</a>.
+    And the finite-quotient <a href="verifier/">verifier</a> confirms the
+    predicted count of Galois extensions for all 5,402 finite test groups:
+    strong evidence, though short of a proof by itself.</p>
+  </div>
+  </section>
+  </div>
+
+  <section>
+  <h2>How it was found</h2>
+  <div class="two-col">
+  <div class="prose">
+    <p>David Turturean spent much of early 2026 trying to solve the problem
+    with the strongest language models then available and submitted
+    candidates to EpochAI. Much like all attempts in the previous four
+    decades, these submissions were unsuccessful.</p>
+
+    <p>In mid June, he began a ChatGPT Pro conversation that succeeded at finding
+    a candidate presentation together with an informal proof.  The initial effort
+    happened over a 26-hour autonomous session.  Turturean directed much of the
+    work by voice, using voice mode in Claude
+    Code to operate the ChatGPT research harnesses and speech-to-text inside
+    ChatGPT while developing the
+    <a href="artifacts/turturean-q2-manuscript-2026-06-25.pdf">preserved
+    60-page manuscript later used for autoformalization</a>.</p>
+  </div>
+  <div class="prose">
+    <p>David Roe ran the finite-quotient verifier he had built for EpochAI, and
+    the submission predicted the correct extension count for every test group.
+    Roe and Turturean then separately formalized
+    the proof in Lean 4 with coding agents, and built this site to explain the
+    result and process.  The formalization effort did not overturn the theorem,
+    but it did more than confirm it: a number of standing hypotheses,
+    normalization choices, and citations had to be made explicit before the
+    proof was machine-checkable, and those refinements are now part of the
+    manuscript.</p>
+
+    <ul>
+      <li><a href="development/account/">Turturean's account of how
+          the presentation was found</a></li>
+      <li><a href="development/success/">Roe's account and discussion</a></li>
+    </ul>
+  </div>
+  </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="version-line">
+  <!-- versions:begin (regenerated by paperforge sitegen/gen_status.py from status.json) -->
+    Manuscript <a href="#" class="vknowl" data-vknowl="version-details"
+       aria-expanded="false" title="Version identifiers">July 26, 2026</a>
+    <span class="vknowl-panel" id="version-details" hidden>
+      Roe formalization <a href="https://github.com/roed-math/gq2-lean"><code>d0714a7</code></a>
+      (Mathlib pinned June 12, 2026, <code>ec410d2</code>) &middot;
+      Turturean formalization <a href="https://github.com/davidturturean/gq2-lean-turturean"><code>e868b9e</code></a> &middot;
+      axiom census: 9 interfaces &middot;
+      verifier dataset: 5,402 groups &middot; PDF sha256 <code>5bb48731c45d&hellip;</code> &middot;
+      <a href="reproducibility/">reproducibility</a>
+    </span>
+  <!-- versions:end -->
+  &middot; <a href="#" class="vknowl" data-vknowl="cite-details"
+       aria-expanded="false" title="BibTeX entry">Cite this work</a>
+    <span class="vknowl-panel" id="cite-details" hidden><pre>@unpublished{roe-turturean-gq2,
+  author = {Roe, David and Turturean, David},
+  title  = {A Presentation of the Absolute {G}alois Group of {$\mathbb{Q}_2$}},
+  year   = {2026},
+  note   = {Manuscript, \url{https://roed314.github.io/gq2/}},
+}</pre>
+      No archival identifier yet; this page is the canonical URL until a
+      preprint is posted.  Machine-readable metadata:
+      <a href="CITATION.cff"><code>CITATION.cff</code></a>.
+    </span>
+  &middot; <a href="errata/">Errata</a>
+  &middot; Built with <a class="pf-credit" href="https://github.com/roed-math/paperforge"><svg class="pf-glyph" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-hidden="true">
+    <defs>
+      <mask id="pf-glyph-cut" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+        <rect width="24" height="24" fill="white"/>
+        <path d="m4 12 3-7h8l2 2c2 0 3 0 5-1-1 4-5 7-9 7H4Z" fill="black"/>
+      </mask>
+    </defs>
+    <path fill="currentColor" mask="url(#pf-glyph-cut)" d="M2 7h5l2-2h6l2 2h5c-1 4-4 7-8 8-2 1-2 3 0 5l1 1h-4l-1-2H7l-1 2H3v-2l2-2c2-2 0-3-3-4Z"/>
+    <path fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" d="m4 12 3-7h8l2 2c2 0 3 0 5-1-1 4-5 7-9 7H4Zm13-5c0 3-1 5-4 6"/>
+  </svg>PaperForge</a>.
+  </div>
+  <script>
+  (function () {
+    document.addEventListener("click", function (e) {
+      var a = e.target.closest ? e.target.closest(".vknowl") : null;
+      if (!a) return;
+      e.preventDefault();
+      var p = document.getElementById(a.getAttribute("data-vknowl"));
+      if (!p) return;
+      p.hidden = !p.hidden;
+      a.setAttribute("aria-expanded", p.hidden ? "false" : "true");
+    });
+  })();
+  </script>
+  <script>
+  (function () {
+    document.addEventListener("click", function (e) {
+      var a = e.target.closest ? e.target.closest(".bgknowl") : null;
+      if (!a) return;
+      if (e.metaKey || e.ctrlKey || e.shiftKey) return;   // allow new-tab
+      var reg = window.GQ2_BG_KNOWLS || {};
+      var entry = reg[a.getAttribute("data-bg")];
+      if (!entry) return;                                 // fall through: navigate
+      e.preventDefault();
+      if (a._bgPanel && a._bgPanel.isConnected) {
+        a._bgPanel.remove(); a._bgPanel = null;
+        a.classList.remove("bgknowl-open");
+        a.setAttribute("aria-expanded", "false");
+        return;
+      }
+      var panel = document.createElement("div");
+      panel.className = "bg-knowl-panel";
+      panel.innerHTML = '<div class="bg-knowl-title">' + entry.title +
+        "</div>" + entry.html +
+        '<div class="bg-knowl-foot"><a href="' + entry.href +
+        '">view in context &#8599;</a></div>';
+      var host = a.closest("p") || a;
+      host.insertAdjacentElement("afterend", panel);
+      a._bgPanel = panel;
+      a.classList.add("bgknowl-open");
+      a.setAttribute("aria-expanded", "true");
+      panel.setAttribute("role", "region");
+      panel.setAttribute("aria-label", entry.title);
+      if (window.renderMathInElement) {
+        renderMathInElement(panel, {
+          delimiters: window.GQ2_MATH_DELIMS,
+          macros: window.GQ2_BG_MACROS || {},
+          throwOnError: false
+        });
+      }
+    });
+  })();
+  </script>
+</footer>
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="The Lean 4 formalizations of the presentation of the absolute Galois group of the 2-adic numbers: blueprint, API documentation, and the two formalization projects.">
+<title>Formalizations · A Presentation of the Absolute Galois Group of Q₂</title>
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="alternate icon" href="../favicon.ico" sizes="16x16 32x32 48x48">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="stylesheet" href="../site.css">
+</head>
+<body>
+
+<header class="page-header">
+  <a class="back" href="../">&#8592; A Presentation of the Absolute Galois Group of&nbsp;&#x211A;<sub>2</sub></a>
+  <h1>The formalizations</h1>
+</header>
+
+<main>
+
+  <h2>Explore the proof</h2>
+  <div class="resource-grid">
+    <div class="resource-card">
+      <a class="res-title" href="../blueprint/">Blueprint</a>
+      <p>Every statement paired with its Lean counterpart, with an interactive
+      dependency graph; completion status is computed directly from the Lean
+      code.</p>
+    </div>
+    <div class="resource-card">
+      <a class="res-title" href="../lean/gq2-claude/">Lean API documentation</a>
+      <p>doc-gen4 pages for every declaration in the formalization;
+      dependency links resolve to the public Mathlib docs.</p>
+    </div>
+    <div class="resource-card">
+      <a class="res-title" href="axioms/">The axioms</a>
+      <p>The nine statements Lean assumes from the literature: each explained,
+      with its citation and its literal Lean form.</p>
+    </div>
+  </div>
+
+  <h2>Lean formalizations</h2>
+  <p class="section-intro">The presentation has been formalized twice, in two
+  separate Lean projects.  Both started from the same <a class="res-title" href="../artifacts/turturean-q2-manuscript-2026-06-25.pdf">source manuscript</a> produced by GPT 5.5.</p>
+  <div class="resource-grid">
+    <div class="resource-card">
+      <div class="card-heading">
+        <a class="res-title" href="https://github.com/roed-math/gq2-lean">David Roe's formalization</a>
+        <span class="badge">Complete</span>
+      </div>
+      <p>A Lean 4 formalization of the presentation theorem with no
+      <code>sorry</code> placeholders, built using Fable 5 and Opus 4.8. Lean treats
+      <a href="axioms/">nine named mathematical results</a> from the
+      literature as given, with a specific citation recorded for each. The
+      source is on
+      <a href="https://github.com/roed-math/gq2-lean">GitHub</a>; its blueprint
+      and API documentation are linked above.</p>
+      <p>The repository carries a machine-readable
+      <a href="https://github.com/roed-math/gq2-lean/blob/master/formalization.yaml"><code>formalization.yaml</code></a>
+      (in the <a href="https://github.com/mathlib-initiative/formalization.yaml">community
+      format</a>) recording the main statements, the axiom census, the
+      automation methods, and known divergences from the paper.  Both main
+      results are also independently checkable with
+      <a href="https://github.com/leanprover/comparator">leanprover/comparator</a>
+      via the repository's
+      <a href="https://github.com/roed-math/gq2-lean/blob/master/comparator-config.json"><code>comparator-config.json</code></a>,
+      whose <code>Challenge.lean</code> names one challenge theorem per main
+      result; step-by-step commands are on the
+      <a href="../reproducibility/">reproducibility page</a>.</p>
+      <p>Note that this formalization is based on a version of Mathlib pinned at June 12, 2026, which does not include more recent progress on continuous cohomology.</p>
+    </div>
+    <div class="resource-card">
+      <div class="card-heading">
+        <span class="res-title-soon">David Turturean's formalization</span>
+        <span class="badge">Complete</span>
+      </div>
+      <p>An independent formalization using GPT 5.5 and Fable 5.</p>
+      <div class="stage-list">
+        <div class="stage">
+          <div class="stage-heading">
+            <a class="stage-title" href="https://github.com/davidturturean/gq2-lean-turturean/releases/tag/audit-11.1">Standalone version</a>
+          </div>
+          <p>Contains no <code>sorry</code> placeholders and uses no Lean code
+          from Roe's project. Lean treats six published results and four
+          project-specific steps as given; the release lists all ten.
+          On this site: <a href="../blueprint-gpt/">blueprint</a> ·
+          <a href="../lean/gq2-gpt/">API documentation</a>.</p>
+        </div>
+        <div class="stage">
+          <div class="stage-heading">
+            <a class="stage-title" href="https://github.com/davidturturean/gq2-lean-turturean-complete">Completed version</a>
+          </div>
+          <p>Proves four remaining steps using a documented adaptation from Roe's
+          formalization. Its seven remaining external mathematical inputs are
+          each tied to published literature.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="version-line">
+  <!-- versions:begin (regenerated by paperforge sitegen/gen_status.py from status.json) -->
+    Manuscript <a href="#" class="vknowl" data-vknowl="version-details"
+       aria-expanded="false" title="Version identifiers">July 26, 2026</a>
+    <span class="vknowl-panel" id="version-details" hidden>
+      Roe formalization <a href="https://github.com/roed-math/gq2-lean"><code>d0714a7</code></a>
+      (Mathlib pinned June 12, 2026, <code>ec410d2</code>) &middot;
+      Turturean formalization <a href="https://github.com/davidturturean/gq2-lean-turturean"><code>e868b9e</code></a> &middot;
+      axiom census: 9 interfaces &middot;
+      verifier dataset: 5,402 groups &middot; PDF sha256 <code>5bb48731c45d&hellip;</code> &middot;
+      <a href="../reproducibility/">reproducibility</a>
+    </span>
+  <!-- versions:end -->
+  &middot; Built with <a class="pf-credit" href="https://github.com/roed-math/paperforge"><svg class="pf-glyph" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-hidden="true">
+    <defs>
+      <mask id="pf-glyph-cut" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+        <rect width="24" height="24" fill="white"/>
+        <path d="m4 12 3-7h8l2 2c2 0 3 0 5-1-1 4-5 7-9 7H4Z" fill="black"/>
+      </mask>
+    </defs>
+    <path fill="currentColor" mask="url(#pf-glyph-cut)" d="M2 7h5l2-2h6l2 2h5c-1 4-4 7-8 8-2 1-2 3 0 5l1 1h-4l-1-2H7l-1 2H3v-2l2-2c2-2 0-3-3-4Z"/>
+    <path fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" d="m4 12 3-7h8l2 2c2 0 3 0 5-1-1 4-5 7-9 7H4Zm13-5c0 3-1 5-4 6"/>
+  </svg>PaperForge</a>.
+  </div>
+  <script>
+  (function () {
+    document.addEventListener("click", function (e) {
+      var a = e.target.closest ? e.target.closest(".vknowl") : null;
+      if (!a) return;
+      e.preventDefault();
+      var p = document.getElementById(a.getAttribute("data-vknowl"));
+      if (!p) return;
+      p.hidden = !p.hidden;
+      a.setAttribute("aria-expanded", p.hidden ? "false" : "true");
+    });
+  })();
+  </script>
+</footer>
+</body>
+</html>
